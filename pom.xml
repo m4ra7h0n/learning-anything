@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>learning</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <reversion>0.0.1-SNAPSHOT</reversion>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>maven</module>
+    </modules>
+
+    <scm>
+        <url>https://github.com/x-j-j/learning</url>
+        <connection>
+            scm:git:git://github.com/x-j-j/learning.git
+        </connection>
+        <developerConnection>
+            scm:git:ssh://git@github.com/x-j-j/learning.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+<!--    <ciManagement>-->
+<!--        <system></system>-->
+<!--        <url></url>-->
+
+<!--    </ciManagement>-->
+<!--        <issueManagement>-->
+<!--            <system></system>-->
+<!--            <url></url>-->
+<!--        </issueManagement>-->
+
+<!--        <licenses>-->
+<!--            <license>-->
+<!--                <name></name>-->
+<!--                <url></url>-->
+<!--            </license>-->
+<!--        </licenses>-->
+
+    <developers>
+        <developer>
+            <id>XJJ</id>
+            <name>肖子健</name>
+            <email>2849771625@qq.com</email>
+            <timezone>8</timezone>
+        </developer>
+    </developers>
+
+
+</project>
