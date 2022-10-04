@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.xjjlearning.maven</groupId>
+    <artifactId>learning-maven</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>maven-loc-plugin</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>maven-plugin</packaging>
+
+  <name>maven-loc-plugin Maven Plugin</name>
+
+  <!-- FIXME change it to the project's website -->
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <version>3.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>3.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>3.6.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+<!--      <plugin>-->
+<!--&lt;!&ndash;        用来测试自定义插件的插件 maven-invoker-plugin &ndash;&gt;-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-invoker-plugin</artifactId>-->
+<!--        <version>3.3.0</version>-->
+<!--        <configuration>-->
+<!--&lt;!&ndash;          默认测试的目录&ndash;&gt;-->
+<!--          <projectsDirectory>src/it</projectsDirectory>-->
+<!--          <goals>-->
+<!--&lt;!&ndash;            src/it下的每个maven项目运行mvn install&ndash;&gt;-->
+<!--            <goal>install</goal>-->
+<!--          </goals>-->
+<!--&lt;!&ndash;          测试完成后要运行的验证脚本&ndash;&gt;-->
+<!--          <postBuildHookScript>validate.groovy</postBuildHookScript>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>integration-test</id>-->
+<!--            <goals>-->
+<!--&lt;!&ndash;              将当前的插件构建并安装到仓库中供测试项目使用&ndash;&gt;-->
+<!--              <goal>install</goal>-->
+<!--&lt;!&ndash;              执行定义好的mvn命令并验证脚本&ndash;&gt;-->
+<!--              <goal>run</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
+
+      <plugin>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.6.0</version>
+
+        <configuration>
+          <goalPrefix>maven-loc-plugin</goalPrefix>
+          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+        </configuration>
+        <executions>
+          <execution>
+            <id>mojo-descriptor</id>
+            <goals>
+              <goal>descriptor</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>run-its</id>
+      <build>
+
+        <plugins>
+          <plugin>
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-invoker-plugin -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-invoker-plugin</artifactId>
+            <version>3.1.0</version>
+
+            <configuration>
+              <debug>true</debug>
+              <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+              <pomIncludes>
+                <pomInclude>*/pom.xml</pomInclude>
+              </pomIncludes>
+              <postBuildHookScript>verify</postBuildHookScript>
+              <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
+              <settingsFile>src/it/settings.xml</settingsFile>
+              <goals>
+                <goal>clean</goal>
+                <goal>test-compile</goal>
+              </goals>
+            </configuration>
+            <executions>
+              <execution>
+                <id>integration-test</id>
+                <goals>
+                  <goal>install</goal>
+                  <goal>integration-test</goal>
+                  <goal>verify</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+
+      </build>
+    </profile>
+  </profiles>
+</project>
