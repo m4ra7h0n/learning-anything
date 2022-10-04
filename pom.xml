@@ -4,9 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>com.xjj.learning</groupId>
     <artifactId>learning</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <build>
         <plugins>
             <plugin>
@@ -27,7 +29,7 @@
     </properties>
 
     <modules>
-        <module>maven</module>
+        <module>learning-maven</module>
     </modules>
 
     <scm>
@@ -41,22 +43,6 @@
         <tag>HEAD</tag>
     </scm>
 
-<!--    <ciManagement>-->
-<!--        <system></system>-->
-<!--        <url></url>-->
-
-<!--    </ciManagement>-->
-<!--        <issueManagement>-->
-<!--            <system></system>-->
-<!--            <url></url>-->
-<!--        </issueManagement>-->
-
-<!--        <licenses>-->
-<!--            <license>-->
-<!--                <name></name>-->
-<!--                <url></url>-->
-<!--            </license>-->
-<!--        </licenses>-->
 
     <developers>
         <developer>
