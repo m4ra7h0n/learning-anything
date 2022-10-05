@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>learning-spring-cloud-alibaba</artifactId>
+        <groupId>com.xjjlearning.springcloud</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>nacos-discovery</artifactId>
+    <name>nacos-discovery</name>
+    <description>nacos-discovery</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>nacos-discovery-provider</module>
+        <module>nacos-discovery-customer</module>
+    </modules>
+
+</project>

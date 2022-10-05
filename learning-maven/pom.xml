@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xjjlearning</groupId>
-        <artifactId>learning</artifactId>
+        <artifactId>learning-anything</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
