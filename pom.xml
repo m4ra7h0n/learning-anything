@@ -27,6 +27,7 @@
     <modules>
         <module>learning-maven</module>
         <module>learning-spring-cloud-alibaba</module>
+        <module>learning-spring-boot</module>
     </modules>
 
     <scm>

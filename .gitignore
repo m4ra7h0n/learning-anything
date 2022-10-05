@@ -43,3 +43,9 @@ target
 
 # AsciiDoc
 spring-cloud-alibaba-docs/**/*.html
+
+# new module ignore
+.mvn
+HELP.md
+mvnw
+mvnw.cmd
