@@ -1,9 +1,9 @@
 # learning anything 
 
-| 模块                          | 描述                     |
+| 模块                            | 描述                     |
 |-------------------------------|------------------------|
 | learning-docs                 | pdf/文档资源               |
-| learning-maven                | 学习maven                |
+| learning-apache               | 学习apache下的组件          |
 | learning-spring-boot          | 学习springboot           |
 | learning-spring-cloud-alibaba | 学习spring-cloud-alibaba |
 

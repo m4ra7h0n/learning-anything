@@ -3,19 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.xjjlearning.apache.maven</groupId>
-        <artifactId>learning-maven</artifactId>
+        <artifactId>dubbo-sample</artifactId>
+        <groupId>com.xjjlearning.apache.dubbo</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>account-captcha</artifactId>
+    <artifactId>dubbo-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>account-captcha</name>
-    <description>account-captcha</description>
-
+    <name>dubbo-provider</name>
+    <description>dubbo-provider</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
-
 </project>
