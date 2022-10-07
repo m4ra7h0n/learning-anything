@@ -1,0 +1,14 @@
+dubbo:
+  application:
+    name: springboot-privider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: 127.0.0.1:2181
+spring:
+  application:
+    name: dubbo-sample-provider
+
+server:
+  port: 8081

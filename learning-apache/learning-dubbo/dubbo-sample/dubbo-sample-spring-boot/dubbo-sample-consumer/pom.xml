@@ -3,23 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.xjjlearning</groupId>
-        <artifactId>learning-anything</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>dubbo-sample-spring-boot</artifactId>
+        <groupId>com.xjjlearning.apache.dubbo</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xjjlearning.apache</groupId>
-    <artifactId>learning-apache</artifactId>
+    <artifactId>dubbo-sample-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learning-apache</name>
-    <description>learning-apache</description>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>learning-maven</module>
-        <module>learning-dubbo</module>
-    </modules>
-
+    <name>dubbo-sample-consumer</name>
+    <description>dubbo-sample-consumer</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
