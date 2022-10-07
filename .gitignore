@@ -29,7 +29,7 @@ hs_err_pid*
 .idea/
 .project
 .settings
-target
+target/
 .DS_Store
 
 # temp ignore
