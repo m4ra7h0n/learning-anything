@@ -9,9 +9,10 @@ sonatype: https://oss.sonatype.org/#welcome
 maven-model-builder-3.0.jar导入之后可以看到超级pom   
 
 # spring-boot  
-官方文档(已转成pdf): https://www.springcloud.cc/spring-boot.html  
-还有制作更好的网页(和官方版本一致): https://www.docs4dev.com/docs/zh/spring-boot/2.1.1.RELEASE/reference/getting-started-system-requirements.html  
-官方github: https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE
+2.7.4版官方英文文档: https://docs.spring.io/spring-boot/docs/current/reference/html/  
+2.1.1.RELEASE版中文文档: https://www.docs4dev.com/docs/zh/spring-boot/2.1.1.RELEASE/reference/getting-started-system-requirements.html  
+2.1.1.RELEASE版官方github: https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE  
+
 
 # spring-cloud-ablibaba:  
 spring-cloud官网: https://www.springcloud.cc/  

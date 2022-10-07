@@ -1,11 +1,11 @@
 # learning anything 
 
-| 模块                          | 描述                         |
-|-------------------------------|----------------------------|
-| learning-docs                 | 学习的pdf和文章                  |
-| learning-maven                | 学习maven                    |
-| learning-spring-boot          | 学习springboot               |
-| learning-spring-cloud-alibaba | 学习spring-cloud-alibaba     |
+| 模块                          | 描述                     |
+|-------------------------------|------------------------|
+| learning-docs                 | pdf/文档资源               |
+| learning-maven                | 学习maven                |
+| learning-spring-boot          | 学习springboot           |
+| learning-spring-cloud-alibaba | 学习spring-cloud-alibaba |
 
 
 # ps学习建议  

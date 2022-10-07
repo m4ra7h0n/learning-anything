@@ -14,4 +14,26 @@
     <description>spring-boot-demo</description>
     <packaging>jar</packaging>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+
+        <!-- Mine Starter -->
+        <dependency>
+            <groupId>com.xjjlearning.springboot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--        自动重启-->
+<!--        https://www.docs4dev.com/docs/zh/spring-boot/2.1.1.RELEASE/reference/using-boot-devtools.html-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-devtools</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+    </dependencies>
 </project>

@@ -30,6 +30,9 @@
 
         <!-- Apache RocketMQ -->
         <rocketmq.version>4.9.4</rocketmq.version>
+
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
