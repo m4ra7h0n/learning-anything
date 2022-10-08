@@ -6,7 +6,6 @@
         <artifactId>dubbo-sample</artifactId>
         <groupId>com.xjjlearning.apache.dubbo</groupId>
         <version>0.0.1-SNAPSHOT</version>
-
     </parent>
     <packaging>pom</packaging>
 
@@ -16,11 +15,36 @@
     <description>dubbo-sample-spring-boot</description>
     <properties>
         <java.version>1.8</java.version>
+<!--        注意版本-->
+        <zookeeper.version>3.8.0</zookeeper.version>
+        <dubbo.version>2.7.5</dubbo.version>
     </properties>
+
     <modules>
         <module>dubbo-sample-provider</module>
         <module>dubbo-sample-consumer</module>
         <module>dubbo-sample-api</module>
     </modules>
+
+<!--     整个依赖只是springboot的，所以没放到外面-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

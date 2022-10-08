@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    zookeeper:
+      discovery:
+        register: false
+      connect-string: 127.0.0.1:2181
+  application:
+    name: dubbo-sample-spring-cloud-consumer
+dubbo:
+  cloud:
+    subscribed-services: dubbo-sample-spring-cloud-provider
+server:
+  port: 8082

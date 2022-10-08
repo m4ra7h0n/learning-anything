@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Value;
 
 @Service
 public class IHelloServiceImpl implements IHelloService {
+    @Value("${dubbo.application.name}")
+    private String serverName;
 
     @Override
     public String sayHello(String name) {
-        return "Hello";
+        return String.format("[%s]: Hello, %s", serverName, name);
     }
 }

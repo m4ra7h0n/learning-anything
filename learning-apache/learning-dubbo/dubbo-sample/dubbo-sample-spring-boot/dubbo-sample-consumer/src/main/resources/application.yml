@@ -1,0 +1,12 @@
+dubbo:
+  registry:
+    address: 127.0.0.1:2181
+  protocol:
+    name: dubbo
+  application:
+    name: springboot-consumer
+server:
+  port: 8082
+spring:
+  application:
+    name: dubbo-sample-consumer
