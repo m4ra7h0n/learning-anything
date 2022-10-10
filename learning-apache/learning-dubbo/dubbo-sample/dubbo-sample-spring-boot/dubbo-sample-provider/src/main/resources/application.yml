@@ -10,6 +10,3 @@ dubbo:
 spring:
   application:
     name: dubbo-sample-provider
-
-server:
-  port: 8081

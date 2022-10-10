@@ -3,9 +3,10 @@
 | 模块                            | 描述                     |
 |-------------------------------|------------------------|
 | learning-docs                 | pdf/文档资源               |
-| learning-apache               | 学习apache下的组件          |
+| learning-apache               | 学习apache下的组件           |
 | learning-spring-boot          | 学习springboot           |
 | learning-spring-cloud-alibaba | 学习spring-cloud-alibaba |
+| learning-front                | 学习前端                   |
 
 
 # ps学习建议  
