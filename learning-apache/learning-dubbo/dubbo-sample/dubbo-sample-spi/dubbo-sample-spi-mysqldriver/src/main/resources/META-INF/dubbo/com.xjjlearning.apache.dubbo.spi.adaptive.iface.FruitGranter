@@ -1,0 +1,2 @@
+apple=com.xjjlearning.apache.dubbo.spi.adaptive.AppleGranter
+banana=com.xjjlearning.apache.dubbo.spi.adaptive.BananaGranter
