@@ -10,6 +10,9 @@ nacos官方文档: https://nacos.io/zh-cn/docs/quick-start.html
 nacos架构与原理雀语(文件夹有pdf): https://www.yuque.com/nacos/ebook/pb40qx
 
 ## uses
+nacos-1.1.4源码编译:  
+mvn -Prelease-nacos clean install -U
+
 nacos使用:  
 解压nacos.zip  
 启动:  
