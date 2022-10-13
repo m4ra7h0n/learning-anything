@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nacos-sample-spring-cloud-discovery-consumer</artifactId>
+    <artifactId>nacos-sample-spring-cloud-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos-sample-spring-cloud-discovery-consumer</name>
-    <description>nacos-sample-spring-cloud-discovery-consumer</description>
+    <name>nacos-sample-spring-cloud-consumer</name>
+    <description>nacos-sample-spring-cloud-consumer</description>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud-openfeign.version>2.0.0.RELEASE</spring-cloud-openfeign.version>

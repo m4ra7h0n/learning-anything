@@ -1,4 +1,4 @@
-package com.xjjlearning.springcloud.nacossamplespringboot;
+package com.xjjlearning.springcloud.nacossamplespringboot.controller;
 
 import com.alibaba.nacos.api.annotation.NacosInjected;
 import com.alibaba.nacos.api.exception.NacosException;

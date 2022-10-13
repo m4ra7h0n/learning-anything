@@ -16,3 +16,8 @@ serviceName, (clusters)
 
 服务监听
 /nacos/v1/ns/instance/list (GET)
+
+# ribbon
+负载均衡
+# openfeign
+内部集成RestTemplate, 配置接口

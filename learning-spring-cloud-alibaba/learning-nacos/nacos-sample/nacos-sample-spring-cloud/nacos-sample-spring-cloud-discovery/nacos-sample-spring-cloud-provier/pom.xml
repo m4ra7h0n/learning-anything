@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nacos-sample-spring-cloud-discovery-provier</artifactId>
+    <artifactId>nacos-sample-spring-cloud-provier</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos-sample-spring-cloud-discovery-provier</name>
-    <description>nacos-sample-spring-cloud-discovery-provier</description>
+    <name>nacos-sample-spring-cloud-provier</name>
+    <description>nacos-sample-spring-cloud-provier</description>
 
     <dependencies>
         <dependency>
