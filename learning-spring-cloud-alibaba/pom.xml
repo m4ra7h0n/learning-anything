@@ -36,9 +36,8 @@
     </properties>
 
     <modules>
-        <module>nacos/nacos-discovery</module>
-        <module>nacos/nacos-discovery/nacos-discovery-customer</module>
-        <module>nacos/nacos-discovery/nacos-discovery-provider</module>
+        <module>learning-nacos</module>
+        <module>learning-rocketmq</module>
     </modules>
 
     <dependencyManagement>

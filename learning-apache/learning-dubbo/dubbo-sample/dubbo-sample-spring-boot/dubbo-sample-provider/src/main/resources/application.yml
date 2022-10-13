@@ -3,10 +3,10 @@ dubbo:
     name: springboot-privider
   protocol:
     name: dubbo
-    port: 20880
+    port: -1
   registry:
-    address: zookeeper://127.0.0.1:2181
-
-spring:
-  application:
-    name: dubbo-sample-provider
+#    id: zk-registry
+    address: nacos://127.0.0.1:8848
+#    address: zookeeper://127.0.0.1:2181
+#  config-center:
+#    address: zookeeper://127.0.0.1:2181

@@ -1,12 +1,14 @@
 dubbo:
   registry:
-    address: 127.0.0.1:2181
+    address: nacos://127.0.0.1:8848
+  #    id: zk-registry
+#    address: zookeeper://127.0.0.1:2181
   protocol:
     name: dubbo
+    port: -1
   application:
     name: springboot-consumer
+#  config-center:
+#    address: zookeeper://127.0.0.1:2181
 server:
   port: 8082
-spring:
-  application:
-    name: dubbo-sample-consumer

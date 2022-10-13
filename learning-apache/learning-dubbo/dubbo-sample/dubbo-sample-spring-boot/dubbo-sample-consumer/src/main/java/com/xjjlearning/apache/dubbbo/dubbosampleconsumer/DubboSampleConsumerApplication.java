@@ -1,6 +1,7 @@
 package com.xjjlearning.apache.dubbbo.dubbosampleconsumer;
 
 import com.xjjlearning.apache.dubbo.dubbosampleapi.IHelloService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.Reference;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +21,8 @@ public class DubboSampleConsumerApplication {
     @RestController
     public class HelloController {
 
-        @Reference(url = "dubbo://127.0.0.1:20880/com.xjjlearning.apache.dubbo.dubbosampleapi.IHelloService")
+//        @Reference(url = "dubbo://127.0.0.1:20880/com.xjjlearning.apache.dubbo.dubbosampleapi.IHelloService")
+        @DubboReference
         private IHelloService helloService;
 
         @GetMapping("/say/{string}")

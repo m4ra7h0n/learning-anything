@@ -4,7 +4,6 @@ spring:
     port: 6379
 
 
-# 自定义starter
 xjj:
   redisson:
     host: localhost

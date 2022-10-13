@@ -1,6 +1,18 @@
 # intro    
 dubbo-sample部分是跟着《spring cloud alibaba原理与实战》搞的     
-  
+dubbo-sample/dubbbo-sample-spring-boot中添加了nacos作为注册中心
+
+# maven
+groupId: org.apache.dubbo
+
+## artifactId: dubbo-spring-boot-starter(0)
+引入dubbo-spring-boot-autoconfigure(1)
+(1)引入dubbo-spring-boot-autoconfigure-compatible(2) 和 dubbo(3)
+(2)引入dubbo(3)
+
+## artifactId: dubbo(3)
+和dubbo-spring-boot-starter重复
+
 # dubbo特性    
   
 ## dubboSPI      
