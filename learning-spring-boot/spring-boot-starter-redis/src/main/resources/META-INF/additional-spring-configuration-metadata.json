@@ -8,12 +8,12 @@
     },
     {
       "name": "xjj.redisson.password",
-      "type": "java.lang.Integer",
+      "type": "java.lang.String",
       "description": "Description for xjj.redisson.password."
     },
     {
       "name": "xjj.redisson.port",
-      "type": "java.lang.String",
+      "type": "java.lang.Integer",
       "defaultValue": "6379",
       "description": "Description for xjj.redisson.port."
     },

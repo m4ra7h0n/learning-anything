@@ -6,4 +6,4 @@ spring:
   application:
     name: service-provider #be care
 server:
-  port: 8081
+  port: 8082

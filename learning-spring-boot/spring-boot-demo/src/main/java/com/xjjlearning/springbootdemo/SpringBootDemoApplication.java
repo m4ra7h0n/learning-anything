@@ -1,19 +1,15 @@
 package com.xjjlearning.springbootdemo;
 
-import org.redisson.api.RedissonClient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration;
+import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
 
 @SpringBootApplication
 public class SpringBootDemoApplication {
 
-    @Autowired
-    RedissonClient redissonClient;
-
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);
+//        AnnotatedBeanDefinitionReader
     }
 
 }

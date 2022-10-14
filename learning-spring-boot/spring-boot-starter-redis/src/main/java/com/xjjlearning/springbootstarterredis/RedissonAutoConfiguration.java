@@ -4,7 +4,6 @@ import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 import org.redisson.config.SingleServerConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -13,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.util.StringUtils;
 
 @AutoConfiguration
-@ConditionalOnClass({Redisson.class})
+@ConditionalOnClass(Redisson.class)
 @EnableConfigurationProperties(RedissonProperties.class)
 public class RedissonAutoConfiguration {
     @Bean
@@ -24,7 +23,7 @@ public class RedissonAutoConfiguration {
             prefix = "rediss://";
         }
         SingleServerConfig singleServerConfig = config.useSingleServer()
-                .setAddress(prefix + redissonProperties.getHost())
+                .setAddress(prefix + redissonProperties.getHost() + ":" + redissonProperties.getPort())
                 .setConnectTimeout(redissonProperties.getTimeout());
         if (!StringUtils.isEmpty(redissonProperties.getPassword())) {
             singleServerConfig.setPassword(redissonProperties.getPassword());
