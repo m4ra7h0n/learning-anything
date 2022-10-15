@@ -1,8 +1,13 @@
 package com.xjjlearning.springcloud.nacossamplespringcloudprovier;
 
+
+import com.alibaba.cloud.nacos.NacosDiscoveryAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration;
+import org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration;
 import org.springframework.cloud.client.serviceregistry.ServiceRegistry;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

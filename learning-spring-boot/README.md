@@ -30,6 +30,7 @@ listen包里写了demo, 有三个东西
 1.event(事件)  
 2.listener(监听事件变动)  
 3.publisher(改变事件)  
+4.multicaster(广播)
 很好理解, 发布订阅模式  
   
   
@@ -99,6 +100,7 @@ SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.Sprin
              ----> beanFactory.preInstantiateSingletons();  // Instantiate all remaining (non-lazy-init) singletons.  
              .... 神他妈多, 循环依赖、bean 后置处理器运用、aop 代理(我先不看, 先撸框架)  
         ---> finishRefresh(); //发布容器刷新完成事件  
+             ---->WebServerInitializedEvent
   
 -> afterRefresh() //spring容器后置处理  
 -> listeners.started(); //发布全部完成事件  
