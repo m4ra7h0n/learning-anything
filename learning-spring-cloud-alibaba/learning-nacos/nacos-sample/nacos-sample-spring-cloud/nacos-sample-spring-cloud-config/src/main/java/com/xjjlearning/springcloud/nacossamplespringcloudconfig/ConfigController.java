@@ -2,7 +2,6 @@ package com.xjjlearning.springcloud.nacossamplespringcloudconfig;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +14,10 @@ public class ConfigController {
     @Value("${useLocalCache:false}")
     private boolean useLocalCache;
 
-    @Value("${test:ok}")
-    private String test;
+    //bootstrap.properties中设置的spring.application.name会作为DataId查询nacos
+    //查询后会变成application.properties中的值, 可进行Value
+    @Value("${content:nothing}")
+    private String content;
     /**
      * http://localhost:8080/config/get
      */
@@ -25,8 +26,8 @@ public class ConfigController {
         return useLocalCache;
     }
 
-    @RequestMapping("/getTest")
+    @RequestMapping("/getContent")
     public String getTest() {
-        return test;
+        return content;
     }
 }

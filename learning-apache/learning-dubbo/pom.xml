@@ -17,5 +17,6 @@
 
     <modules>
         <module>dubbo-sample</module>
+        <module>dubbo-protocol</module>
     </modules>
 </project>

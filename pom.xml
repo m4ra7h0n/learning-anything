@@ -32,6 +32,7 @@
         <module>learning-spring-boot</module>
         <module>learning-front</module>
         <module>learning-hack</module>
+        <module>learning-algorithm</module>
     </modules>
 
     <scm>

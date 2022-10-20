@@ -21,7 +21,7 @@ AutoConfigurationImportSelector.class继承了ImportSelector, 其中需要定义
   
 # starter是什么    
 1.starter中定义Properties类, 用于application.properties中的配置选项, 该类需要添加注解@ConfigurationProperties(prefix = "xjj.redisson"), 其中perfix为前缀    
-2.starter中还要定义某个类的自动配置类, 该类需要添加@EnableConfigurationProperties注解, 参数为Properties类, 并将该类写入resources/META-INF/spring.factories作为springboot自动加载配置的实现    
+2.starter中还要定义某个类的自动配置类, 该类需要添加@EnableConfigurationProperties注解, 参数为Properties类, 并将该类写入resources/META-INF/spring.factories作为springboot自动加载配置的实现(SpringFactoriesLoader->loadSpringFactories()加载)    
 3.resources/META-INF/additional-spring-configuration-metadata.json作为application.properties的提示信息, 可设置默认值    
   
 # 事件监听机制(EventListener)  

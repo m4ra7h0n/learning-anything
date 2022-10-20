@@ -1,17 +1,20 @@
 package com.xjjlearning.springcloud.nacossamplespringboot.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
+import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("config")
+@RequestMapping("/config")
+@NacosPropertySource(dataId = "config", autoRefreshed = true)
 public class ConfigController {
-    @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
-    private boolean useLocalCache;
+    @NacosValue(value = "${content:nothing}", autoRefreshed = true)
+    private String content;
 
     @RequestMapping(value = "/get")
-    public boolean get() {
-        return useLocalCache;
+    public String get() {
+        return content;
     }
 }

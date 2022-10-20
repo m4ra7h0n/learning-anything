@@ -38,6 +38,7 @@
     <modules>
         <module>learning-nacos</module>
         <module>learning-rocketmq</module>
+        <module>learning-seata</module>
     </modules>
 
     <dependencyManagement>

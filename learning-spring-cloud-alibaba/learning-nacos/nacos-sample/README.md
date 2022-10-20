@@ -1,3 +1,5 @@
+# 一. nacos-1.x
+
 # nacos客户端  
 这里的nacos-discovery就相当于dubbo, 在分布式环境中作为注册中心, 以及rpc调用  
 **org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:0.2.2.RELEASE**
@@ -49,9 +51,23 @@ subscribe()->hostReactor.getServiceInfo()->scheduleUpdateIfAbsent()->addTask()
 ## 监控服务端push
 PushReceiver.run()  //当服务端发送push的时候监控(未看源码)
 
-**com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.1.1.RELEASE**
-新版 bind() 在 AbstractAutoServiceRegistration 的 onApplicationEvent 中
-新版的用了async，又加了什么watch 看不懂
+## 服务启动读取Bootstrap.yml加载远程配置到Environment
+preparedEnvironment() //主要是找自动装配的类com.alibaba.cloud.nacos.NacosConfigBootStrapConfiguration
+    中触发listeners 中的BootstrapApplicationListener加载远程配置
+    ->bootstrapServiceContext()
+    ->builder.sources(BootstrapImportSelectorConfiguration.class);
+    ->selectImports()->
+    List<String> names = new ArrayList<>(SpringFactoriesLoader.loadFactoryNames(BootstrapConfiguration.class, classLoader));
+prepareContext() //确实可以算作容器前的准备了
+    ->PropertySourceBootstrapConfiguration
+    ->locator.locateCollection(environment); //加载远程配置
+    ->locater.locate() //NacosPropertySourceLocator
+
+## nacos config核心
+### 继续跟进NacosPropertySourceLocator
+locater.loacte()
+->loadApplicationConfiguration()->loadNacosDataIfPresent()->loadNacosPropertySource()->build()->loadNacosData()
+ ->ApplicationReadyEvent -->NacosContextRefresher监听
 
 # nacos服务端(nacos-1.1.4)
 ## 服务注册
@@ -86,7 +102,13 @@ InstanceController
 
 
 
-# 总结
+# 二. nacos-2.x
+结构发生了一些变化
+**com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.1.1.RELEASE**
+新版 bind() 在 AbstractAutoServiceRegistration 的 onApplicationEvent 中
+新版的用了async，又加了什么watch 看不懂
+
+# 三. 总结
 ## 心跳
 1.有客户端注册的时候，客户端维持5s一次的心跳发送给服务端，发送接口为/instance/beat，同时服务端检测一遍所有的客户端心跳是否超时，并清除
 2.客户端调用/instance/beat时，服务端执行一个立即检查该心跳的方法，并标记该客户端为健康状态

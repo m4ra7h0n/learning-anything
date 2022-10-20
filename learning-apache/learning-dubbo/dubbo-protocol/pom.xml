@@ -8,11 +8,11 @@
         <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.xjjlearning.apache.dubbo</groupId>
-    <artifactId>dubbo-sample-spring-cloud-api</artifactId>
+    <groupId>com.xjjlearninig.dubbo</groupId>
+    <artifactId>dubbo-protocol</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dubbo-sample-spring-cloud-api</name>
-    <description>dubbo-sample-spring-cloud-api</description>
+    <name>dubbo-protocol</name>
+    <description>dubbo-protocol</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -27,6 +27,22 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>3.0.5</version>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
