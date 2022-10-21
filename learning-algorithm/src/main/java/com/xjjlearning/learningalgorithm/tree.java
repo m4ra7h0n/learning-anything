@@ -16,7 +16,6 @@ public class tree {
         }
     }
 
-    //中序遍历意味着root放在中间访问, 左中右
     public static void frontTrival(TreeNode root) {
 //        Stack<TreeNode> stack = new Stack<>();
 //        List<Integer> list = new ArrayList<>();
@@ -45,8 +44,8 @@ public class tree {
         }
     }
 
+    //中序遍历意味着root放在中间访问, 左中右
     public static void midTrival(TreeNode root){
-        //中序遍历意味着root放在中间访问, 左中右
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
         while (!stack.isEmpty() || node != null) {
