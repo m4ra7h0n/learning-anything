@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>learning-sentinel</artifactId>
+		<groupId>com.xjjlearning.alibaba.cloud</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>sentinel-spring-cloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sentinel-spring-cloud</name>
+	<description>sentinel-spring-cloud</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+			<version>${spring.cloud.alibaba.version}</version>
+		</dependency>
+
+		<!--  持久化, sentin了默认存储在内存中  -->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-nacos</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+
+<!--		nacos-api-->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-extension</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sentinel-spring-cloud
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8090
+      datasource:
+        - nacos:
+            server-addr: 127.0.0.1:8848
+            data-id: com.xjjlearning.alibaba.cloud.sentinel.demo.flow.rule
+            group-id: Sentinel_Demo
+            data-type: json
+            rule-type: flow
+server:
+  port: 8081

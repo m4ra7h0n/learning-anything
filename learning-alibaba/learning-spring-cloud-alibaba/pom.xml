@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <version>0.0.1-SNAPSHOT</version>
-    <groupId>com.xjjlearning.alibaba.springcloud</groupId>
+    <groupId>com.xjjlearning.alibaba.cloud</groupId>
     <artifactId>learning-spring-cloud-alibaba</artifactId>
     <name>spring cloud alibaba</name>
     <description>spring-cloud-alibaba</description>
@@ -39,6 +39,7 @@
         <module>learning-nacos</module>
         <module>learning-rocketmq</module>
         <module>learning-seata</module>
+        <module>learning-sentinel</module>
     </modules>
 
     <dependencyManagement>

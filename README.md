@@ -1,24 +1,14 @@
 # learning anything 
 
-| 模块                            | 描述                     |
-|-------------------------------|------------------------|
-| learning-docs                 | pdf/文档资源               |
-| learning-apache               | 学习apache下的组件           |
-| learning-spring-boot          | 学习springboot           |
-| learning-spring-cloud-alibaba | 学习spring-cloud-alibaba |
-| learning-front                | 学习前端                   |
-| learning-hack                 | 复现漏洞                   |
-
-[learning-docs](https://github.com/x-j-j/learning-anything/tree/master/learning-docs)  
-learning-apache  
-    - [learning-dubbo](https://github.com/x-j-j/learning-anything/tree/master/learning-apache/learning-dubbo)  
-    - [learning-maven](https://github.com/x-j-j/learning-anything/tree/master/learning-apache/learning-maven)  
-learning-front  
-    - [learning-vue](https://github.com/x-j-j/learning-anything/tree/master/learning-front/learning-front-vue)  
-learning-hack
-    - [spring](https://github.com/x-j-j/learning-anything/tree/master/learning-hack/spring)
-[learning-spring-boot](https://github.com/x-j-j/learning-anything/tree/master/learning-spring-boot)  
-[learning-spring-cloud-alibaba](https://github.com/x-j-j/learning-anything/tree/master/learning-spring-cloud-alibaba)  
+| 模块                   | 描述           |
+|----------------------|--------------|
+| learning-docs        | pdf/文档资源     |
+| learning-apache      | 学习apache下的组件 |
+| learning-spring-boot | 学习springboot |
+| learning-alibaba     | 学习alibaba组件  |
+| learning-front       | 学习前端         |
+| learning-hack        | 复现漏洞         |
+| learning-algorithm   | 学习算法         |
 
 # ps学习建议  
 ## 方法论
