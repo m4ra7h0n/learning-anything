@@ -16,7 +16,7 @@
 	<modules>
 		<module>sentinel-spring-cloud-example</module>
 		<module>sentinel-nacos-datasource-example</module>
-		<module>sentinel-dubbo-example</module>
+		<module>sentinel-apache-dubbo-example</module>
 	</modules>
 
 </project>

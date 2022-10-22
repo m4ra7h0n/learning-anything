@@ -16,8 +16,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>learning-guava</module>
-		<module>learning-grpc</module>
+		<module>learning-google-guava</module>
+		<module>learning-google-grpc</module>
 	</modules>
 
 	<properties>

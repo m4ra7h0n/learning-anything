@@ -1,0 +1,17 @@
+dubbo:
+  protocol:
+    port: -1
+    name: dubbo
+  application:
+    name: dubbo-sample-spring-cloud-provider  #dubbo??????application???
+spring:
+  application:
+    name: dubbo-sample-spring-cloud-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#    zookeeper:
+#      discovery:
+#        register: true
+#      connect-string: 127.0.0.1:2181

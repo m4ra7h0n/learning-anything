@@ -1,0 +1,13 @@
+dubbo:
+  protocol:
+    port: -1
+    name: dubbo
+  application:
+    name: sentinel-apache-dubbo-provider-example #dubbo??????application???
+spring:
+  application:
+    name: sentinel-apache-dubbo-provider-example
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
