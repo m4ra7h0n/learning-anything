@@ -12,7 +12,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sentinel-nacos-datasource-example</name>
 	<description>sentinel-nacos-datasource-example</description>
-
+<!--详见	https://github.com/alibaba/Sentinel/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%99%E6%89%A9%E5%B1%95#datasource-%E6%89%A9%E5%B1%95)%E3%80%82-->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -24,16 +24,22 @@
 			<artifactId>sentinel-core</artifactId>
 		</dependency>
 
-<!--		sentinel-nacos-->
+
+		<!--	规则nacos-api 必加-->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-transport-simple-http</artifactId>
+		</dependency>
+
+		<!--		sentinel-nacos 推模式-->
 		<dependency>
 			<groupId>com.alibaba.csp</groupId>
 			<artifactId>sentinel-datasource-nacos</artifactId>
 		</dependency>
-
-<!--		nacos-api-->
-		<dependency>
-			<groupId>com.alibaba.csp</groupId>
-			<artifactId>sentinel-datasource-extension</artifactId>
-		</dependency>
+<!--		sentinel-nacos拉模式-->
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.csp</groupId>-->
+<!--			<artifactId>sentinel-datasource-extension</artifactId>-->
+<!--		</dependency>-->
 	</dependencies>
 </project>

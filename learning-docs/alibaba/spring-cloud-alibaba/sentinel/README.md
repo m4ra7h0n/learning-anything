@@ -17,3 +17,7 @@ rt: 平均响应时长
 occupiedPassQps: 优先通过的请求
 concurrency: 并发量
 classification: 资源类型
+
+
+# 其他说明
+sentinel-examples是官方examples源码

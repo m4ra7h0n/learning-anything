@@ -11,7 +11,7 @@ public class NacosConfigSender {
         final String dataId = "com.xjjlearning.alibaba.cloud.sentinel.demo.flow.rule";
         final String rule = "[\n"
                 + "  {\n"
-                + "    \"resource\": \"/dash\",\n"
+                + "    \"resource\": \"/say\",\n"
                 + "    \"controlBehavior\": 0,\n"
                 + "    \"count\": 1,\n"
                 + "    \"grade\": 1,\n"
