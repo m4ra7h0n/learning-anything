@@ -33,6 +33,7 @@
         <module>learning-front</module>
         <module>learning-hack</module>
         <module>learning-algorithm</module>
+        <module>learning-google</module>
     </modules>
 
     <scm>
