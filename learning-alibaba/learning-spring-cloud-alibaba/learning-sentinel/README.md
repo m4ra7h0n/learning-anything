@@ -7,3 +7,9 @@
 
 # sentinel dubbo
 consumer/provider加流控规则都行
+
+# sentinel adapter
+dubbo-adapter主要包括针对 Service Provider 和 Service Consumer 实现的 Filter
+
+# dubbo接入sentinel
+7.8.1未搞

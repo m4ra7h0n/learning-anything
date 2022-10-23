@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>nacos-sample-spring-cloud</artifactId>
-        <groupId>com.xjjlearning.alibaba.cloud</groupId>
+        <groupId>com.xjjlearning.alibaba.cloud.nacos</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

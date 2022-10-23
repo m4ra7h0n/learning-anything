@@ -2,17 +2,18 @@
 dubbo-sample部分是跟着《spring cloud alibaba原理与实战》搞的     
 dubbo-sample/dubbbo-sample-spring-boot中添加了nacos作为注册中心
 
-# maven的几个版本区别
-groupId: org.apache.dubbo
+# maven 版本选择
+2.6.x及以下版本，请使用：com.alibaba.dubbo
+2.7.0开始，使用org.apache.dubbo
 
-## artifactId: dubbo-spring-boot-starter(0)
+# maven的几个版本区别
+## groupId: org.apache.dubbo / artifactId: dubbo-spring-boot-starter(0)
 引入dubbo-spring-boot-autoconfigure(1)
 (1)引入dubbo-spring-boot-autoconfigure-compatible(2) 和 dubbo(3)
 (2)引入dubbo(3)
 
-## artifactId: dubbo(3)
+## groupId: org.apache.dubbo / artifactId: dubbo(3)
 和dubbo-spring-boot-starter重复
-
 # dubbo 踩坑
 provider发布之后如果添加了maven的pom, 必须重启, 否则consumer无法调用
 
@@ -22,6 +23,9 @@ provider发布之后如果添加了maven的pom, 必须重启, 否则consumer无�
 1. 官方定义SPI接口(service provider interface), 实现方实现接口进行扩展    
 2.调用的时候通过ExtensionLoader.getExtensionLoader(SPIInterface.class).getExtension("extensionName")获得该扩展    
 3.不同于javaSPI, dubboSPI需要resources/META-INF/dubbo/下添加以接口包名为名称的文件, 内容为key-value形式, key作为调用的extensionName    
+
+### dubboFilter
+基于spi扩展的filter  在客户端/服务端  调用的时候进行方法拦截
   
 ## dubboAdaptive  
 1.dubboSPI其中的一种机制, 用来动态加载类扩展类, 可以在接口方法上加, 也可在类上加, 在接口方法上加使用代理模式(javassist), 而在类上加则不会有代理  

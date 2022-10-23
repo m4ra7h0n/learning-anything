@@ -8,32 +8,27 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>sentinel-spring-cloud</artifactId>
+	<artifactId>sentinel-parameter-flow-control-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sentinel-spring-cloud</name>
-	<description>sentinel-spring-cloud</description>
+	<name>sentinel-parameter-flow-control-example</name>
+	<description>sentinel-parameter-flow-control-example</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.csp</groupId>-->
+<!--			<artifactId>sentinel-parameter-flow-control</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
 		</dependency>
-
-		<!--  持久化, sentin了默认存储在内存中  -->
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.csp</groupId>-->
+<!--			<artifactId>sentinel-transport-simple-http</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>com.alibaba.csp</groupId>
-			<artifactId>sentinel-datasource-nacos</artifactId>
-		</dependency>
-
-<!--		nacos-api-->
-		<dependency>
-			<groupId>com.alibaba.csp</groupId>
-			<artifactId>sentinel-datasource-extension</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
 </project>

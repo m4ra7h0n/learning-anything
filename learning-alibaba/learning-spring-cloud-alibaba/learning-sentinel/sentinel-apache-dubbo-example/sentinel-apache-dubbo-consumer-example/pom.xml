@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>sentinel-apache-dubbo-example</artifactId>
-        <groupId>com.xjjlearning.alibaba.cloud</groupId>
+        <groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
         <version>0.0.1-SNAPSHOT</version>
 
     </parent>
@@ -26,7 +26,7 @@
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.xjjlearning.alibaba.cloud</groupId>
+            <groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
             <artifactId>sentinel-apache-dubbo-api-example</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -51,6 +51,21 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-transport-simple-http</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
+            <artifactId>sentinel-apache-dubbo-adapter-example</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
         </dependency>
     </dependencies>
 

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>learning-sentinel</artifactId>
-        <groupId>com.xjjlearning.alibaba.cloud</groupId>
+        <groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -18,6 +18,7 @@
         <module>sentinel-apache-dubbo-provider-example</module>
         <module>sentinel-apache-dubbo-api-example</module>
         <module>sentinel-apache-dubbo-consumer-example</module>
+        <module>sentinel-apache-dubbo-adapter-example</module>
     </modules>
 
 
@@ -28,6 +29,7 @@
         <spring-boot.version>2.1.11.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
+        <apache.dubbo.version>2.7.3</apache.dubbo.version>
 <!--        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>-->
     </properties>
 
@@ -47,6 +49,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--  内含dubbo  -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>

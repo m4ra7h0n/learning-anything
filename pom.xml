@@ -60,13 +60,13 @@
 <!--    may be useful-->
 
 <!--    热部署, 同时还需要开启配置advanced settings(高版本)-->
-<!--    <dependencies>-->
+    <dependencies>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-devtools</artifactId>-->
 <!--            <version>2.7.4</version>-->
 <!--        </dependency>-->
-<!--    </dependencies>-->
+    </dependencies>
 
     <build>
 <!--        skip the artifact-->

@@ -18,6 +18,8 @@ occupiedPassQps: 优先通过的请求
 concurrency: 并发量
 classification: 资源类型
 
+# sentinel-examples
+例子还是比较详细的  如果学习sentinel + dubbo  学习此文档要详细于 dubbo文档
 
 # 其他说明
 sentinel-examples是官方examples源码
