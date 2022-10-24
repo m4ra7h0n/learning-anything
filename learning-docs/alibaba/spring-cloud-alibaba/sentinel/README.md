@@ -1,3 +1,6 @@
+# 官方文档
+https://sentinelguard.io/zh-cn/index.html
+
 # 启动
 使用jdk-16
 java -jar sentinel-dashboard-1.8.5.jar --server.port=8090

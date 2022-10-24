@@ -34,6 +34,7 @@
         <module>learning-hack</module>
         <module>learning-algorithm</module>
         <module>learning-google</module>
+        <module>learning-database</module>
     </modules>
 
     <scm>

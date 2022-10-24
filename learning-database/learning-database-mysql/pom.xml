@@ -3,20 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>learning-spring-cloud-alibaba</artifactId>
-        <groupId>com.xjjlearning.alibaba.cloud</groupId>
+        <artifactId>learning-database</artifactId>
+        <groupId>com.xjjlearning.database</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xjjlearning.alibaba.cloud.seata</groupId>
-    <artifactId>learning-seata</artifactId>
+    <groupId>com.xjjlearning.database.mysql</groupId>
+    <artifactId>learning-database-mysql</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learning-seata</name>
-    <description>learning-seata</description>
-
+    <name>learning-database-mysql</name>
+    <description>learning-database-mysql</description>
     <packaging>pom</packaging>
-
     <modules>
-        <module>spring-boot-dubbo-seata</module>
+        <module>mybatis</module>
+        <module>mybatis-plus</module>
+        <module>hibernate</module>
     </modules>
 </project>
