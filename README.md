@@ -34,7 +34,7 @@
       - [x] 插件编写
 - learning-database
     - [ ] mysql
-        - [ ] mybatis
+        - [x] mybatis
         - [ ] mybatis-plus
         - [ ] hibernate
     - [ ] redis
