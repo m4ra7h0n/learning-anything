@@ -1,3 +1,5 @@
+《Maven实战》pdf
+
 # resource
 仓库地址(搜索maven)
 alibaba: https://developer.aliyun.com/mvn/search

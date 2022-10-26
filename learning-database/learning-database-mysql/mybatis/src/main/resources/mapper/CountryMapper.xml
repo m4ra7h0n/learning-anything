@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xjjlearning.database.mysql.mapper.CountryMapper">
+<!--    id: 当前select查询的唯一一个id resultType: 查询返回值类型-->
+    <select id="selectAll" resultType="Country">
+        select id,countryname,countrycode from country
+    </select>
+</mapper>

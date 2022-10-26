@@ -1,3 +1,5 @@
+《nacos架构与原理》pdf
+
 # nacos文件夹
 nacos-bin.zip  ->  直接可执行的nacos
 nacos-docker  ->  docker搭建nacos集群(某github项目, 开箱即用)

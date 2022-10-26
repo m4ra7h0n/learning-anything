@@ -1,14 +1,54 @@
 # learning anything 
 
-| 模块                   | 描述           |
-|----------------------|--------------|
-| learning-docs        | pdf/文档资源     |
-| learning-apache      | 学习apache下的组件 |
-| learning-spring-boot | 学习springboot |
-| learning-alibaba     | 学习alibaba组件  |
-| learning-front       | 学习前端         |
-| learning-hack        | 复现漏洞         |
-| learning-algorithm   | 学习算法         |
+笔者学习顺序依次如下：  
+1.《Maven实战》  
+2.《Spring Cloud Alibaba原理与实战》中途学习《Mybatis从入门到精通》
+
+所有pdf资源放在阿里云盘(永远有效): https://www.aliyundrive.com/s/ngpTUNYpZ55
+
+# 完成列表
+- learning-algorithm
+- learning-alibaba
+    - spring-cloud-alibaba
+        - [ ] nacos
+          - [ ] 源码
+            - [x] discovery
+            - [ ] config
+        - [ ] rocketmq
+            - [ ] 源码
+        - [ ] seata
+            - [ ] 源码
+        - [ ] sentinel
+            - [x] 流控
+            - [x] 热点参数
+            - [ ] 源码
+- learning-apache
+    - [ ] dubbo
+        - [ ] rpc
+            - [ ] dubbo
+            - [ ] grpc
+        - [x] spi
+        - [ ] 源码
+    - [x] maven
+      - [x] 基础
+      - [x] 插件编写
+- learning-database
+    - [ ] mysql
+        - [ ] mybatis
+        - [ ] mybatis-plus
+        - [ ] hibernate
+    - [ ] redis
+- learning-docs
+- learning-front
+    - [ ] vue
+- learning-google
+  - [ ] grpc
+  - [ ] guava
+- learning-hack
+- learning-spring-boot
+  - [x] 手写starter
+  - [ ] 源码
+
 
 # ps学习建议  
 ## 方法论
