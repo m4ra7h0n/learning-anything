@@ -1,13 +1,13 @@
-package com.xjjlearning.alibaba.cloud.seata;
+package com.xjjlearning.alibaba.cloud.seata.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExamplesCommonApplication {
+public class ExamplesOrderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExamplesCommonApplication.class, args);
+		SpringApplication.run(ExamplesOrderApplication.class, args);
 	}
 
 }

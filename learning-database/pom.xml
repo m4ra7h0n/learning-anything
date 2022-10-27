@@ -20,6 +20,7 @@
 
     <modules>
         <module>learning-database-mysql</module>
+        <module>learning-database-redis</module>
     </modules>
 
     <dependencyManagement>
@@ -33,4 +34,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>

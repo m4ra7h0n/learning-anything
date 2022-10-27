@@ -1,13 +1,13 @@
-package com.xjjlearning.alibaba.cloud.seata;
+package com.xjjlearning.alibaba.cloud.seata.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExamplesStockApplication {
+public class ExamplesAccountApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ExamplesStockApplication.class, args);
+        SpringApplication.run(ExamplesAccountApplication.class, args);
     }
 
 }
