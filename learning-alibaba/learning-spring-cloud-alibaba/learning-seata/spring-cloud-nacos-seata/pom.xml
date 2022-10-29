@@ -13,5 +13,61 @@
 	<name>spring-cloud-nacos-seata</name>
 	<description>spring-cloud-nacos-seata</description>
 	<packaging>pom</packaging>
+	<modules>
+		<module>order-service</module>
+		<module>stock-service</module>
+	</modules>
 
+	<properties>
+		<druid.version>1.2.14</druid.version>
+		<mybatis-plus.version>3.5.2</mybatis-plus.version>
+
+		<lombok.version>1.18.24</lombok.version>
+
+		<spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
+
+<!--		nacos-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.nacos</groupId>
+			<artifactId>nacos-client</artifactId>
+		</dependency>
+
+<!--		seata-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+		</dependency>
+
+<!--		数据库-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.30</version>
+		</dependency>
+	</dependencies>
 </project>

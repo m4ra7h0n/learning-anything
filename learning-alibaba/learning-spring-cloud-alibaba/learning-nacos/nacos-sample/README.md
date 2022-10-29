@@ -4,7 +4,7 @@
 这里的nacos-discovery就相当于dubbo, 在分布式环境中作为注册中心, 以及rpc调用  
 **org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:0.2.2.RELEASE**
 ## 服务注册
-该版本为孵化版本, 最新版artifactId为com.alibaba.cloud
+org.springframework.cloud该版本为孵化版本, 最新版artifactId为com.alibaba.cloud
 源码思路:  
 **思路1:**  
 maven依赖入手: spring-cloud-starter-alibaba-nacos-discovery(springcloud插件)

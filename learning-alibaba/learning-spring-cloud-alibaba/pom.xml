@@ -20,10 +20,11 @@
 
     <properties>
         <!-- Spring Boot -->
-        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <!--  版本过低nacos启动报错  -->
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
 
         <!-- Spring Cloud -->
-        <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
+        <spring.cloud.version>Hoxton.SR4</spring.cloud.version>
         <spring.cloud.alibaba.version>2.1.2.RELEASE</spring.cloud.alibaba.version>
 
         <curator.version>4.0.1</curator.version>
@@ -33,6 +34,8 @@
 
         <!-- Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <modules>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: stock-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/seata_stock?allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xiaozijian2000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+server:
+  port: 9092
+

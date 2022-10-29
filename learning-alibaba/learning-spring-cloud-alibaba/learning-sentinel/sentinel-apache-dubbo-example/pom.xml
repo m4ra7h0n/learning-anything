@@ -30,7 +30,6 @@
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
         <apache.dubbo.version>2.7.3</apache.dubbo.version>
-<!--        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>-->
     </properties>
 
     <dependencyManagement>

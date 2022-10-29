@@ -3,7 +3,7 @@ dubbo:
     port: -1
     name: dubbo
   application:
-    name: sentinel-apache-dubbo-provider-example #dubbo??????application???
+    name: sentinel-apache-dubbo-provider-example
 spring:
   application:
     name: sentinel-apache-dubbo-provider-example

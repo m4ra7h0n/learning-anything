@@ -2,7 +2,12 @@
 
 笔者学习顺序依次如下：  
 1.《Maven实战》  
-2.《Spring Cloud Alibaba原理与实战》中途学习《Mybatis从入门到精通》
+2.《Spring Cloud Alibaba原理与实战》中途学习:
+(1)《Mybatis从入门到精通》
+(2) mybatis-plus官网文档
+(3) druid官网文档
+(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)
+(5) 各个组件的源码 (官网最新版本)
 
 所有pdf资源放在阿里云盘(永远有效): https://www.aliyundrive.com/s/ngpTUNYpZ55
 
@@ -21,6 +26,8 @@
         - [ ] sentinel
             - [x] 流控
             - [x] 热点参数
+            - [ ] 降级
+            - [ ] dubbo-adapter
             - [ ] 源码
 - learning-apache
     - [ ] dubbo
@@ -35,7 +42,7 @@
 - learning-database
     - [ ] mysql
         - [x] mybatis
-        - [ ] mybatis-plus
+        - [x] mybatis-plus
         - [ ] hibernate
     - [ ] redis
 - learning-docs
@@ -44,6 +51,7 @@
 - learning-google
   - [ ] grpc
   - [ ] guava
+  - [ ] protocol buffer
 - learning-hack
 - learning-spring-boot
   - [x] 手写starter

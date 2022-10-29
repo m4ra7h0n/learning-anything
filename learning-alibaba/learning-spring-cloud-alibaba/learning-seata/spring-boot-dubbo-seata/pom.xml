@@ -23,17 +23,21 @@
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
+		<spring.version>5.0.8.RELEASE</spring.version>
+		<springboot.version>2.7.4</springboot.version>
+
 		<druid.version>1.2.14</druid.version>
 		<mybatis-plus.version>3.5.1</mybatis-plus.version>
-		<dubbo-boot.version>0.2.1.RELEASE</dubbo-boot.version>
+
 		<nacos.version>0.2.1.RELEASE</nacos.version>
-		<springboot.version>2.7.4</springboot.version>
 		<nacos-config-spring-boot.version>0.2.1</nacos-config-spring-boot.version>
-		<dubbo-registry-nacos.version>0.0.2</dubbo-registry-nacos.version>
-		<lombok.version>1.16.22</lombok.version>
-		<spring.version>5.0.8.RELEASE</spring.version>
-		<dubbo.version>2.6.7</dubbo.version>
 		<nacos-client.verison>1.0.0</nacos-client.verison>
+
+		<dubbo-boot.version>0.2.1.RELEASE</dubbo-boot.version>
+		<dubbo-registry-nacos.version>0.0.2</dubbo-registry-nacos.version>
+		<dubbo.version>2.6.7</dubbo.version>
+
+		<lombok.version>1.16.22</lombok.version>
 	</properties>
 
 <!--	版本重来-->

@@ -12,35 +12,33 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>nacos-sample-spring-cloud-discovery</name>
     <description>nacos-sample-spring-cloud-discovery</description>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+
     <packaging>pom</packaging>
     <modules>
         <module>nacos-sample-spring-cloud-provier</module>
         <module>nacos-sample-spring-cloud-consumer</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <!--   org.springframework.cloud版为孵化版本, 请使用com.alibaba.cloud  -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>0.2.2.RELEASE</version>
-            </dependency>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            &lt;!&ndash;   org.springframework.cloud版为孵化版本, 请使用com.alibaba.cloud  &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--                <version>0.2.2.RELEASE</version>-->
+<!--            </dependency>-->
 
-            <!--  pdf的版本  -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>2.1.1.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.nacos</groupId>
-                <artifactId>nacos-client</artifactId>
-                <version>1.1.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<!--            &lt;!&ndash;  pdf的版本  &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--                <version>2.1.1.RELEASE</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.nacos</groupId>-->
+<!--                <artifactId>nacos-client</artifactId>-->
+<!--                <version>1.1.0</version>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 </project>

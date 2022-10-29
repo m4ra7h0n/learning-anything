@@ -14,6 +14,7 @@
 	<description>sentinel-apache-dubbo-adapter-example</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<apache.dubbo.version>2.7.3</apache.dubbo.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -22,18 +23,18 @@
 		</dependency>
 
 <!--		包含dubbo-->
-<!--		<dependency>-->
-<!--			<groupId>com.alibaba.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-dubbo</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-dubbo</artifactId>
+		</dependency>
 
 		<!--		2.6.x及以下版本，请使用：com.alibaba.dubbo-->
 		<!--		2.7.0开始，使用org.apache.dubbo-->
-		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo</artifactId>
-			<version>${apache.dubbo.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.dubbo</groupId>-->
+<!--			<artifactId>dubbo</artifactId>-->
+<!--			<version>${apache.dubbo.version}</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
