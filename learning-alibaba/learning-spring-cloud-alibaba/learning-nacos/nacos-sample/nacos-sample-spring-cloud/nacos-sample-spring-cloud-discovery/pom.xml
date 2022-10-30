@@ -18,27 +18,4 @@
         <module>nacos-sample-spring-cloud-provier</module>
         <module>nacos-sample-spring-cloud-consumer</module>
     </modules>
-
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            &lt;!&ndash;   org.springframework.cloud版为孵化版本, 请使用com.alibaba.cloud  &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--                <version>0.2.2.RELEASE</version>-->
-<!--            </dependency>-->
-
-<!--            &lt;!&ndash;  pdf的版本  &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--                <version>2.1.1.RELEASE</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.nacos</groupId>-->
-<!--                <artifactId>nacos-client</artifactId>-->
-<!--                <version>1.1.0</version>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
 </project>

@@ -13,11 +13,15 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.xjjlearning.alibaba.cloud.seata.service;
+package com.xjjlearning.alibaba.cloud.seata.entity;
 
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.experimental.Accessors;
 
-import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 /**
  * Program Name: springcloud-nacos-seata
@@ -29,6 +33,16 @@ import javax.annotation.Resource;
  * @version 1.0
  * @date 2019/8/28 4:05 PM
  */
-@Service
-public class StockService {
+@Data
+@Accessors(chain = true)
+@TableName("order_tbl")
+public class Order {
+
+    @TableId(type = IdType.AUTO)
+    private Integer id;
+    private String userId;
+    private String commodityCode;
+    private Integer count;
+    private BigDecimal money;
+
 }

@@ -1,13 +1,68 @@
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
   application:
     name: order-service
   datasource:
     url: jdbc:mysql://localhost:3306/seata_order?allowMultiQueries=true
-    driver-class-name:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xiaozijian2000
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: SEATA_GROUP
 server:
   port: 9091
 
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  # ?????????my_test_tx_group??????????
+  tx-service-group: order-service-group
+#  enable-auto-data-source-proxy: false
+  service:
+    # 1.0.0???vgroup_mapping
+    vgroupMapping:
+      # ?????????my_test_tx_group??????????
+      order-service-group: default
+    grouplist:
+      default: 127.0.0.1:8091
+    enable-degrade: false
+    disable-global-transaction: false
+  store:
+    mode: db
+    db:
+      datasource: druid
+      db-type: mysql
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/seata?rewriteBatchedStatements=true
+      user: root
+      password: xiaozijian2000
+      min-conn: 5
+      max-conn: 100
+      global-table: global_table
+      branch-table: branch_table
+      lock-table: lock_table
+      distributed-lock-table: distributed_lock
+      query-limit: 100
+      max-wait: 5000
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      username: "nacos"
+      password: "nacos"
+      namespace: ""
+      data-id: seataServer.properties
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      cluster: default
+      namespace: ""
+      username: "nacos"
+      password: "nacos"
