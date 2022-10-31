@@ -4,4 +4,4 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 127.0.0.1:8090
+        dashboard: 47.95.7.37:8090

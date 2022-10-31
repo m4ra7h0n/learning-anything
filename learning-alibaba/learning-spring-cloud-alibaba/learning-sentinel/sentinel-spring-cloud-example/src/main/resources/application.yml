@@ -4,11 +4,11 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 127.0.0.1:8090
+        dashboard: 47.95.7.37:8090
       datasource:
         ds1: # datasource 1
           nacos:
-            server-addr: 127.0.0.1:8848
+            server-addr: 47.95.7.37:8848
             data-id: com.xjjlearning.alibaba.cloud.sentinel.demo.flow.rule
             group-id: Sentinel_Demo
             data-type: json

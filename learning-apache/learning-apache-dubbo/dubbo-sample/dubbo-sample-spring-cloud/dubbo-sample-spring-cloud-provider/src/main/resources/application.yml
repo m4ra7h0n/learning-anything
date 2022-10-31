@@ -10,8 +10,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.95.7.37:8848
 #    zookeeper:
 #      discovery:
 #        register: true
-#      connect-string: 127.0.0.1:2181
+#      connect-string: 47.95.7.37:2181

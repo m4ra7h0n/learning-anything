@@ -6,7 +6,7 @@ dubbo:
     port: -1
   registry:
 #    id: zk-registry
-    address: nacos://127.0.0.1:8848
-#    address: zookeeper://127.0.0.1:2181
+    address: nacos://47.95.7.37:8848
+#    address: zookeeper://47.95.7.37:2181
 #  config-center:
-#    address: zookeeper://127.0.0.1:2181
+#    address: zookeeper://47.95.7.37:2181

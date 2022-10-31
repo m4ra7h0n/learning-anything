@@ -20,6 +20,7 @@
     <modules>
         <module>nacos-sample</module>
         <module>nacos-cluster</module>
+        <module>nacos-config-sourcecode</module>
     </modules>
 
 </project>
