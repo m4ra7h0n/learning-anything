@@ -35,6 +35,9 @@
         <module>learning-algorithm</module>
         <module>learning-google</module>
         <module>learning-database</module>
+        <module>learning-reactor</module>
+        <module>learning-serverless</module>
+        <module>learning-netty</module>
     </modules>
 
     <scm>

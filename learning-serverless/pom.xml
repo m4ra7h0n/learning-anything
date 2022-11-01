@@ -8,18 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xjjlearning.alibaba</groupId>
-    <artifactId>learning-alibaba</artifactId>
+    <groupId>com.xjjlearning.serverless</groupId>
+    <artifactId>learning-serverless</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learning-alibaba</name>
-    <description>learning-alibaba</description>
-
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>learning-spring-cloud-alibaba</module>
-        <module>learning-alibaba-druid</module>
-        <module>learning-alibaba-arthas</module>
-    </modules>
-
+    <name>learning-serverless</name>
+    <description>learning-serverless</description>
 </project>

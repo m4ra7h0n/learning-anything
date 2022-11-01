@@ -16,6 +16,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring</module>
+        <module>hack-spring</module>
     </modules>
 </project>
