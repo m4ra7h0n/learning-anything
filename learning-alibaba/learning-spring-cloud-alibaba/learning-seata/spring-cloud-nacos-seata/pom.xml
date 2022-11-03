@@ -66,11 +66,12 @@
 			</exclusions>
 		</dependency>
 
-<!--		客户端和服务端版本一致-->
+<!--		客户端和服务端版本一致 或者不一致也行(tested)-->
 		<dependency>
 			<groupId>io.seata</groupId>
 			<artifactId>seata-spring-boot-starter</artifactId>
-			<version>1.5.2</version>
+			<version>1.4.2</version>
+<!--			<version>1.5.2</version>-->
 		</dependency>
 
 <!--		数据库-->
@@ -91,5 +92,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.30</version>
 		</dependency>
+
 	</dependencies>
 </project>

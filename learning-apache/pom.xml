@@ -20,6 +20,7 @@
         <module>learning-apache-dubbo</module>
         <module>learning-apache-zookeeper</module>
         <module>learning-apache-flink</module>
+        <module>learning-apache-rocketmq</module>
     </modules>
 
 </project>

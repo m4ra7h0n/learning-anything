@@ -6,7 +6,7 @@ import com.alibaba.nacos.api.config.ConfigService;
 
 public class NacosConfigSender {
     public static void main(String[] args) throws Exception{
-        final String remoteAddress = "localhost:8848";
+        final String remoteAddress = "47.95.7.37:8848";
         final String groupId = "Sentinel_Demo";
         final String dataId = "com.xjjlearning.alibaba.cloud.sentinel.demo.flow.rule";
         final String rule = "[\n"

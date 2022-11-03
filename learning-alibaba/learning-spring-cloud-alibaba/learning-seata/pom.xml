@@ -17,8 +17,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-dubbo-seata</module>
         <module>spring-cloud-alibaba-samples</module>
         <module>spring-cloud-nacos-seata</module>
+        <module>spring-cloud-dubbo-seata</module>
     </modules>
 </project>

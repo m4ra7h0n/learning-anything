@@ -20,6 +20,7 @@ class NacosConfigSourcecodeApplicationTests {
 
     @Test
     void contextLoads() throws NacosException, InterruptedException {
+//        ServiceInfoHolder
         Properties properties = new Properties();
         properties.put(PropertyKeyConst.SERVER_ADDR, "47.95.7.37:" + 8848);
         properties.put(PropertyKeyConst.CONFIG_LONG_POLL_TIMEOUT, "20000");

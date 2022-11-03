@@ -1,6 +1,8 @@
 # intro    
 dubbo-sample部分是跟着《spring cloud alibaba原理与实战》搞的     
 dubbo-sample/dubbbo-sample-spring-boot中添加了nacos作为注册中心
+如果使用老版dubbo 则用dubbo-sample-spring-cloud(com.alibaba.cloud)
+如果使用新版dubbo 则用dubbo-sample-spring-boot(org.apache.dubbo)
 
 # maven 版本选择
 2.6.x及以下版本，请使用：com.alibaba.dubbo

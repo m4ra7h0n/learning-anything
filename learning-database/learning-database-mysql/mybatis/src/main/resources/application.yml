@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/mybatis
+    url: jdbc:mysql://47.95.7.37:3306/mybatis
     username: root
-    password: xiaozijian2000
+    password: EAy75mgwk9Bzs3!
 
 mybatis:
   # discovery mapper dir automatically

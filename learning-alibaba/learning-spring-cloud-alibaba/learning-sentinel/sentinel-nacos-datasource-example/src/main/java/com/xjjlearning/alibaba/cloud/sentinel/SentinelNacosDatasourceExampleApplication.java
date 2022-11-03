@@ -17,7 +17,7 @@ import java.util.Properties;
 public class SentinelNacosDatasourceExampleApplication {
 
 	private static final String KEY = "/say";
-	private static final String remoteAddress = "localhost:8848";
+	private static final String remoteAddress = "47.95.7.37:8848";
 	private static final String groupId = "Sentinel_Demo";
 	private static final String dataId  = "com.xjjlearning.alibaba.cloud.sentinel.demo.flow.rule";
 	private static boolean isDemoNamespace = false;

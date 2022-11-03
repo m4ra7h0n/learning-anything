@@ -89,7 +89,25 @@ SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.Sprin
              ----> postProcessBeanDefinitionRegistry(registry) //执行BeanDefinitionRegistryPostProcessor自定义方法  
              ----> postProcessBeanDefinitionRegistry(registry) //执行BeanFactoryPostProcessor自定义方法  
              ... 太多了一大堆看不懂  
-        ---> registerBeanPostProcessors(beanFactory); //注册 BeanPostProcessors，bean 后置处理器  
+        ---> registerBeanPostProcessors(beanFactory); // 注册拦截bean创建的bean处理器
+             //先注册实现PriorityOrdered 的 bean后置处理器
+             //再注册实现Ordered 的 bean后置处理器
+             ----> beanFactory.getBean(GlobalTransactionScanner, BeanPostProcessor.class)  //分析seata的postprocessor
+                   //创建bean实例
+                   ----> createBean()
+                         ----> resolveBeanClass()  //动态加载类
+                         ----> prepareMethodOverrides()  //
+                         ----> resolveBeforeInstantiation() //允许bean后置处理器返回一个代理
+                         ----> doCreateBean(beanName, mbdToUse, args);
+                               ----> initializeBean(beanName, exposedObject, mbd);
+                                     ----> afterPropertiesSet(); //执行创建TM和RM
+                    
+             //最后注册所有常规的bean后置处理器
+
+
+
+
+
         ---> initMessageSource(); //初始化 MessageSource 组件（做国际化功能；消息绑定，消息解析）  
         ---> initApplicationEventMulticaster(); //初始化事件派发器，在注册监听器时会用到  
              ----> 可自定义applicationEventMulticaster  

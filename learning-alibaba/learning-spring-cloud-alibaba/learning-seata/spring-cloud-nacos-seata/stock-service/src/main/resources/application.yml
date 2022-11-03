@@ -2,10 +2,10 @@ spring:
   application:
     name: stock-service
   datasource:
-    url: jdbc:mysql://localhost:3306/seata_stock?allowMultiQueries=true
+    url: jdbc:mysql://47.95.7.37:3306/seata_stock?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: xiaozijian2000
+    password: EAy75mgwk9Bzs3!
     type: com.alibaba.druid.pool.DruidDataSource
   cloud:
     nacos:
@@ -31,14 +31,21 @@ seata:
     enable-degrade: false
     disable-global-transaction: false
   store:
-    mode: db
+    mode: file
+    file:
+      dir: sessionStore
+      max-branch-session-size: 16384
+      max-global-session-size: 512
+      file-write-buffer-cache-size: 16384
+      session-reload-read-size: 100
+      flush-disk-mode: async
     db:
       datasource: druid
       db-type: mysql
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://47.95.7.37:3306/seata?rewriteBatchedStatements=true
+      url: jdbc:mysql://47.95.7.37:3306/seata?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=GMT%2B8
       user: root
-      password: xiaozijian2000
+      password: EAy75mgwk9Bzs3!
       min-conn: 5
       max-conn: 100
       global-table: global_table
@@ -54,7 +61,7 @@ seata:
       group: SEATA_GROUP
       username: "nacos"
       password: "nacos"
-      namespace: ""
+      namespace:
       data-id: seataServer.properties
   registry:
     type: nacos
@@ -63,6 +70,6 @@ seata:
       server-addr: 47.95.7.37:8848
       group: SEATA_GROUP
       cluster: default
-      namespace: ""
+      namespace:
       username: "nacos"
       password: "nacos"

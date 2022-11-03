@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xjjlearning.apache.maven</groupId>
-        <artifactId>learning-maven</artifactId>
+        <artifactId>learning-apache-maven</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

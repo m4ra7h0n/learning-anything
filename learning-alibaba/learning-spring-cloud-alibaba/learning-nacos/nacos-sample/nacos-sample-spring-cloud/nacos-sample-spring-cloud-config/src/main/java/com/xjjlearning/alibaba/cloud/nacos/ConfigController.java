@@ -19,7 +19,7 @@ public class ConfigController {
     @Value("${content:nothing}")
     private String content;
     /**
-     * http://localhost:8080/config/get
+     * http://47.95.7.37:8080/config/get
      */
     @RequestMapping("/get")
     public boolean get() {

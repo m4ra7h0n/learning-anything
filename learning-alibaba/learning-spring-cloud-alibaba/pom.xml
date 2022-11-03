@@ -25,6 +25,10 @@
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.9.RELEASE</spring.cloud.alibaba.version>
 
+        <dubbo.version>3.0.7</dubbo.version>
+
+        <nacos.spring.boot.version>0.2.12</nacos.spring.boot.version>
+
         <curator.version>4.0.1</curator.version>
 
         <!-- Apache RocketMQ -->
@@ -45,7 +49,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <!-- Spring Dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -63,10 +66,19 @@
                 <scope>import</scope>
             </dependency>
 
+<!--            最新版本移除dubbo 给apache -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -80,6 +92,17 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-acl</artifactId>
                 <version>${rocketmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos.spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+                <version>${nacos.spring.boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
