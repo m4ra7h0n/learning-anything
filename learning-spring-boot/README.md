@@ -100,7 +100,8 @@ SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.Sprin
                          ----> resolveBeforeInstantiation() //允许bean后置处理器返回一个代理
                          ----> doCreateBean(beanName, mbdToUse, args);
                                ----> initializeBean(beanName, exposedObject, mbd);
-                                     ----> afterPropertiesSet(); //执行创建TM和RM
+                                     ----> afterPropertiesSet(); // seata 执行创建TM和RM
+                                     ----> afterPropertiesSet(); // mybatis factoryBean.getObject();
                     
              //最后注册所有常规的bean后置处理器
 

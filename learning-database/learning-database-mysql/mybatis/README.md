@@ -1,5 +1,6 @@
 # notes
 resultMap: 数据库列和类的字段映射
+mybatis 的异常是 RuntimeException子类
 
 # notice
 实体类中不要使用基本类型  会被赋初始值  而不是null

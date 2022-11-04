@@ -27,7 +27,6 @@ seata:
   enabled: true
   application-id: ${spring.application.name}
   tx-service-group: spring-cloud-dubbo-seata-service-group
-  enable-auto-data-source-proxy: false
   service:
     vgroupMapping:
       spring-cloud-dubbo-seata-service-group: default
@@ -78,6 +77,7 @@ seata:
       namespace:
       username: "nacos"
       password: "nacos"
+#  enable-auto-data-source-proxy: false # 千万别加
 
 dubbo:
   application:

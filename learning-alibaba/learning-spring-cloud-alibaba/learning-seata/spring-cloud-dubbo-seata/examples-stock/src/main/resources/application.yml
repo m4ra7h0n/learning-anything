@@ -22,7 +22,7 @@ seata:
   enabled: true
   application-id: ${spring.application.name}
   tx-service-group: spring-cloud-dubbo-seata-service-group
-  enable-auto-data-source-proxy: false
+#  enable-auto-data-source-proxy: false # 千万别加
   service:
     vgroupMapping:
       spring-cloud-dubbo-seata-service-group: default # TC

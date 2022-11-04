@@ -21,6 +21,8 @@
     <modules>
         <module>learning-database-mysql</module>
         <module>learning-database-redis</module>
+        <module>learning-database-postgres</module>
+        <module>learning-database-gauss</module>
     </modules>
 
     <dependencyManagement>

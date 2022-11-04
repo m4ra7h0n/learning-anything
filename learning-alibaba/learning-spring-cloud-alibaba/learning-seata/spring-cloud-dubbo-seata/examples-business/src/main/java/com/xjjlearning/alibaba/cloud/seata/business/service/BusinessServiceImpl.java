@@ -11,6 +11,7 @@ import com.xjjlearning.alibaba.cloud.seata.common.response.ObjectResponse;
 import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,7 +22,7 @@ public class BusinessServiceImpl implements BusinessService{
     OrderDubboService orderDubboService;
 
     @Override
-    @GlobalTransactional(timeoutMills = 300000, name = "dubbo-gts-seata-example")
+    @GlobalTransactional
     public ObjectResponse handleBusiness(BusinessDTO businessDTO) {
         System.out.println("开始全局事务, XID = " + RootContext.getXID());
         ObjectResponse objectResponse = new ObjectResponse();
@@ -40,12 +41,7 @@ public class BusinessServiceImpl implements BusinessService{
         orderDTO.setOrderCount(businessDTO.getCount());
         ObjectResponse<OrderDTO> orderResp = orderDubboService.createOrder(orderDTO);
 
-        // 3.发生错误回滚
-        if (orderResp.getStatus() != 200 || stockResp.getStatus() != 200) {
-            throw new DefaultException(RspStatusEnum.FAIL);
-        }
-
-        // 4.返回消息
+//        // 4.返回消息
         objectResponse.setMessage(RspStatusEnum.SUCCESS.getMessage());
         objectResponse.setStatus(RspStatusEnum.SUCCESS.getCode());
         objectResponse.setData(orderResp.getData());
