@@ -29,7 +29,7 @@
     <modules>
         <module>learning-apache</module>
         <module>learning-alibaba</module>
-        <module>learning-spring-boot</module>
+        <module>learning-spring</module>
         <module>learning-front</module>
         <module>learning-hack</module>
         <module>learning-algorithm</module>

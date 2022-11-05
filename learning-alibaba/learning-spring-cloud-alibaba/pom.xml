@@ -41,10 +41,9 @@
     </properties>
 
     <modules>
-        <module>learning-nacos</module>
-        <module>learning-rocketmq</module>
-        <module>learning-seata</module>
-        <module>learning-sentinel</module>
+        <module>learning-alibaba-nacos</module>
+        <module>learning-alibaba-seata</module>
+        <module>learning-alibaba-sentinel</module>
     </modules>
 
     <dependencyManagement>

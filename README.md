@@ -1,5 +1,8 @@
 # learning anything 
 
+learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件可执行文件/使用说明 容量过多不适于放入github 固存放于阿里网盘(永久有效)  
+无保留分享: https://www.aliyundrive.com/s/ngpTUNYpZ55  
+
 笔者学习顺序依次如下：  
 1.《Maven实战》  
 2.《Spring Cloud Alibaba原理与实战》中途学习:
@@ -9,53 +12,63 @@
 (4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)
 (5) 各个组件的源码 (官网最新版本)
 
-所有pdf资源放在阿里云盘(永远有效): https://www.aliyundrive.com/s/ngpTUNYpZ55
 
-打算学习:
-1.《java异步编程实战》
-顺带学习 《java多线程核心编程技术》 dubbo源码  nacos源码等
-2.《深度理解Apache Dubbo与实战》
-3.reactor编程
-4.grpc:
-顺带学习groovy gradlew protobuf restful
-
-
-# 完成列表
-- learning-algorithm
-- learning-alibaba
-    - spring-cloud-alibaba
-        - [x] nacos
-          - [x] 源码
-            - [x] discovery
-            - [x] config
+# 打算学习:  
+**入门**  
+guava(google utils)  
+guice(DI框架)  
+选修: (swagger-ui  feign)  
+  
+## 华为开发使用-支线  
+**语言**  
+groovy  
+**数据库**  
+postgres(会使用, 以及原理 不要求源码)  
+gauss(会使用, 以及原理 不要求源码)  
+**大数据**  
+flink(会使用, 以及原理 不要求源码)  
+  
+## 主线  
+**多线程以及NIO**  
+《java异步编程实战》  
+《java多线程核心编程技术》  
+《Netty权威指南》  
+  
+netty(重学 + 源码)  
+reactor(使用 + 源码)  
+arthas(使用 + 源码)  
+  
+**NIO网络应用(rpc篇)**  
+《深度理解Apache Dubbo与实战》  
+grpc (protobuf)  
+  
+**高级篇**  
+spring-cloud-alibaba(源码重读 + netty)  
+zookeeper(源码)  
+flink(源码)  
+kubernetes(源码)  
+  
+# 完成列表  
+- learning-algorithm  
+- learning-alibaba   
+    - [ ] arthas  
+    - [x] druid  
+    - [ ] spring-cloud-alibaba  
+        - [x] nacos  
         - [ ] rocketmq
-            - [ ] 源码
-        - [ ] seata
-            - [ ] 源码
-        - [ ] sentinel
-            - [x] 流控
-            - [x] 热点参数
-            - [ ] 降级
-            - [ ] dubbo-adapter
-            - [ ] 源码
+        - [x] seata
+        - [x] sentinel
 - learning-apache
     - [ ] dubbo
-        - [ ] rpc
-            - [ ] dubbo
-            - [ ] grpc
-        - [x] spi
-        - [ ] 源码
     - [x] maven
-      - [x] 基础
-      - [x] 插件编写
     - [ ] flink
     - [ ] zookeeper
+    - [ ] rocketmq
 - learning-database
     - [ ] mysql
-        - [x] mybatis
-        - [x] mybatis-plus
-        - [ ] hibernate
     - [ ] redis
+    - [ ] postgres
+    - [ ] gauss
 - learning-docs
 - learning-front
     - [ ] vue
@@ -66,9 +79,11 @@
   - [ ] guice
   - [ ] kubernetes
 - learning-hack
-- learning-spring-boot
-  - [x] 手写starter
-  - [ ] 源码
+- learning-spring
+  - [ ] spring-boot
+    - [ ] 源码 + 源码实践
+  - [ ] spring-cloud
+    - [ ] spring-cloud-gateway
 - [ ] learning-netty
 - [ ] learning-reactor
 - [ ] learning-serverless
@@ -98,7 +113,14 @@
 基础不牢，如果你不懂springboot，直接学习spring-cloud技术栈，大半会觉得学起来很吃力，这里搜一搜，那里搜一搜，结果调试好久也调试不通。尝试先放开spring-cloud，找一本springboot实践的pdf来学学，你会很有收获。记住欲速而不达。  
 2.步骤都对就是报错  
 两种情况, 其一是不同版本需要的组件的版本也有差异, 需要的组件也有差异, 尝试多试一试不同的组件, 比如教程上写的是引入zookeeper模块, 但实际上需要引入spring-cloud-starter-zookeeper-discovery才能调试通过  
-第二是由于挪动包, 改包名导致的不知原因的错误, 试一下重启idea, 仍不行试一试保存内容, 删掉模块重新建一个  
+第二是由于挪动包, 改包名导致的不知原因的错误, 试一下重启idea, 仍不行试一试保存内容, 删掉模块重新建一个
+3.pdf比较过时
+最好跟着官网来(if 官网教程比较多) or 官网samples. because pdf 都比较过时
+4.失眠
+你可能是学的有点过了 比如上午学习4小时 下午学习4小时 晚上学习4小时 你100%失眠
+如果这个时候你在准备马拉松 你200%失眠 because 阳虚 + 阴虚
+建议: 减少强度 + 归脾丸 + 补肾阳的
+
 
 ## 反思建议总结
 ### 一 

@@ -24,6 +24,7 @@
     <modules>
         <module>spring-boot-demo</module>
         <module>spring-boot-starter-redis</module>
+        <module>spring-boot-sourcecode</module>
     </modules>
 
     <dependencyManagement>
