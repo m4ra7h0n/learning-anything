@@ -20,5 +20,6 @@
         <module>spring-cloud-alibaba-samples</module>
         <module>spring-cloud-nacos-seata</module>
         <module>spring-cloud-dubbo-seata</module>
+        <module>seata-sourcecode</module>
     </modules>
 </project>

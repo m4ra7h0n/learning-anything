@@ -1,5 +1,6 @@
 # 项目例子
 全都是根据官网的samples学的, pdf只作为参考
+官网网址: https://seata.io/zh-cn/
 
 # X/Open 分布式事务模型
 一个 TM (事务管理器)  管理多个RM (资源管理器)
