@@ -16,12 +16,14 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>rocketmq-demo</module>
+		<module>rocketmq-connect</module>
+		<module>rocketmq-feature</module>
+		<module>rocketmq-streams</module>
+		<module>rocketmq-feature-before5</module>
 	</modules>
 
 	<properties>
 		<spring-boot.version>2.3.12.RELEASE</spring-boot.version>
-		<rocketmq.version>4.9.4</rocketmq.version>
 	</properties>
 
 	<dependencies>
@@ -36,7 +38,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.rocketmq</groupId>
-			<artifactId>rocketmq-client</artifactId>
+			<artifactId>rocketmq-client-java</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -49,15 +51,17 @@
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
-<!--			<dependency>-->
-<!--				<groupId>org.apache.rocketmq</groupId>-->
-<!--				<artifactId>rocketmq-spring-boot-starter</artifactId>-->
-<!--				<version>2.2.2</version>-->
-<!--			</dependency>-->
+
+<!--			下面注意两个版本之间的差别-->
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-client-java</artifactId>
+				<version>5.0.0</version>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.rocketmq</groupId>
 				<artifactId>rocketmq-client</artifactId>
-				<version>${rocketmq.version}</version>
+				<version>4.9.4</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

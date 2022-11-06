@@ -1,8 +1,11 @@
 package com.xjjlearning.learningalgorithm;
 
+import java.util.Arrays;
+
 public final class Sort {
     public static void main(String[] args) {
         int[] nums = new int[]{4, 2, 6, 7, 5, 1, 2, 3, 4, 5};
+        Arrays.sort(nums);
         MergeSort.sort(nums);
         for (int num : nums) {
             System.out.println(num);
