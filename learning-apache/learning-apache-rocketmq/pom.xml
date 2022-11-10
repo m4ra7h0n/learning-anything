@@ -36,10 +36,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.rocketmq</groupId>
-			<artifactId>rocketmq-client-java</artifactId>
-		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -62,6 +58,11 @@
 				<groupId>org.apache.rocketmq</groupId>
 				<artifactId>rocketmq-client</artifactId>
 				<version>4.9.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-streams-clients</artifactId>
+				<version>1.0.1-preview</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

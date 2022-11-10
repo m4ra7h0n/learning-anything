@@ -12,5 +12,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>rocketmq-demo</name>
     <description>rocketmq-demo</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client-java</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
