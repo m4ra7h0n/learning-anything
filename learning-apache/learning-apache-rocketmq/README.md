@@ -11,3 +11,6 @@ push比较适合变动比较少的场景(rocketmq的push底层原理是长轮询
 stream文档: https://github.com/apache/rocketmq-streams/tree/main/rocketmq-streams-examples
 connect文档: https://rocketmq-1.gitbook.io/rocketmq-connector/
 类似于logstash
+
+# rocketmq与kafka对比
+kafka不支持消费失败重试/定时消息/事务消息/顺序消费，难以支撑淘宝订单交易充值等业务。淘宝中间件团队参考kafka设计的RocketMQ

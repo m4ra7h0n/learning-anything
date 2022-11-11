@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>learning-spring</artifactId>
-        <groupId>com.xjjlearning.spring</groupId>
+        <groupId>com.xjjlearning.springframework</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.xjjlearning.spring.cloud</groupId>
+    <groupId>com.xjjlearning.springframework.cloud</groupId>
     <artifactId>learning-spring-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>learning-spring-cloud</name>

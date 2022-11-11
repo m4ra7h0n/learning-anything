@@ -46,23 +46,27 @@ kubernetes
 - learning-alibaba   
     - [ ] arthas  
     - [x] druid  
-    - [ ] spring-cloud-alibaba  
+    - [x] spring-cloud-alibaba  
         - [x] nacos  
-        - [ ] rocketmq
         - [x] seata
         - [x] sentinel
 - learning-apache
+    - [x] rocketmq
     - [ ] dubbo
     - [x] maven
     - [ ] flink
     - [ ] zookeeper
     - [ ] rocketmq
+    - [ ] hudi
+    - [ ] log4j
+    - [ ] groovy
 - learning-database
     - [x] mysql
     - [ ] redis
     - [ ] postgres
     - [ ] gauss
     - [ ] memcached
+    - [x] db2
 - learning-docs
 - learning-front
     - [ ] vue

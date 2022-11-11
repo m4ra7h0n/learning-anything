@@ -4,13 +4,13 @@
 
     <parent>
         <artifactId>learning-spring</artifactId>
-        <groupId>com.xjjlearning.spring</groupId>
+        <groupId>com.xjjlearning.springframework</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <version>0.0.1-SNAPSHOT</version>
-    <groupId>com.xjjlearning.spring.boot</groupId>
+    <groupId>com.xjjlearning.springframework.boot</groupId>
     <artifactId>learning-spring-boot</artifactId>
     <name>learning spring boot</name>
     <description>learning spring boot</description>

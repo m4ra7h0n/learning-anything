@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - uri: http://localhost:8081/say
+          predicates:
+            - Path=/gateway/**
+          filters:
+            - StripPrefix=1
+server:
+  port: 8082

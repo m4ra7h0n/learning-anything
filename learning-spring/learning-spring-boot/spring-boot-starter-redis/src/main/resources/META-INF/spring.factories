@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration= \
-com.xjjlearning.spring.boot.RedissonAutoConfiguration
+com.xjjlearning.springframework.boot.RedissonAutoConfiguration

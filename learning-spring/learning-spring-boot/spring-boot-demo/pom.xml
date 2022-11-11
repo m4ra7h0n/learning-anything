@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>learning-spring-boot</artifactId>
-        <groupId>com.xjjlearning.spring.boot</groupId>
+        <groupId>com.xjjlearning.springframework.boot</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -22,7 +22,7 @@
         </dependency>
         <!-- Mine Starter -->
         <dependency>
-            <groupId>com.xjjlearning.springboot</groupId>
+            <groupId>com.xjjlearning.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
