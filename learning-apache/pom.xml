@@ -21,6 +21,8 @@
         <module>learning-apache-zookeeper</module>
         <module>learning-apache-flink</module>
         <module>learning-apache-rocketmq</module>
+        <module>learning-apache-hudi</module>
+        <module>learning-apache-log4j</module>
     </modules>
 
 </project>

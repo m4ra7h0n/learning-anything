@@ -20,6 +20,7 @@
         <module>learning-spring-cloud-alibaba</module>
         <module>learning-alibaba-druid</module>
         <module>learning-alibaba-arthas</module>
+        <module>learning-alibaba-fastjson</module>
     </modules>
 
 </project>

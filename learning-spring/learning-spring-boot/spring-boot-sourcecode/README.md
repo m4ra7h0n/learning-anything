@@ -32,6 +32,9 @@ listen包里写了demo, 有三个东西
 3.publisher(改变事件)  
 4.multicaster(广播)
 很好理解, 发布订阅模式  
+
+具体应用1: (事件驱动架构): https://developer.aliyun.com/article/829271
+具体应用2: reactor
   
   
 # springboot启动源码(目前只粗略的读一下, 后续要着重研究)  

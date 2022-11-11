@@ -14,14 +14,32 @@ learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件�
 
 
 # 打算学习:  
-| 入门         | 数据库      | 网络                    | 线程                 | 语言     | 高级篇                                |
-|------------|----------|-----------------------|--------------------|--------|------------------------------------|
-| guava      | postgres | 《深度理解Apache Dubbo与实战》 | 《java异步编程实战》       | groovy | spring-cloud-alibaba(源码重读 + netty) |
-| guice      | guass    | grpc                  | 《java多线程核心编程技术》    |        | zookeeper(源码)                      |
-| swagger-ui | flink    | 《Netty权威指南》           | reactor            |        | flink(源码)                          |
-| feign      |          |                       |     |        |  kubernetes(源码)                                   |
+rocketmq + knative -> serverless   
+rocketmq-stream/flink + postgres/guass -> big data  
+reactor + async + socket + multithread -> netty  
+protobuf + grpc + netty -> 各种source-code的网络部分  
 
-others: arthas
+pdf:  
+《深度理解Apache Dubbo与实战》  
+《java多线程核心编程技术》  
+《java异步编程实战》  
+《Netty权威指南》  
+
+入门:  
+guava  
+guice   
+swagger-ui  
+feign  
+
+中阶:  
+arthas   
+netty  
+reactor  
+
+高阶:  
+flink  
+zookeeper  
+kubernetes  
  
 # 完成列表  
 - learning-algorithm  
@@ -44,6 +62,7 @@ others: arthas
     - [ ] redis
     - [ ] postgres
     - [ ] gauss
+    - [ ] memcached
 - learning-docs
 - learning-front
     - [ ] vue
@@ -82,6 +101,10 @@ others: arthas
 
 3.工整考究驱动学习  
 实践的时候要工工整整的，要做就做最好，这样才会引起自豪的心情，想去维护好这个项目，让它越来越好，越来越充实和完美  
+
+4.填坑式学习  
+学习的过程就是不断的挖坑填坑 挖坑代表种草某种技术 了解但不精进 填坑代表发自内心的去学习这门半知半解的技术   
+挖坑的过程就是浏览文章的过程 见到的这种技术次数多了 坑也就挖的差不多了  
 
 ## 学习踩坑：  
 1.学不懂  
