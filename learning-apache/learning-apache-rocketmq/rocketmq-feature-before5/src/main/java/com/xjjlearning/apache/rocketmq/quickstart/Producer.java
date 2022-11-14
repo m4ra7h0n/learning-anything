@@ -32,7 +32,7 @@ public class Producer {
      */
     public static final int MESSAGE_COUNT = 1000;
     public static final String PRODUCER_GROUP = "XJJ_GROUP";
-    public static final String DEFAULT_NAMESRVADDR = "127.0.0.1:9876";
+    public static final String DEFAULT_NAMESRVADDR = "192.168.0.115:9876";
     public static final String TOPIC = "TopicTest";
     public static final String TAG = "TagA";
 

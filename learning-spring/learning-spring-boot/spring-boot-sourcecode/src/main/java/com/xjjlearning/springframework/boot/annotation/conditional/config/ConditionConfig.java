@@ -1,9 +1,9 @@
-package com.xjjlearning.springframework.boot.conditional.config;
+package com.xjjlearning.springframework.boot.annotation.conditional.config;
 
-import com.xjjlearning.springframework.boot.conditional.GPConditional;
-import com.xjjlearning.springframework.boot.conditional.classes.RequiredBean;
-import com.xjjlearning.springframework.boot.conditional.classes.SpringService;
-import com.xjjlearning.springframework.boot.conditional.classes.SpringServiceRequiredOnBean;
+import com.xjjlearning.springframework.boot.annotation.conditional.classes.RequiredBean;
+import com.xjjlearning.springframework.boot.annotation.conditional.classes.SpringService;
+import com.xjjlearning.springframework.boot.annotation.conditional.classes.SpringServiceRequiredOnBean;
+import com.xjjlearning.springframework.boot.annotation.conditional.GPConditional;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;

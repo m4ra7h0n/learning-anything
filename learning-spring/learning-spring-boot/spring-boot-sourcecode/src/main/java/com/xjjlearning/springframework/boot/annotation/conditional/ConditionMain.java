@@ -1,7 +1,7 @@
-package com.xjjlearning.springframework.boot.conditional;
+package com.xjjlearning.springframework.boot.annotation.conditional;
 
-import com.xjjlearning.springframework.boot.conditional.classes.SpringService;
-import com.xjjlearning.springframework.boot.conditional.classes.SpringServiceRequiredOnBean;
+import com.xjjlearning.springframework.boot.annotation.conditional.classes.SpringService;
+import com.xjjlearning.springframework.boot.annotation.conditional.classes.SpringServiceRequiredOnBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

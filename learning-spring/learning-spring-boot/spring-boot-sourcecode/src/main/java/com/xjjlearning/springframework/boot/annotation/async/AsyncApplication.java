@@ -1,4 +1,4 @@
-package com.xjjlearning.springframework.boot.async;
+package com.xjjlearning.springframework.boot.annotation.async;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

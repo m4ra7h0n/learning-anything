@@ -1,4 +1,4 @@
-package com.xjjlearning.springframework.boot.conditional;
+package com.xjjlearning.springframework.boot.annotation.conditional;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;

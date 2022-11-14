@@ -1,4 +1,4 @@
-package com.xjjlearning.springframework.boot.async;
+package com.xjjlearning.springframework.boot.annotation.async;
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Configuration;

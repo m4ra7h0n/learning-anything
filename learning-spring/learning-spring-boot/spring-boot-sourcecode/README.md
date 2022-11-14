@@ -36,6 +36,10 @@ listen包里写了demo, 有三个东西
 具体应用1: (事件驱动架构): https://developer.aliyun.com/article/829271
 具体应用2: reactor
   
+# order
+暂时写了注解的例子 具体还有PriorityOrder OrderCompareter ordered  
+遇到了再学  
+
   
 # springboot启动源码(目前只粗略的读一下, 后续要着重研究)  
 SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.SpringApplication.run()  
@@ -112,6 +116,7 @@ SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.Sprin
                                      ----> determineConstructorsFromBeanPostProcessors() **// 确定使用的 构造方法**
                                      ----> autowireConstructor(beanName, mbd, ctors, args); **//使用有参数构造方法 创建bean**
                                      ----> instantiateBean(beanName, mbd); **//使用无参数构造方法创建bean**
+                                           ----> applyBeanPostProcessorsBeforeInitialization(); **//`括展点` 实现BeanPostProcessor的类(@PostConstruct)**
                                ----> populateBean() **//将属性注入bean**
                                ----> initializeBean(beanName, exposedObject, mbd); **// Initialize the bean instance.**
                                      ----> afterPropertiesSet(); **// `扩展点` seata 执行创建TM和RM**

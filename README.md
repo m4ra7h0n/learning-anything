@@ -14,16 +14,18 @@ learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件�
 
 
 # 打算学习:  
-rocketmq + knative -> serverless   
 rocketmq-stream/flink + postgres/guass -> big data  
 reactor + async + socket + multithread -> netty  
 protobuf + grpc + netty -> 各种source-code的网络部分  
+rocketmq + knative -> serverless   
 
 pdf:  
-《深度理解Apache Dubbo与实战》  
-《java多线程核心编程技术》  
+《基于Apache Flink的流处理：流式应用基础、实现及操作》
+《PostgreSQL修炼之道：从小工到专家 第2版》
 《java异步编程实战》  
-《Netty权威指南》  
+《java多线程核心编程技术》  
+《netty实战》
+
 
 入门:  
 guava  
@@ -67,6 +69,7 @@ kubernetes
     - [ ] gauss
     - [ ] memcached
     - [x] db2
+    - [ ] polardb
 - learning-docs
 - learning-front
     - [ ] vue
