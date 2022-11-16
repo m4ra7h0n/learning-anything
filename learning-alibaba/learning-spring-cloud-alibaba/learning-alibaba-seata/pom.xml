@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.xjjlearning.alibaba.cloud.seata</groupId>
-    <artifactId>learning-apache-seata</artifactId>
+    <artifactId>learning-alibaba-seata</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>learning-seata</name>
     <description>learning-seata</description>

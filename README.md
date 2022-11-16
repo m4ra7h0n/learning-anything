@@ -4,13 +4,16 @@ learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件�
 无保留分享: https://www.aliyundrive.com/s/ngpTUNYpZ55  
 
 笔者学习顺序依次如下：  
-1.《Maven实战》  
-2.《Spring Cloud Alibaba原理与实战》中途学习:
-(1)《Mybatis从入门到精通》
-(2) mybatis-plus官网文档
-(3) druid官网文档
-(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)
-(5) 各个组件的源码 (官网最新版本)
+1.《Maven实战》   
+2.《Spring Cloud Alibaba原理与实战》中途学习:  
+(1)《Mybatis从入门到精通》  
+(2) mybatis-plus官网文档    
+(3) druid官网文档   
+(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)    
+(5) 各个组件的源码 (官网最新版本)    
+3.guava(读英文官方文档 一天一篇 并且做练习)      
+4.《java并发编程的艺术》   
+5.《java并发编程实战》   
 
 
 # 打算学习:  
@@ -44,15 +47,15 @@ zookeeper
 kubernetes  
  
 # 完成列表  
-- learning-algorithm  
-- learning-alibaba   
+- [ ] learning-algorithm  
+- [ ] learning-alibaba   
     - [ ] arthas  
     - [x] druid  
     - [x] spring-cloud-alibaba  
         - [x] nacos  
         - [x] seata
         - [x] sentinel
-- learning-apache
+- [ ] learning-apache
     - [x] rocketmq
     - [ ] dubbo
     - [x] maven
@@ -62,7 +65,7 @@ kubernetes
     - [ ] hudi
     - [ ] log4j
     - [ ] groovy
-- learning-database
+- [ ] learning-database
     - [x] mysql
     - [ ] redis
     - [ ] postgres
@@ -70,25 +73,27 @@ kubernetes
     - [ ] memcached
     - [x] db2
     - [ ] polardb
-- learning-docs
-- learning-front
+- [ ] learning-docs
+- [ ] learning-front
     - [ ] vue
-- learning-google
+- [ ] learning-google
   - [ ] grpc
   - [ ] guava
   - [ ] protocol buffer
   - [ ] guice
   - [ ] kubernetes
-- learning-hack
-- learning-spring
+- [ ] learning-hack
+- [ ] learning-spring
   - [ ] spring-boot
     - [ ] 源码 + 源码实践
-  - [ ] spring-cloud
-    - [ ] spring-cloud-gateway
+  - [x] spring-cloud
+    - [x] spring-cloud-gateway
 - [ ] learning-netty
 - [ ] learning-reactor
 - [ ] learning-serverless
 
+# idea使用
+1.idea打开如果模块过多则使用settings(windows)/preferences(mac) -> build, execution, deployment -> build tools -> maven -> ignore files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割  
 
 # ps学习建议  
 ## 方法论

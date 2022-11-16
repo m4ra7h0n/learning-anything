@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>learning-apache-sentinel</artifactId>
+		<artifactId>learning-alibaba-sentinel</artifactId>
 		<groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>sentinel-spring-cloud</artifactId>
+	<artifactId>sentinel-spring-cloud-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sentinel-spring-cloud</name>
 	<description>sentinel-spring-cloud</description>
