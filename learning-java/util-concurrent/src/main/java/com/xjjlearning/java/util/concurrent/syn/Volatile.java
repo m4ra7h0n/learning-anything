@@ -1,24 +1,33 @@
 package com.xjjlearning.java.util.concurrent.syn;
 
-public class Volatile {
-    public volatile static boolean shutdownRequested = false;
-    public void shutdown() {
-        shutdownRequested = true;
-    }
+import java.util.concurrent.TimeUnit;
 
-    public void doWork() {
-        while (!shutdownRequested) {
-            // do stuff
-            System.out.println('~');
+public class Volatile {
+
+    public static class Runner implements Runnable {
+        private volatile boolean shutdownRequested = false;
+        public void shutdown() {
+            shutdownRequested = true;
+        }
+        @Override
+        public void run() {
+            while (!shutdownRequested && !Thread.currentThread().isInterrupted()) {
+                // do stuff
+                System.out.println('~');
+            }
         }
     }
 
-    // why it doesn't work ?
     public static void main(String[] args) throws InterruptedException {
-        Volatile aVolatile = new Volatile();
-        aVolatile.doWork();
-        Thread.sleep(1);
-        aVolatile.shutdown();
-//        new Thread(aVolatile::shutdown).start();
+        Runner runner = new Runner();
+        Thread thread = new Thread(runner);
+        thread.start();
+//        thread.setDaemon(true); // what ? shutdown method is useless
+        TimeUnit.SECONDS.sleep(2);
+        runner.shutdown();
+        thread.interrupt();
+
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("over");
     }
 }

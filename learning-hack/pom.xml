@@ -17,5 +17,6 @@
 
     <modules>
         <module>hack-spring</module>
+        <module>hack-java</module>
     </modules>
 </project>

@@ -11,7 +11,7 @@ volatile 无线程上下文切换
 ![](src/main/resources/markword.png)  
 synchronized 引入偏向锁 轻量级锁(cas自旋) 来减少重量级锁线程上下文切换  
 cas底层通过总线锁/缓存锁来更新(lock指令来锁)cas同时具有volatile读和写的内存语意, 所以禁止和前后所有的读写重排序, 多线程时经常用   
-synchronized底层使用monitor(监视器锁)  
+synchronized底层使用monitor(监视器锁, monitorenter, monitorexit), 每个对象都有一个monitor  
 # 第三章 java内存模型(JMM)
 ## 基础
 在命令式编程中，线程之间的通信机制有两种：共享内存和消息传递  
@@ -57,3 +57,13 @@ volatile + cas 因为二者可以满足volatile相关内存语意
 2.引用对象赋值要在使用引用对象中final变量之前  
 ## happens-before  
 happens-before关系保证正确同步的多线程程序的执行结果不被改变
+# 第五章
+AQS是给Lock使用的同步队列  
+Lock是给程序员使用的锁  
+## ReentrantReadWriteLock
+高16位表示读 低16位表示写
+
+# others
+static和volatile
+static是多实例之间共享
+volatile是多线程之间共享

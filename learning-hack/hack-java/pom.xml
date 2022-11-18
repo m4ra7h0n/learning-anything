@@ -8,10 +8,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hack-spring</artifactId>
+    <groupId>com.xjjlearning.hack.java</groupId>
+    <artifactId>hack-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hack-spring</name>
-    <description>hack-spring</description>
-    <packaging>pom</packaging>
+    <name>hack-java</name>
+    <description>hack-java</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
 </project>

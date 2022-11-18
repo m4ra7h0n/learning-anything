@@ -2,7 +2,7 @@ package com.xjjlearning.java.util.concurrent.chapter3;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-class ReentrantLockExampleTest {
+class ReentrantLockExample {
     int           a    = 0;
     ReentrantLock lock = new ReentrantLock();
 

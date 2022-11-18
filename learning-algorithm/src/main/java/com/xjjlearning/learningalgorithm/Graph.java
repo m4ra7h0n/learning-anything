@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class graph {
+public class Graph {
     public static void main(String[] args) {
         int[][] times = new int[][]{{2,1,1},{2,3,1},{3,4,1}};
         System.out.println(leetcode743(times, 4, 2));

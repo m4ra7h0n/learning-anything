@@ -1,10 +1,6 @@
 package com.xjjlearning.java.util.concurrent.chapter3;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SynchronizedExampleTest {
+class SynchronizedExample {
     int     a    = 0;
     boolean flag = false;
 
@@ -18,10 +14,5 @@ class SynchronizedExampleTest {
             int i = a;
             System.out.println(i);
         } // release lock
-    }
-    @Test
-    public void synchronizedTest() {
-        new Thread(this::writer).start();
-        new Thread(this::reader).start();
     }
 }
