@@ -1,4 +1,6 @@
-《java并发编程的的艺术》
+《java并发编程的的艺术》  
+all in test directory  
+
 # 第二章
 ## volatile
 变量写在主内存(lock前缀引发) 线程间可见  
@@ -12,6 +14,7 @@ volatile 无线程上下文切换
 synchronized 引入偏向锁 轻量级锁(cas自旋) 来减少重量级锁线程上下文切换  
 cas底层通过总线锁/缓存锁来更新(lock指令来锁)cas同时具有volatile读和写的内存语意, 所以禁止和前后所有的读写重排序, 多线程时经常用   
 synchronized底层使用monitor(监视器锁, monitorenter, monitorexit), 每个对象都有一个monitor  
+
 # 第三章 java内存模型(JMM)
 ## 基础
 在命令式编程中，线程之间的通信机制有两种：共享内存和消息传递  
@@ -56,14 +59,42 @@ volatile + cas 因为二者可以满足volatile相关内存语意
 1.final成员构造不出构造函数  
 2.引用对象赋值要在使用引用对象中final变量之前  
 ## happens-before  
-happens-before关系保证正确同步的多线程程序的执行结果不被改变
+happens-before关系保证正确同步的多线程程序的执行结果不被改变  
+
 # 第五章
 AQS是给Lock使用的同步队列  
 Lock是给程序员使用的锁  
-## ReentrantReadWriteLock
-高16位表示读 低16位表示写
+## ReentrantReadWriteLock  
+高16位表示读 低16位表示写  
+
+# 第六章(过后详细重学)
+## ConcurrentHashMap
+pdf 版本过老, 妹看  
+## ConcurrentLinkedQueue
+offer(): 神奇的操作 我tm看不懂 p.casNext(null, newNode) 之后head和tail就不同了 他们不都是指向同一个节点吗 ??  
+然后这个东西虽然减少了volatile写的操作(tail移动次数减少) 但是好tm复杂 虽然代码不多 但是我读不懂  
+出队也先不看了 pdf版本比较老  
+## BlockingQueue
+![](src/main/resources/blocking-queue.png)
+
+# 第七章
+
+# 第八章
+
+# 第九章
+![](src/main/resources/thread-pool.png)
+
+# 第十章
+![](src/main/resources/two-stage-scheduling.png)
+![](src/main/resources/executor-inheritance.png)
+ScheduledThreadPoolExecutor详解:https://www.jianshu.com/p/925dba9f5969
+
+# 11章
+异步任务池被作者预言了 未来的rocketmq等消息队列就是基于此实现的
 
 # others
 static和volatile
 static是多实例之间共享
 volatile是多线程之间共享
+unsafe详解:  
+https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html  

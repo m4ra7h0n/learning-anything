@@ -17,6 +17,7 @@
 
 	<modules>
 		<module>util-concurrent</module>
+        <module>security</module>
 	</modules>
 
 </project>

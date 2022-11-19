@@ -17,6 +17,6 @@
 
     <modules>
         <module>hack-spring</module>
-        <module>hack-java</module>
+        <module>learning-codeql</module>
     </modules>
 </project>
