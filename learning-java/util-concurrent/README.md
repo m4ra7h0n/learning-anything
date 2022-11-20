@@ -69,13 +69,16 @@ Lock是给程序员使用的锁
 
 # 第六章(过后详细重学)
 ## ConcurrentHashMap
-pdf 版本过老, 妹看  
-## ConcurrentLinkedQueue
+美团技术文章: https://tech.meituan.com/2016/06/24/java-hashmap.html  
+## BlockingQueue
+### ....BlockingQueue
+美团技术文章: https://tech.meituan.com/2016/11/18/disruptor.html  
+![](src/main/resources/blocking-queue.png)
+### ConcurrentLinkedQueue
 offer(): 神奇的操作 我tm看不懂 p.casNext(null, newNode) 之后head和tail就不同了 他们不都是指向同一个节点吗 ??  
 然后这个东西虽然减少了volatile写的操作(tail移动次数减少) 但是好tm复杂 虽然代码不多 但是我读不懂  
 出队也先不看了 pdf版本比较老  
-## BlockingQueue
-![](src/main/resources/blocking-queue.png)
+https://juejin.cn/post/6908749869939163144  
 
 # 第七章
 

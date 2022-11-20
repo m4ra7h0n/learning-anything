@@ -20,10 +20,7 @@ public class Graph {
         }
         int res = 0;
 
-
-
-
-        PriorityQueue<int[]> q = new PriorityQueue<>((o1, o2)->(o1[1] - o2[1]));
+        PriorityQueue<int[]> q = new PriorityQueue<>((o1, o2)-> o1[1] - o2[1] );
         int[] dist = new int[n + 1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[k] = 0;
@@ -40,10 +37,6 @@ public class Graph {
                 }
             }
         }
-
-
-
-
 
         for (int i = 1; i < dist.length; i++) {
             if (dist[i] == Integer.MAX_VALUE) {

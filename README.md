@@ -79,8 +79,8 @@ pdf:
   - [ ] learning-codeql
   - [ ] hack-spring
   - [ ] hack-java
-- [ ] learning-java
-  - [ ] util-concurrent
+- [x] learning-java
+  - [x] util-concurrent
 - [ ] learning-spring
   - [ ] spring-boot
     - [ ] 源码 + 源码实践

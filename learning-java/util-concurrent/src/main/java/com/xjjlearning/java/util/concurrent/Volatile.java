@@ -22,7 +22,7 @@ public class Volatile {
         Runner runner = new Runner();
         Thread thread = new Thread(runner);
         thread.start();
-//        thread.setDaemon(true); // what ? shutdown method is useless
+//        thread.setDaemon(true); // ? shutdown method is useless
         TimeUnit.SECONDS.sleep(2);
         runner.shutdown();
         thread.interrupt();
