@@ -1,6 +1,17 @@
-package com.xjjlearning.learningalgorithm;
+package com.xjjlearning.learningalgorithm.tree;
 
-/**
+import java.util.Scanner;
+
+/**        r
+ *       /   \
+ *     p      q
+ *   / | \  / | \
+ *  a  b c d  e  f
+ * /|\
+ *g h i
+ * /
+
+ /**
  * https://blog.csdn.net/weixin_43591980/article/details/109580974
  */
 @SuppressWarnings("all")
@@ -82,7 +93,7 @@ public class RBTree<K extends Comparable<K>, V> {
     /**
      * 左旋方法
      * 左旋示意图：左旋x节点
-     * <html>
+     *
      *   p                   p
      *   |                   |
      *   x                   y
@@ -90,7 +101,7 @@ public class RBTree<K extends Comparable<K>, V> {
      * lx  y               x   ry
      *    / \             / \
      *   ly  ry          lx  ly
-     *<html/>
+     *
      * 左旋做了几件事？
      * 1.将x的右子节点指向y的左子节点(ly)，并且把y的左子节点更新为x
      * 2.当x的父节点(不为空时)，更新y的父节点为x的父节点，并将x的父节点 指定 子树(当前x的子树位置) 指定为y
@@ -126,8 +137,8 @@ public class RBTree<K extends Comparable<K>, V> {
      * 右旋方法
      * 右旋示意图：右旋y节点
      *
-     *     p                       p
-     *     |                       |
+     *       p                       p
+     *      /                       /
      *     y                       x
      *    / \          ---->      / \
      *   x   ry                  lx  y
@@ -204,7 +215,6 @@ public class RBTree<K extends Comparable<K>, V> {
 
         /**
          * 退出上面的while循环后，到这里，说明树中没有相同key 的元素
-         *
          * 需要添加新元素node到 x(parent) 目前位置的左子树/右子树
          */
         node.parent = parent;
@@ -230,7 +240,7 @@ public class RBTree<K extends Comparable<K>, V> {
      * |---情景2：如果插入节点的key已经存在,(这种情况不需要处理,因为修改树中的值不会触发红黑树修复平衡方法)
      * |---情景3：如果插入节点的父节点为黑色,这种情况不需要处理,(参考红黑树的性质4和性指5去理解)
      * (因为所插入的路径中,黑色节点数没发生变化,所以红黑树依然平衡)
-     * <p>
+     *
      * 情景4 需要去处理的情景
      * |---情景4：插入节点的父节点为红色,(违反红黑树性质4,不能有两个红色节点相连)
      * |---情景4.1：叔叔节点存在，并且为红色（父-叔 双红）
@@ -293,7 +303,8 @@ public class RBTree<K extends Comparable<K>, V> {
                         return;
                     }
                 }
-            } else {// 父节点为爷爷节点的右子树
+            }
+            else {// 父节点为爷爷节点的右子树
                 RBNode uncle = gparent.left;
                 // 情景4.1：叔叔节点存在，并且为红色（父-叔 双红）
                 // 将父和叔染色为黑色，再将爷爷染红，并将爷爷设置为当前节点，进入下一次循环判断
@@ -403,6 +414,101 @@ public class RBTree<K extends Comparable<K>, V> {
 
         public void setValue(V value) {
             this.value = value;
+        }
+    }
+
+    /**
+     * 下面是测试部分
+     */
+    public static void main(String[] args) {
+        RBTree<String, Object> rbtree = new RBTree();
+        //测试输入：ijkgefhdabc
+        while(true) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("请输入key:");
+            String key = sc.next();
+
+            rbtree.insert(key, null);
+            TreeOperation.show(rbtree.getRoot());
+        }
+    }
+
+    static class TreeOperation {
+    /*
+           树的结构示例：
+              1
+            /   \
+          2       3
+         / \     / \
+        4   5   6   7
+    */
+
+        // 用于获得树的层数
+        public static int getTreeDepth(RBTree.RBNode root) {
+            return root == null ? 0 : (1 + Math.max(getTreeDepth(root.getLeft()), getTreeDepth(root.getRight())));
+        }
+
+
+        private static void writeArray(RBTree.RBNode currNode, int rowIndex, int columnIndex, String[][] res, int treeDepth) {
+            // 保证输入的树不为空
+            if (currNode == null) return;
+            // 先将当前节点保存到二维数组中
+            res[rowIndex][columnIndex] = String.valueOf(currNode.getKey() /*+ "-" + (currNode.isColor() ? "R" : "B") + ""*/);
+
+            // 计算当前位于树的第几层
+            int currLevel = ((rowIndex + 1) / 2);
+            // 若到了最后一层，则返回
+            if (currLevel == treeDepth) return;
+            // 计算当前行到下一行，每个元素之间的间隔（下一行的列索引与当前元素的列索引之间的间隔）
+            int gap = treeDepth - currLevel - 1;
+
+            // 对左儿子进行判断，若有左儿子，则记录相应的"/"与左儿子的值
+            if (currNode.getLeft() != null) {
+                res[rowIndex + 1][columnIndex - gap] = "/";
+                writeArray(currNode.getLeft(), rowIndex + 2, columnIndex - gap * 2, res, treeDepth);
+            }
+
+            // 对右儿子进行判断，若有右儿子，则记录相应的"\"与右儿子的值
+            if (currNode.getRight() != null) {
+                res[rowIndex + 1][columnIndex + gap] = "\\";
+                writeArray(currNode.getRight(), rowIndex + 2, columnIndex + gap * 2, res, treeDepth);
+            }
+        }
+
+
+        public static void show(RBTree.RBNode root) {
+            if (root == null) System.out.println("EMPTY!");
+            // 得到树的深度
+            int treeDepth = getTreeDepth(root);
+
+            // 最后一行的宽度为2的（n - 1）次方乘3，再加1
+            // 作为整个二维数组的宽度
+            int arrayHeight = treeDepth * 2 - 1;
+            int arrayWidth = (2 << (treeDepth - 2)) * 3 + 1;
+            // 用一个字符串数组来存储每个位置应显示的元素
+            String[][] res = new String[arrayHeight][arrayWidth];
+            // 对数组进行初始化，默认为一个空格
+            for (int i = 0; i < arrayHeight; i++) {
+                for (int j = 0; j < arrayWidth; j++) {
+                    res[i][j] = " ";
+                }
+            }
+
+            // 从根节点开始，递归处理整个树
+            // res[0][(arrayWidth + 1)/ 2] = (char)(root.val + '0');
+            writeArray(root, 0, arrayWidth / 2, res, treeDepth);
+
+            // 此时，已经将所有需要显示的元素储存到了二维数组中，将其拼接并打印即可
+            for (String[] line : res) {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < line.length; i++) {
+                    sb.append(line[i]);
+                    if (line[i].length() > 1 && i <= line.length - 1) {
+                        i += line[i].length() > 4 ? 2 : line[i].length() - 1;
+                    }
+                }
+                System.out.println(sb.toString());
+            }
         }
     }
 }

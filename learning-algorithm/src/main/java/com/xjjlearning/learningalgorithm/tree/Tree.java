@@ -1,4 +1,4 @@
-package com.xjjlearning.learningalgorithm;
+package com.xjjlearning.learningalgorithm.tree;
 
 import java.util.*;
 
