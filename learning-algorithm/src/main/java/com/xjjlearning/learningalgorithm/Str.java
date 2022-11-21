@@ -34,7 +34,7 @@ public class Str {
         char sign = '+';
         int num = 0;
         int pre;
-        while (!chars.isEmpty()){
+        while (!chars.isEmpty()) {
             char c = chars.poll();
             if (Character.isDigit(c)) {
                 num = num * 10 + (c - '0');

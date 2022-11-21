@@ -27,10 +27,9 @@ public class BitSetTest {
         System.out.println(bitSet.cardinality());
     }
 
-
-    /*
-            leetcode 37
-    */
+    /**
+     * leetcode 37
+     */
     static BitSet[] col;
     static BitSet[] row;
     static BitSet[][] grid;

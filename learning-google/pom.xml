@@ -18,6 +18,7 @@
 	<modules>
 		<module>learning-google-guava</module>
 		<module>learning-google-guice</module>
+		<module>learning-google-gson</module>
 		<module>learning-google-grpc</module>
 		<module>learning-google-protobuf</module>
 		<module>learning-google-kubernetes</module>
