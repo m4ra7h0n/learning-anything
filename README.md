@@ -1,10 +1,18 @@
 # learning anything 
+![](https://img.shields.io/badge/Author-XJJ-orange)
+![](https://img.shields.io/github/repo-size/x-j-j/learning-anything?color=orange)  
+![](https://img.shields.io/github/commit-activity/m/x-j-j/learning-anything?color=red)
+![](https://img.shields.io/github/last-commit/x-j-j/learning-anything?color=red)  
+![](https://img.shields.io/github/languages/count/x-j-j/learning-anything?color=red)
+![](https://img.shields.io/github/languages/top/x-j-j/learning-anything?color=red)  
+![](https://img.shields.io/github/stars/x-j-j/learning-anything?style=social)
+![](https://img.shields.io/github/forks/x-j-j/learning-anything?style=social)
 
 learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件可执行文件/使用说明 容量过多不适于放入github 固存放于阿里网盘(永久有效)  
 无保留分享: https://www.aliyundrive.com/s/ngpTUNYpZ55  
-好些pdf都是花钱买的:| 请珍惜  
+**好些pdf都是花钱买的:| 请珍惜**  
 
-笔者学习顺序依次如下：  
+**笔者学习顺序依次如下：**  
 1.《Maven实战》  
 2.《Spring Cloud Alibaba原理与实战》中途学习:   
 (1)《Mybatis从入门到精通》   
