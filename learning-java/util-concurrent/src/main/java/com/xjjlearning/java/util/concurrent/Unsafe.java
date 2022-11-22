@@ -5,6 +5,7 @@ import org.apache.http.nio.util.DirectByteBufferAllocator;
 import java.nio.ByteBuffer;
 import java.util.concurrent.ConcurrentHashMap;
 
+// https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html
 public class Unsafe {
     private static long valueOffset;
     private volatile int value;

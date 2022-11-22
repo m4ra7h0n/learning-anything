@@ -38,6 +38,7 @@
         <module>learning-reactor</module>
         <module>learning-serverless</module>
         <module>learning-netty</module>
+        <module>learning-java</module>
     </modules>
 
     <scm>

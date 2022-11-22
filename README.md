@@ -2,19 +2,30 @@
 
 learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件可执行文件/使用说明 容量过多不适于放入github 固存放于阿里网盘(永久有效)  
 无保留分享: https://www.aliyundrive.com/s/ngpTUNYpZ55  
+好些pdf都是花钱买的:| 请珍惜  
 
 笔者学习顺序依次如下：  
-1.《Maven实战》   
-2.《Spring Cloud Alibaba原理与实战》中途学习:  
-(1)《Mybatis从入门到精通》  
-(2) mybatis-plus官网文档    
+1.《Maven实战》  
+2.《Spring Cloud Alibaba原理与实战》中途学习:   
+(1)《Mybatis从入门到精通》   
+(2) mybatis-plus官网文档     
 (3) druid官网文档   
-(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)    
-(5) 各个组件的源码 (官网最新版本)    
-3.guava(读英文官方文档 一天一篇 并且做练习)      
-4.《java并发编程的艺术》   
-5.《java并发编程实战》   
-6.《Java编程方法论: 响应式Spring Reactor3 设计与实现》
+(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)     
+(5) 各个组件的源码 (官网最新版本)     
+3.《java并发编程的艺术》    
+4.guava    
+5.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
+
+
+**下面的天数是单个项目的天数**  
+
+| 项目                             | 天数     |
+|--------------------------------|--------|
+| 《Maven实战》                      | 5days  |
+| 《Spring Cloud Alibaba原理与实战》    | 32days |
+| 《Mybatis从入门到精通》 + mybatis-plus | 4days  |
+| druid官方文档                      | 1days  |
+| 《java并发编程的艺术》                  | 7days  |
 
 
 # 打算学习:  
@@ -27,7 +38,6 @@ pdf:
 《基于Apache Flink的流处理：流式应用基础、实现及操作》  
 《PostgreSQL修炼之道：从小工到专家 第2版》  
 《java异步编程实战》    
-《java多线程核心编程技术》  
 《netty实战》
 
 下面是学习 + 阅读源码  
@@ -54,7 +64,6 @@ pdf:
     - [x] maven
     - [ ] flink
     - [ ] zookeeper
-    - [ ] rocketmq
     - [ ] hudi
     - [ ] log4j
     - [ ] groovy
@@ -78,9 +87,9 @@ pdf:
 - [ ] learning-hack
   - [ ] learning-codeql
   - [ ] hack-spring
-  - [ ] hack-java
 - [x] learning-java
   - [x] util-concurrent
+  - [ ] security
 - [ ] learning-spring
   - [ ] spring-boot
     - [ ] 源码 + 源码实践
@@ -117,6 +126,10 @@ pdf:
 **4.填坑式学习**  
 学习的过程就是不断的挖坑填坑 挖坑代表种草某种技术 了解但不精进 填坑代表发自内心的去学习这门半知半解的技术   
 挖坑的过程就是浏览文章的过程 见到的这种技术次数多了 坑也就挖的差不多了  
+
+**5.复习频次**  
+根据艾宾浩斯遗忘曲线复习实践节点在1个小时，1天，1周，1月，1季 效果最好, 记忆最牢靠  
+所以我们学习某个相对较大的知识点最好以周为单位, 同时配合做小项目, 按月复习  
 
 ## 学习踩坑：  
 

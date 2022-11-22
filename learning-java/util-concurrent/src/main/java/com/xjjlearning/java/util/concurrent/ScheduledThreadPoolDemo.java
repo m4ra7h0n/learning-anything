@@ -1,11 +1,11 @@
-package com.xjjlearning.java.util.concurrent.chapter10;
+package com.xjjlearning.java.util.concurrent;
 
 import java.util.Date;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class ScheduledThreadPoolTest {
+public class ScheduledThreadPoolDemo {
 
     public static void main(String[] args) throws InterruptedException {
         // 创建大小为5的线程池

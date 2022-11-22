@@ -13,4 +13,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>learning-reactor</name>
     <description>learning-reactor</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>reactor-demo</module>
+        <module>reactor-sourcecode</module>
+    </modules>
 </project>
