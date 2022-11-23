@@ -1,18 +1,19 @@
 # learning anything 
+learning-anything 意在练习各种技术, 学习记录代码, 代码中的注释统一用英文, 感谢star和关注  
+learning-anything is meant to practice a variety of techniques, learn and record codes, All comments in the codes are in English. thanks for your star and focus on.   
+
 ![](https://img.shields.io/badge/Author-XJJ-orange)
-![](https://img.shields.io/github/repo-size/x-j-j/learning-anything?color=orange)  
-![](https://img.shields.io/github/commit-activity/m/x-j-j/learning-anything?color=red)
-![](https://img.shields.io/github/last-commit/x-j-j/learning-anything?color=red)  
-![](https://img.shields.io/github/languages/count/x-j-j/learning-anything?color=red)
-![](https://img.shields.io/github/languages/top/x-j-j/learning-anything?color=red)  
+![](https://img.shields.io/badge/Email-2849771625%40qq.com-orange)  
+![](https://img.shields.io/github/repo-size/x-j-j/learning-anything?color=lightgrey)
+![](https://img.shields.io/github/languages/count/x-j-j/learning-anything?color=lightgrey)
+![](https://img.shields.io/github/languages/top/x-j-j/learning-anything?color=lightgrey)
+![](https://img.shields.io/github/commit-activity/m/x-j-j/learning-anything?color=lightgrey)
+![](https://img.shields.io/github/last-commit/x-j-j/learning-anything?color=lightgrey)
 ![](https://img.shields.io/github/stars/x-j-j/learning-anything?style=social)
 ![](https://img.shields.io/github/forks/x-j-j/learning-anything?style=social)
 
-learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件可执行文件/使用说明 容量过多不适于放入github 固存放于阿里网盘(永久有效)  
-无保留分享: https://www.aliyundrive.com/s/ngpTUNYpZ55  
-**好些pdf都是花钱买的:| 请珍惜**  
-
-**笔者学习顺序依次如下：**  
+# already learned
+**学习顺序依次如下：**   
 1.《Maven实战》  
 2.《Spring Cloud Alibaba原理与实战》中途学习:   
 (1)《Mybatis从入门到精通》   
@@ -21,13 +22,11 @@ learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件�
 (4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)     
 (5) 各个组件的源码 (官网最新版本)     
 3.《java并发编程的艺术》    
-4.guava    
-5.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
-
+4.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
 
 **下面的天数是单个项目的天数**  
 
-| 项目                             | 天数     |
+| project                        | total  |
 |--------------------------------|--------|
 | 《Maven实战》                      | 5days  |
 | 《Spring Cloud Alibaba原理与实战》    | 32days |
@@ -35,29 +34,28 @@ learning-doc (该项目文档资源) 由于放有所有pdf/官方源码/组件�
 | druid官方文档                      | 1days  |
 | 《java并发编程的艺术》                  | 7days  |
 
+# learning-doc (该项目文档资源)
+所有pdf/官方源码/组件可执行文件/使用说明  
+阿里网盘(永久有效)  https://www.aliyundrive.com/s/ngpTUNYpZ55  
+**好些pdf都是花钱买的:| 请珍惜**
 
-# 打算学习:  
-rocketmq-stream/flink + postgres/guass -> big data  
-reactor + async + socket + multithread -> netty  
-protobuf + grpc + netty -> 各种source-code的网络部分  
-rocketmq + knative -> serverless   
+# plan to learn:
+**pdf:**  
+《基于Apache Flink的流处理：流式应用基础、实现及操作》   
+《PostgreSQL修炼之道：从小工到专家 第2版》   
+《java异步编程实战》(写并发项目会过来再看这块)    
+《netty实战》  
 
-pdf:  
-《基于Apache Flink的流处理：流式应用基础、实现及操作》  
-《PostgreSQL修炼之道：从小工到专家 第2版》  
-《java异步编程实战》    
-《netty实战》
+**下面是学习 + 阅读源码**  
 
-下面是学习 + 阅读源码  
-
-| 入门       | 中阶    | 高阶         |
-|------------|--------|------------|
-| guava      | arthas | flink      |
-| guice      | netty  | zookeeper  |
-| swagger-ui | ractor | kubernetes |
-| feign      |
+| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless |
+|------------|--------|------------|-----------------|-------------|-------------|------------|
+| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   |
+| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    |
+| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            |
+| feign      |        |            | guass           | multithread |             |            |
  
-# 完成列表  
+#  finished list 
 - [ ] learning-algorithm  
 - [ ] learning-alibaba   
     - [ ] arthas  

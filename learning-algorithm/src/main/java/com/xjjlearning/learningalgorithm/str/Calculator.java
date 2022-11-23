@@ -1,16 +1,16 @@
-package com.xjjlearning.learningalgorithm;
+package com.xjjlearning.learningalgorithm.str;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Str {
+public class Calculator {
     public static void main(String[] args) {
 //        String s = "1-12/4 +3/3 *6";
 //        String s= "3*(4-5/2)-6";
 //        String s = " 2-1+2";
         String s = "-1-(-2)";
 //        String s = "(1+(4+5+2)-3)+(6+8)";
-        int calculate = Str.calculate(s);
+        int calculate = calculate(s);
         System.out.println(calculate);
     }
 
@@ -83,3 +83,5 @@ public class Str {
         return n;
     }
 }
+
+
