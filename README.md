@@ -12,7 +12,7 @@ learning-anything is meant to practice a variety of techniques, learn and record
 ![](https://img.shields.io/github/stars/x-j-j/learning-anything?style=social)
 ![](https://img.shields.io/github/forks/x-j-j/learning-anything?style=social)
 
-# already learned
+## 已经学习
 **学习顺序依次如下：**   
 1.《Maven实战》  
 2.《Spring Cloud Alibaba原理与实战》中途学习:   
@@ -22,9 +22,11 @@ learning-anything is meant to practice a variety of techniques, learn and record
 (4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)     
 (5) 各个组件的源码 (官网最新版本)     
 3.《java并发编程的艺术》    
-4.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
+4.《java8实战》  
+5.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
 
 **下面的天数是单个项目的天数**  
+由于不是全天学习 所以以下内容仅供参考 
 
 | project                        | total  |
 |--------------------------------|--------|
@@ -34,12 +36,12 @@ learning-anything is meant to practice a variety of techniques, learn and record
 | druid官方文档                      | 1days  |
 | 《java并发编程的艺术》                  | 7days  |
 
-# learning-doc (该项目文档资源)
+## 该项目文档/资源 (learning-doc)
 所有pdf/官方源码/组件可执行文件/使用说明  
 阿里网盘(永久有效)  https://www.aliyundrive.com/s/ngpTUNYpZ55  
 **好些pdf都是花钱买的:| 请珍惜**
 
-# plan to learn:
+## 打算学习:
 **pdf:**  
 《基于Apache Flink的流处理：流式应用基础、实现及操作》   
 《PostgreSQL修炼之道：从小工到专家 第2版》   
@@ -55,35 +57,35 @@ learning-anything is meant to practice a variety of techniques, learn and record
 | swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            |
 | feign      |        |            | guass           | multithread |             |            |
  
-#  finished list 
+## 完成列表
 - [ ] learning-algorithm  
 - [ ] learning-alibaba   
-    - [ ] arthas  
-    - [x] druid  
-    - [x] spring-cloud-alibaba  
-        - [x] nacos  
-        - [x] seata
-        - [x] sentinel
+  - [ ] arthas  
+  - [x] druid  
+  - [x] spring-cloud-alibaba  
+    - [x] nacos  
+    - [x] seata
+    - [x] sentinel
 - [ ] learning-apache
-    - [x] rocketmq
-    - [ ] dubbo
-    - [x] maven
-    - [ ] flink
-    - [ ] zookeeper
-    - [ ] hudi
-    - [ ] log4j
-    - [ ] groovy
+  - [x] rocketmq
+  - [ ] dubbo
+  - [x] maven
+  - [ ] flink
+  - [ ] zookeeper
+  - [ ] hudi
+  - [ ] log4j
+  - [ ] groovy
 - [ ] learning-database
-    - [x] mysql
-    - [ ] redis
-    - [ ] postgres
-    - [ ] gauss
-    - [ ] memcached
-    - [x] db2
-    - [ ] polardb
+  - [x] mysql
+  - [ ] redis
+  - [ ] postgres
+  - [ ] gauss
+  - [ ] memcached
+  - [x] db2
+  - [ ] polardb
 - [ ] learning-docs
 - [ ] learning-front
-    - [ ] vue
+  - [ ] vue
 - [ ] learning-google
   - [ ] grpc
   - [ ] guava
@@ -94,7 +96,9 @@ learning-anything is meant to practice a variety of techniques, learn and record
   - [ ] learning-codeql
   - [ ] hack-spring
 - [x] learning-java
-  - [x] util-concurrent
+  - [ ] util
+    - [x] concurrency
+    - [ ] stream
   - [ ] security
 - [ ] learning-spring
   - [ ] spring-boot
@@ -105,11 +109,11 @@ learning-anything is meant to practice a variety of techniques, learn and record
 - [ ] learning-reactor
 - [ ] learning-serverless
 
-# idea使用
+## idea使用
 1.idea打开如果模块过多则使用settings(windows)/preferences(mac) -> build, execution, deployment -> build tools -> maven -> ignore files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割  
 
-# ps学习建议  
-## 方法论
+## ps学习建议  
+### 方法论
 
 学习应该是学起来有干劲，学不够，爽，越学越想学，如何达到呢？  
 
@@ -137,7 +141,7 @@ learning-anything is meant to practice a variety of techniques, learn and record
 根据艾宾浩斯遗忘曲线复习实践节点在1个小时，1天，1周，1月，1季 效果最好, 记忆最牢靠  
 所以我们学习某个相对较大的知识点最好以周为单位, 同时配合做小项目, 按月复习  
 
-## 学习踩坑：  
+### 学习踩坑：  
 
 **1.学不懂**  
 基础不牢，如果你不懂springboot，直接学习spring-cloud技术栈，大半会觉得学起来很吃力，这里搜一搜，那里搜一搜，结果调试好久也调试不通。尝试先放开spring-cloud，找一本springboot实践的pdf来学学，你会很有收获。记住欲速而不达。  
@@ -155,17 +159,17 @@ learning-anything is meant to practice a variety of techniques, learn and record
 建议: 减少强度 + 归脾丸 + 补肾阳的  
 
 
-## 反思建议总结
-### 一 
+### 反思建议总结
+#### 一 
 有时候在想, 比如读到dubbo-spi机制源码那块, 里面有一个wrapperClasses, 以前没见过包装类可能就掠过了, 我自己分析的时候真没注意这块, 看教程才注意  
 有两种方案:  
 1.前期尽量跟着各种教程来学源码等  
 2.当教程枯竭, 读到生僻的源码, 就一定要细致, 最好能搞出流程图, 分析好每个地方的作用  
 
-### 二
+#### 二
 如果pdf教程中的版本比较低 可以直接根据官方给出的sample 进行编写代码  
 
-### 三.源码
+#### 三.源码
 1.源码不要在学习组件的时候阅读, 源码要在熟练使用组件能做项目的前提下去读(或者因为某个功能不知道怎么回事 或者好奇时), 这样带着问题和好奇心会读的更好   
 2.阅读源码 不要太细致 弄个框架流程就好 因为扣细了没用也记不住 也不是靠背学源码的    
 真正需要细致的时候是你参照源码写一个自己的逻辑的时候 这个时候要细致的参考源码  
@@ -175,13 +179,13 @@ learning-anything is meant to practice a variety of techniques, learn and record
 5.在看《java开发并发编程艺术》的时候跟着作者写了一些代码，作者在看源码的时候都要自己写demo，demo是由浅入深的，先写框架搞清原理(忽略一些实现细节)，然后再逐步完善细节，这样对学习源码很有帮助  
 6.多想想 如果是自己会如何设计功能 再去看源码
 
-### 四
+#### 四
 集群不要先配置 项目从简单入手 集群作为优化的方式  
 
-### 五
+#### 五
 尽量在第一遍学的时候就认认真真的学透 如果第一遍草草的学 那么第二遍再重学的时候总有一种我之前已经掌握了的错觉 不自觉地不耐烦  
 学透就意味着要有正规的教程 比较有点深度的教程 全面的教程 推荐pdf或者官网 不要搞网上的文章之类的 又不全又错又不深入   
 
-# by the way
+## by the way
 项目里有阿里云ecs服务器公网地址 也有其他服务的端口账号密码 但是 你访问不了 谢谢 设置了ip白名单  
 而且也不要想着信息搜集我 去登录我的其他社交媒体的账户 因为 这个密码唯一 只是这个项目用:)    
