@@ -23,7 +23,6 @@ learning-anything is meant to practice a variety of techniques, learn and record
 (5) 各个组件的源码 (官网最新版本)     
 3.《java并发编程的艺术》    
 4.《java8实战》  
-5.《Java编程方法论: 响应式Spring Reactor3 设计与实现》   
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考 
