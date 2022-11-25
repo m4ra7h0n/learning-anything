@@ -16,9 +16,9 @@ import java.util.concurrent.atomic.AtomicReference;
 @SpringBootTest
 public class CounterTest {
 
-    private AtomicInteger atomicI = new AtomicInteger(0);
+    private final AtomicInteger atomicI = new AtomicInteger(0);
 //    private AtomicStampedReference reference = new AtomicStampedReference(0);
-    private AtomicReference reference = new AtomicReference();
+//    private AtomicReference reference = new AtomicReference();
     private int i = 0;
 
     @Test
@@ -56,7 +56,7 @@ public class CounterTest {
 //        atomicI.getAndIncrement();
         for (;;) {
             int i = atomicI.get();
-            boolean suc = atomicI.compareAndSet(i, ++i); //先看下i是否还是i 然后通过锁缓存/总线 进行更新
+            boolean suc = atomicI.compareAndSet(i, i + 1); //先看下i是否还是i 然后通过锁缓存/总线 进行更新
             if (suc) {
                 break;
             }
@@ -67,4 +67,7 @@ public class CounterTest {
         i++;
     }
 
+//    private synchronized void count() {
+//        i++;
+//    }
 }
