@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 @SpringBootTest
 public class StreamApplicationTest {
-    // learn how to use
+    // learn how to use by articles. Another way is to see the pdf.
     // https://developer.aliyun.com/article/903870
 
     @Test

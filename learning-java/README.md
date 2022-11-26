@@ -1,6 +1,9 @@
 《java8实战》
-代码放在util/stream里了  
-# 第一章
+前三章代码放在util/function/test里了  
+四五六章代码放在util/stream/test里了  
+我先看的stream源码 再来看的这个pdf教程 多少感觉有点墨迹  
+
+# 第一章 (function)
 命令式编程 --> 函数式编程  
 1.流处理stream(4-7)  
 2.Stream API就是构建在通过传递代码使操作行为实现参数化的思想上的(2,3,13,14)  
@@ -73,5 +76,31 @@ class Boxing {
     }
 }
 ```
+# 第三章
 方法引用:  
 Apple::getWeight  
+
+# 第四章(stream)
+流到底是什么呢？简短的定义就是"从支持数据处理操作的源生成的元素序列"  
+建造者模式(builder pattern)  
+
+**循环合并**  
+```java
+// filter(Dish::getCalories).map(Dish::getName)  
+
+// equals to 
+
+// for (int i = 0; i < n; i++) {
+//     Dish[i] = filter(Dish[i]);
+//     Dish[i] = map(Dish[i])
+// }
+```
+
+# 第五章
+筛选/切片 filter,distinct,skip,limit  
+提取/转换/映射 map,flatMap   
+截断 limit  
+查找/匹配 findFirst,findAny,allMatch,noneMatch,anyMatch   
+归约/迭代合并 reduce  
+reduce 反复结合每个元素，直到流被归约成一个值  
+reduce,sorted,distinct是有状态的需要保存整个值

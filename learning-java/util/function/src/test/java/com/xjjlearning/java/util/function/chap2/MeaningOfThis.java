@@ -1,4 +1,4 @@
-package com.xjjlearning.java.util.stream.chap2;
+package com.xjjlearning.java.util.function.chap2;
 
 public class MeaningOfThis
 {

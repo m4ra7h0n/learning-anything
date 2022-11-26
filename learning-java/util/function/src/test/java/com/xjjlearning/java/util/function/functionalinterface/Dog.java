@@ -1,4 +1,4 @@
-package com.xjjlearning.java.util.function.functionalinterface.iface;
+package com.xjjlearning.java.util.function.functionalinterface;
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -9,13 +9,14 @@ import java.util.function.Function;
 public interface Dog<T> {
     // only one declared abstract method
     boolean eat(T food);
-    
+
     // Object Method
     boolean equals(Object obj);
     // default method
     default Dog<T> and(T food) {
         return (T) -> eat(food);
     }
+
     // Comparator Method
     public static <T, U> Comparator<T> comparing (
             Function<? super T, ? extends U> keyExtractor,

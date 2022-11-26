@@ -1,7 +1,5 @@
 package com.xjjlearning.java.util.function.functionalinterface;
 
-import com.xjjlearning.java.util.function.functionalinterface.iface.Dog;
-
 class functionalInterfaceTest{
     public static void main(String[] args) {
         Dog<String> dog = (String food) -> {

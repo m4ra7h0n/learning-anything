@@ -1,5 +1,9 @@
-package com.xjjlearning.java.util.stream.chap3;
+package com.xjjlearning.java.util.function.chap3;
 
+import com.xjjlearning.java.util.function.Apple;
+import com.xjjlearning.java.util.function.Fruit;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -21,60 +25,27 @@ public class Lambdas {
 		System.out.println(greenApples);
 
 
-		Comparator<Apple> c = (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+		Comparator<Apple> c = Comparator.comparingInt(Fruit::getWeight);
 
 		// [Apple{color='green', weight=80}, Apple{color='red', weight=120}, Apple{color='green', weight=155}]
 		inventory.sort(c);
 		System.out.println(inventory);
 	}
 
-//	public static List<Apple> filter(List<Apple> inventory, ApplePredicate p){
-//		List<Apple> result = new ArrayList<>();
-//		for(Apple apple : inventory){
-//			if(p.test(apple)){
-//				result.add(apple);
-//			}
-//		}
-//		return result;
-//	}
+	public static List<Apple> filter(List<Apple> inventory, ApplePredicate p){
+		List<Apple> result = new ArrayList<>();
+		for(Apple apple : inventory){
+			if(p.test(apple)){
+				result.add(apple);
+			}
+		}
+		return result;
+	}
 
 	public static <T> List<T> filter(List<T> inventory, Predicate<T> p) {
 		return inventory.stream()
 				.filter(p)
 				.collect(Collectors.toList());
-	}
-
-	public static class Apple {
-		private int weight = 0;
-		private String color = "";
-
-		public Apple(int weight, String color){
-			this.weight = weight;
-			this.color = color;
-		}
-
-		public Integer getWeight() {
-			return weight;
-		}
-
-		public void setWeight(Integer weight) {
-			this.weight = weight;
-		}
-
-		public String getColor() {
-			return color;
-		}
-
-		public void setColor(String color) {
-			this.color = color;
-		}
-
-		public String toString() {
-			return "Apple{" +
-					"color='" + color + '\'' +
-					", weight=" + weight +
-					'}';
-		}
 	}
 
 	interface ApplePredicate{

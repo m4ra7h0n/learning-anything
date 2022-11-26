@@ -19,8 +19,6 @@ learning-anything is meant to practice a variety of techniques, learn and record
 (1)《Mybatis从入门到精通》   
 (2) mybatis-plus官网文档     
 (3) druid官网文档   
-(4) 各个组件官网的 exaples/samples/文档 (因为pdf有些地方过时了)     
-(5) 各个组件的源码 (官网最新版本)     
 3.《java并发编程的艺术》    
 4.《java8实战》  
 
@@ -44,6 +42,7 @@ learning-anything is meant to practice a variety of techniques, learn and record
 **pdf:**  
 《基于Apache Flink的流处理：流式应用基础、实现及操作》   
 《PostgreSQL修炼之道：从小工到专家 第2版》   
+《redis实战》  
 《java异步编程实战》(写并发项目会过来再看这块)    
 《netty实战》  
 

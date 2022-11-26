@@ -1,5 +1,8 @@
 package com.xjjlearning.java.util.function.functionalinterface;
 
+import com.xjjlearning.java.util.function.Apple;
+import com.xjjlearning.java.util.function.Fruit;
+import com.xjjlearning.java.util.function.Orange;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -114,17 +117,10 @@ public class InnerFunctionClassTest {
         Function<Integer, Integer> f4 = f2.compose(f1); // f4 = f2(f1(x))
         System.out.println(f3.apply(2)); // (2 * 2) + 1 -> 5
         System.out.println(f4.apply(2)); // (2 + 1) * (2 + 1) -> 9
+
+        IntToLongFunction intToLongFunction = value -> 2L;
+        System.out.println(intToLongFunction.applyAsLong(1));
     }
-
-    @Test
-    public void biFunctionTest() {
-        BiFunction<Integer, String, Apple> f = Apple::new;
-        Apple greenApple = f.apply(1, "green");
-        System.out.println(greenApple.getWeight());
-        // TriFunction -> 3 args, 1 return
-    }
-
-
     /**
      *  Supplier
      */
@@ -132,5 +128,39 @@ public class InnerFunctionClassTest {
     public void supplierTest() { // no arg, one result
         Supplier<String> a = () -> "val";
         System.out.println(a.get());
+    }
+
+
+    /**
+     *    other functional method
+     */
+    @Test
+    public void unaryOperatorTest() {
+        // T -> T
+        UnaryOperator<Integer> unaryOperator = i -> i;
+    }
+    @Test
+    public void binaryOperatorTest() {
+        // T, T -> T
+        BinaryOperator<Integer> binaryOperator = (i, j) -> i * j;
+    }
+    @Test
+    public void biPredicate() {
+        // L, R -> boolean
+        BiPredicate<Integer, Boolean> predicate = (i, j) -> i == 1 && j;
+    }
+    @Test
+    public void biConsumer() {
+        // T, U -> Void
+        BiConsumer<Integer, Integer> biConsumer = (i, j) -> System.out.println(i + j);
+    }
+
+    @Test
+    public void biFunctionTest() {
+        // T, U -> R
+        BiFunction<Integer, String, Apple> f = Apple::new;
+        Apple greenApple = f.apply(1, "green");
+        System.out.println(greenApple.getWeight());
+        // TriFunction -> 3 args, 1 return
     }
 }

@@ -1,4 +1,4 @@
-package com.xjjlearning.java.util.stream.chap3;
+package com.xjjlearning.java.util.function.chap3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
