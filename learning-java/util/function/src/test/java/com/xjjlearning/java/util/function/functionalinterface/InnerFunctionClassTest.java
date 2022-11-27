@@ -120,7 +120,14 @@ public class InnerFunctionClassTest {
 
         IntToLongFunction intToLongFunction = value -> 2L;
         System.out.println(intToLongFunction.applyAsLong(1));
+
+        List<Integer> map = map(Arrays.asList(1, 2, 3), (i -> i * 2));
+        List<Integer> map2 = map(Arrays.asList(1, 2, 3), InnerFunctionClassTest::function);
     }
+    public static int function(int i) {
+        return i * 2;
+    }
+
     /**
      *  Supplier
      */

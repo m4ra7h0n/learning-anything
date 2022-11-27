@@ -1,19 +1,19 @@
 package com.xjjlearning.learningalgorithm.tree;
 
 import java.util.Scanner;
-
-/**        r
+/**<pre> {@code
+ *         r
  *       /   \
  *     p      q
  *   / | \  / | \
  *  a  b c d  e  f
  * /|\
  *g h i
- * /
-
- /**
+ *}
+ *
  * https://blog.csdn.net/weixin_43591980/article/details/109580974
  */
+
 @SuppressWarnings("all")
 public class RBTree<K extends Comparable<K>, V> {
     private static final boolean RED = true;// 红

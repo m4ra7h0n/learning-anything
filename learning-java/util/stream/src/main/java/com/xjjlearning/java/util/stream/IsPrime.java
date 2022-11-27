@@ -42,21 +42,21 @@ public class IsPrime {
     }
 
     // solution 4
-    // That's the same thing as up here
+    // That's the same thing as solution3
     public static Map<Boolean, List<Integer>> partitionPrimesWithInlineCollector(int n) {
         return Stream.iterate(2, i -> i + 1).limit(n)
                 .collect(
-                        // supplier
+                        // supplier -> construct
                         () -> new HashMap<Boolean, List<Integer>>() {{
                             put(true, new ArrayList<>());
                             put(false, new ArrayList<>());
                         }},
-                        // accumulator
+                        // accumulator -> add
                         (acc, candidate) -> {
                             acc.get(isPrime(acc.get(true), candidate)) // select the List of prime or non-prime
                                     .add(candidate);
                         },
-                        // combiner
+                        // combiner -> concurrent
                         (map1, map2) -> {
                             map1.get(true).addAll(map2.get(true));
                             map1.get(false).addAll(map2.get(false));
