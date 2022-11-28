@@ -122,13 +122,14 @@ reduce 反复结合每个元素，直到流被归约成一个值
 reduce,sorted,distinct是有状态的需要保存整个值
 
 # 第六章
+
 collect, Collector, Collection  
 java.util.stream.Collectors  
 java.util.stream.Collector  
-java.util.stream.Stream$collect()  
+java.util.stream.Stream$collect()
 
 reduce方法旨在把两个值结合起来生成一个新值，它是一个不可变的归约。  
-与此相反，collect方法的设计就是要改变容器，从而累积要输出的结果  
+与此相反，collect方法的设计就是要改变容器，从而累积要输出的结果
 
 ```java
 class Test {
@@ -139,9 +140,9 @@ class Test {
                 new ArrayList<Integer>(),
                 (List<Integer> l, Integer e) -> {
                     l.add(e);
-                    return l; 
-                } 
-                
+                    return l;
+                }
+
                 // 滥用2
                 // (List<Integer> l1, List<Integer> l2) -> {
                 //     l1.addAll(l2);
@@ -152,8 +153,46 @@ class Test {
 }
 ```
 
+# 7章
 
+## 用一个例子 累加自然数来比较各种迭代器的性能
 
+Stream.iterator().limit().reduce() / parallel()  
+LongStream.rangeClosed().reduce() / parallel()  -> best  
+forkJoin()  
+正常累加
 
+## 学习使用 forkJoin
 
+分治(Divide and conquer)
+
+and Performance optimization
+
+# 8章
+
+学习Lambda在设计模式中的应用  
+learn the application of Lambda to design pattern  
+策略模式(strategy)  
+模版方法模式(template method)  
+工厂模式(factory)  
+观察者模式(observer)
+
+# 9章
+
+learn default method in interface
+
+# 10章
+
+lean Optional class
+
+# 11章
+
+learn CompletableFuture  
+thenAccept(): 哪个future先完成先执行传入的方法  
+thenApply(): (相当于map)  
+thenCompose(): (相当于flatMap)  
+thenCombine(): 并行执行两个future后, 使用二者的结果执行传入的方法  
+CompletableFuture.supplyAsync(): 执行任务async  
+
+# 12章
 
