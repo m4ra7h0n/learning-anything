@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>learning-anything</artifactId>
+        <groupId>com.xjjlearning</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>learning-language</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>learning-language</name>
+    <description>learning-language</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>learning-java</module>
+        <module>learning-groovy</module>
+        <module>learning-scala</module>
+        <!--        <module>learning-haskell</module>-->
+    </modules>
+</project>

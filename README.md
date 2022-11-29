@@ -2,7 +2,7 @@
 
 learning-anything 意在练习各种技术, 学习记录代码, 代码中的注释统一用英文, 感谢star和关注  
 learning-anything is meant to practice a variety of techniques, learn and record codes, All comments in the codes are in
-English. thanks for your star and focus on.  
+English. thanks for your star and focus on.
 
 ![](https://img.shields.io/badge/Author-XJJ-orange)
 ![](https://img.shields.io/badge/Email-2849771625%40qq.com-orange)  
@@ -23,7 +23,7 @@ English. thanks for your star and focus on.
 (2) mybatis-plus官网文档     
 (3) druid官网文档   
 3.《java并发编程的艺术》    
-4.《java8实战》  
+4.《java8实战》
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考
@@ -35,31 +35,33 @@ English. thanks for your star and focus on.
 | 《Mybatis从入门到精通》 + mybatis-plus | 4days  |
 | druid官方文档                      | 1days  |
 | 《java并发编程的艺术》                  | 7days  |
-| 《java8实战》                      | 4days  |
+| 《java8实战》                      | 5days  |
 
 ## 该项目文档/资源 (learning-doc)
 
-所有pdf/官方源码/组件可执行文件/使用说明  
+所有pdf(配套代码)/官方源码/组件可执行文件/使用说明放在  
 阿里网盘(永久有效)  https://www.aliyundrive.com/s/ngpTUNYpZ55  
 **好些pdf都是花钱买的:| 请珍惜**
 
 ## 打算学习:
 
 **pdf:**  
-《基于Apache Flink的流处理：流式应用基础、实现及操作》   
+《阿里巴巴Java开发手册》  
+《函数式编程指北》  
+《Haskell函数式编程入门》
 《PostgreSQL修炼之道：从小工到专家 第2版》   
 《redis实战》  
 《java异步编程实战》(写并发项目会过来再看这块)    
-《netty实战》
+《netty实战》 《Effective Java》 《基于Apache Flink的流处理：流式应用基础、实现及操作》
 
 **下面是学习 + 阅读源码**
 
-| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless |
-|------------|--------|------------|-----------------|-------------|-------------|------------|
-| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   |
-| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    |
-| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            |
-| feign      |        |            | guass           | multithread |             |            |
+| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless | language  |
+|------------|--------|------------|-----------------|-------------|-------------|------------|-----------|
+| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   | groovy    |
+| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    | scala     |
+| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            | Haskell   |
+| feign      |        |            | guass           | multithread |             |            |           |
 
 ## 完成列表
 
@@ -100,11 +102,14 @@ English. thanks for your star and focus on.
 - [ ] learning-hack
     - [ ] learning-codeql
     - [ ] hack-spring
-- [x] learning-java
-    - [ ] util
-        - [x] concurrency
-        - [ ] stream
-    - [ ] security
+- [ ] learning-language
+    - [x] learning-java
+        - [ ] util
+            - [x] concurrency
+            - [x] function
+            - [ ] stream
+        - [ ] security
+    - [ ] learning-haskell
 - [ ] learning-spring
     - [ ] spring-boot
         - [ ] 源码 + 源码实践
@@ -204,6 +209,9 @@ files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 #### 六(pdf中的源码)
 
 pdf中往往配有源码 一定要自己写 然后参照配的代码 这样才算是掌握 否则你复制粘贴 根本不算会 自己写不出 没有思考
+
+#### 七
+看《java8实战》中作者学习java stream 后又和 scala 中的 stream 进行对比, 这样学习可以加深印象  
 
 ## by the way
 
