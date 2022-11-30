@@ -24,6 +24,7 @@ English. thanks for your star and focus on.
 (3) druid官网文档   
 3.《java并发编程的艺术》    
 4.《java8实战》
+5.reactor官方文档
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考
@@ -46,22 +47,27 @@ English. thanks for your star and focus on.
 ## 打算学习:
 
 **pdf:**  
-《阿里巴巴Java开发手册》  
-《函数式编程指北》  
-《Haskell函数式编程入门》
-《PostgreSQL修炼之道：从小工到专家 第2版》   
-《redis实战》  
+《阿里巴巴Java开发手册》   
+《函数式编程指北》    
+《Haskell函数式编程入门》  
+《PostgreSQL修炼之道：从小工到专家 第2版》     
+《redis实战》   
 《java异步编程实战》(写并发项目会过来再看这块)    
-《netty实战》 《Effective Java》 《基于Apache Flink的流处理：流式应用基础、实现及操作》
+《netty实战》    
+《Effective Java》   
+《基于Apache Flink的流处理：流式应用基础、实现及操作》   
+《java核心技术卷》第12版 java17    
+《kotlin进阶实战》  
 
 **下面是学习 + 阅读源码**
 
-| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless | language  |
-|------------|--------|------------|-----------------|-------------|-------------|------------|-----------|
-| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   | groovy    |
-| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    | scala     |
-| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            | Haskell   |
-| feign      |        |            | guass           | multithread |             |            |           |
+| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless | language |
+|------------|--------|------------|-----------------|-------------|-------------|------------|----------|
+| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   | groovy   |
+| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    | scala    |
+| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            | Haskell  |
+| feign      |        |            | guass           | multithread |             |            | kotlin   |
+|            |        |            | kafka           |             |             |            |          |
 
 ## 完成列表
 
@@ -103,13 +109,15 @@ English. thanks for your star and focus on.
     - [ ] learning-codeql
     - [ ] hack-spring
 - [ ] learning-language
-    - [x] learning-java
-        - [ ] util
+    - [ ] learning-java
+        - [x] util
             - [x] concurrency
             - [x] function
-            - [ ] stream
+            - [x] stream
         - [ ] security
     - [ ] learning-haskell
+    - [ ] learning-groovy
+    - [ ] learning-scala
 - [ ] learning-spring
     - [ ] spring-boot
         - [ ] 源码 + 源码实践

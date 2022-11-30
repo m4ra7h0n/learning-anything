@@ -17,6 +17,7 @@
         <module>learning-java</module>
         <module>learning-groovy</module>
         <module>learning-scala</module>
+        <!--        <module>learning-kotlin</module>-->
         <!--        <module>learning-haskell</module>-->
     </modules>
 </project>

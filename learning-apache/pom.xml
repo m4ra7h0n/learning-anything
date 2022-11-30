@@ -23,6 +23,7 @@
         <module>learning-apache-rocketmq</module>
         <module>learning-apache-hudi</module>
         <module>learning-apache-log4j</module>
+        <module>learning-apache-kafka</module>
     </modules>
 
 </project>
