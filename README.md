@@ -23,8 +23,8 @@ English. thanks for your star and focus on.
 (2) mybatis-plus官网文档     
 (3) druid官网文档   
 3.《java并发编程的艺术》    
-4.《java8实战》
-5.reactor官方文档
+4.《java8实战》  
+5.reactor官方文档  
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考
@@ -61,13 +61,13 @@ English. thanks for your star and focus on.
 
 **下面是学习 + 阅读源码**
 
-| 入门         | 中阶     | 高阶         | big data        | netty       | source code | serverless | language |
-|------------|--------|------------|-----------------|-------------|-------------|------------|----------|
-| guava      | arthas | flink      | rocketmq-stream | reactor     | protobuf    | rocketmq   | groovy   |
-| guice      | netty  | zookeeper  | flink           | async       | grpc        | knative    | scala    |
-| swagger-ui | ractor | kubernetes | postgreSQL      | socket      | netty       |            | Haskell  |
-| feign      |        |            | guass           | multithread |             |            | kotlin   |
-|            |        |            | kafka           |             |             |            |          |
+| 入门         | 中阶     | 高阶         | big data        | source code | serverless | language |
+|------------|--------|------------|-----------------|-------------|------------|----------|
+| guava      | arthas | flink      | rocketmq-stream | protobuf    | rocketmq   | groovy   |
+| guice      | netty  | zookeeper  | flink           | grpc        | knative    | scala    |
+| swagger-ui | ractor | kubernetes | postgreSQL      | netty       |            | Haskell  |
+| feign      |        |            | guass           |             |            | kotlin   |
+|            |        |            | kafka           |             |            |          |
 
 ## 完成列表
 

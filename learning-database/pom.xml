@@ -23,7 +23,6 @@
         <module>learning-database-redis</module>
         <module>learning-database-postgres</module>
         <module>learning-database-gauss</module>
-        <module>learning-database-db2</module>
         <module>learning-database-memcached</module>
         <module>learning-database-polardb</module>
     </modules>
