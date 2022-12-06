@@ -7,7 +7,6 @@
         <groupId>com.xjjlearning.springframework.cloud</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.xjjlearning.springframework.cloud.gateway</groupId>
     <artifactId>learning-spring-cloud-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>learning-spring-cloud-gateway</name>
@@ -17,5 +16,6 @@
         <module>spring-cloud-gateway-demo</module>
         <module>spring-cloud-gateway-service</module>
         <module>spring-cloud-gateway-nacos</module>
+        <module>spring-cloud-gateway-oauth</module>
     </modules>
 </project>

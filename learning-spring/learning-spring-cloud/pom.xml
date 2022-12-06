@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>learning-spring-cloud-gateway</module>
+        <module>learning-spring-cloud-security</module>
     </modules>
 
 </project>

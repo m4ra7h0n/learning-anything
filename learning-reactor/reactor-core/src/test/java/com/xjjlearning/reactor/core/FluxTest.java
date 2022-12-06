@@ -5,6 +5,7 @@ import com.xjjlearning.reactor.core.iface.MyEventProcessor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.FluxSink;
 import reactor.core.publisher.Mono;
 
 import java.util.Arrays;
@@ -70,9 +71,9 @@ public class FluxTest {
         }).limit(12).collect(Collectors.toList());
     }
 
-    private MyEventProcessor myEventProcessor = new MyEventProcessor() {
+    private final MyEventProcessor myEventProcessor = new MyEventProcessor() {
         MyEventListener<String> eventListener;
-        ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
+        final ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
         @Override
         public void register(MyEventListener<String> eventListener) {
@@ -94,6 +95,52 @@ public class FluxTest {
 
     @Test
     void fluxCreateTest() {
+        Flux<String> bridge = Flux.create(sink -> { // FluxSink
+            myEventProcessor.register( // <4>
+                    new MyEventListener<>() { // <1>
+                        public void onDataChunk(List<String> chunk) {
+                            for (String s : chunk) {
+                                sink.next(s); // <2>
+                            }
+                        }
+                        public void processComplete() {
+                            sink.complete(); // <3>
+                        }
+                    });
+        }, FluxSink.OverflowStrategy.BUFFER).map(s -> s + "1");
+
+        bridge.subscribe(System.out::println);
+
+        myEventProcessor.dataChunk("foo", "bar", "xjj");
+        myEventProcessor.processComplete();
+
+
+        // StepVerifier.withVirtualTime(() -> bridge)
+        //         .expectSubscription()
+        //         .expectNoEvent(Duration.ofSeconds(10))
+        //         .then(() -> myEventProcessor.dataChunk("foo", "bar", "baz"))
+        //         .expectNext("foo", "bar", "baz")
+        //         .expectNoEvent(Duration.ofSeconds(10))
+        //         .then(() -> myEventProcessor.processComplete())
+        //         .verifyComplete();
+    }
+
+    @Test
+    void fluxPushTest() {
+        Flux<String> bridge = Flux.push(sink -> { // FluxSink
+            myEventProcessor.register( // <4>
+                    new MyEventListener<>() { // <1>
+                        public void onDataChunk(List<String> chunk) {
+                            for (String s : chunk) {
+                                sink.next(s); // <2>
+                            }
+                        }
+                        public void processComplete() {
+                            sink.complete(); // <3>
+                        }
+                    });
+        }).map(s -> s + "1");
+
     }
 
     @Test

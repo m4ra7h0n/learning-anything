@@ -11,6 +11,9 @@ public class IpAddressKeyResolver implements KeyResolver {
     public Mono<String> resolve(ServerWebExchange exchange) {
         //设置限流的key 即ip
         // 如果没有获取到key 请求将被拒绝
-        return Mono.just(exchange.getRequest().getRemoteAddress().getAddress().getHostAddress());
+        return Mono.just(exchange.getRequest()
+                .getRemoteAddress()
+                .getAddress()
+                .getHostAddress());
     }
 }

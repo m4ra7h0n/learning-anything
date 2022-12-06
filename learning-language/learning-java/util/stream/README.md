@@ -137,7 +137,7 @@ anyMatch() -> sink.cancellationRequested() && spliterator.tryAdvance(sink) //先
 ...
 
 # Collectors
-
+collect() = ReduceOp + Collector
 
 # conclusion
 Spliterator

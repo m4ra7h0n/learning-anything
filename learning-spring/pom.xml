@@ -13,9 +13,11 @@
     <name>learning-spring</name>
     <description>learning-spring</description>
     <packaging>pom</packaging>
+
     <modules>
         <module>learning-spring-boot</module>
         <module>learning-spring-cloud</module>
+        <module>learning-spring-security</module>
     </modules>
 
 </project>

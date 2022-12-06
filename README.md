@@ -47,6 +47,8 @@ English. thanks for your star and focus on.
 ## 打算学习:
 
 **pdf:**  
+《Hands-On-Reactive-Programming-in-Spring-5-master》  
+《Designing and Deploying Microservices》  
 《阿里巴巴Java开发手册》   
 《函数式编程指北》    
 《Haskell函数式编程入门》  
@@ -181,6 +183,12 @@ files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 如果这个时候你在准备马拉松 你200%失眠 because 阳虚 + 阴虚  
 建议: 减少强度 + 归脾丸 + 补肾阳的
 
+**花一整天找文档资料**
+今天学习spring security 先是去找spring官网死磕英文 看了一上午看麻了 主要是官网他讲的不清楚 有些含糊
+然后找了官方文档对应的中文版 看了一下午 因为版本和最新的sample对不上 好些教程有点老还在讲spring3 所以还是云里雾里 没有一个对新手友好的逐步进阶的教程  临近晚上去csdn找了找 发现了比较细的全的教程 博客也不是不好 还得分场合看 
+总结: 虽然官方文档好 全 但是如果是初学 官方文档详细的可以看 官方文档不详细或者是英文的而你英文不好 不适合  
+这个时候找找网友写的全面的系列也不错  
+
 ### 反思建议总结
 
 #### 一
@@ -220,6 +228,8 @@ pdf中往往配有源码 一定要自己写 然后参照配的代码 这样才�
 
 #### 七
 看《java8实战》中作者学习java stream 后又和 scala 中的 stream 进行对比, 这样学习可以加深印象  
+
+
 
 ## by the way
 
