@@ -17,6 +17,7 @@ English. thanks for your star and focus on.
 ## 已经学习
 
 **学习顺序依次如下：**   
+[
 1.《Maven实战》  
 2.《Spring Cloud Alibaba原理与实战》中途学习:   
 (1)《Mybatis从入门到精通》    
@@ -24,7 +25,9 @@ English. thanks for your star and focus on.
 (3) druid官网文档   
 3.《java并发编程的艺术》    
 4.《java8实战》  
-5.reactor官方文档  
+5.tk.mybatis通用mapper  
+6.spring-security官网sample  
+](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考

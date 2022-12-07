@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xjjlearning.reactor.core.guide;
+package com.xjjlearning.reactor.core.website.guide;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;

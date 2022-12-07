@@ -5,6 +5,7 @@ import com.xjjlearning.springframework.security.web.TokenController;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
@@ -15,7 +16,10 @@ import javax.annotation.Resource;
 import java.time.Instant;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest({ HelloController.class, TokenController.class })
@@ -71,7 +75,7 @@ class JwtApplicationTests {
     @Test
     void  rootWhenAuthenticatedThen401() throws Exception {
         mockMvc.perform(post("/"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isUnauthorized()); // we don't have Authorization header
     }
     @Test
     void tokenWhenBadCredentialsThen401() throws Exception {
@@ -79,4 +83,34 @@ class JwtApplicationTests {
                 .andExpect(status().isUnauthorized());
     }
 
+    @Test
+    void indexGreetsAuthenticatedUser() throws Exception {
+        mockMvc.perform(get("/jwt").with(jwt().jwt(jwt -> jwt.subject("xjj"))))
+                .andExpect(content().string("Hello, xjj!"));
+    }
+    @Test
+    void messageCanBeReadWithScopeMessageReadAuthority() throws Exception {
+        mockMvc.perform(get("/message").with(jwt().jwt(jwt -> jwt.claim("scope", "message:read"))))
+                .andExpect(content().string("secret message"));
+        mockMvc.perform(get("/message").with(jwt().authorities((GrantedAuthority) () -> "SCOPE_message:read")))
+                .andExpect(content().string("secret message"));
+    }
+
+
+    @Test
+    void messageCanNotBeCreatedSituation() throws Exception {
+        // needs message:write scope
+        mockMvc.perform(post("/message").with(jwt()).content("hello xjj"))
+                .andExpect(status().isForbidden()); // we don't permission
+        mockMvc.perform(post("/message")
+                    .with(jwt().jwt(jwt -> jwt.claim("scope", "message:read")))
+                    .content("hello xjj"))
+                .andExpect(status().isForbidden());
+
+        // success
+        mockMvc.perform(post("/message")
+                        .with(jwt().jwt(jwt -> jwt.claim("scope", "message:write")))
+                        .content("hello xjj"))
+                .andExpect(content().string("Message was created. Content: hello xjj"));
+    }
 }

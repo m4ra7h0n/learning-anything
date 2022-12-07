@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-package com.xjjlearning.reactor.core.guide;
+package com.xjjlearning.reactor.core.website.guide;
 
 import reactor.core.publisher.Flux;
-import reactor.util.function.Tuple2;
 
 import java.util.function.Function;
 
 /**
  * @author Simon Baslé
  */
-public class FakeUtils2 {
+public class FakeUtils1 {
 
-	public static final Function<? super Flux<String>, Flux<Tuple2<Long, String>>> enrichUser =
-			f -> f.elapsed();
+	public static final Function<? super Flux<String>, Flux<String>> applyFilters =
+			f -> f.filter(s -> s.startsWith("s"));
 
 }

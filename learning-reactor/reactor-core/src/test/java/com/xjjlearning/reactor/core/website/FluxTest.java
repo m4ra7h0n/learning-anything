@@ -1,12 +1,13 @@
-package com.xjjlearning.reactor.core;
+package com.xjjlearning.reactor.core.website;
 
-import com.xjjlearning.reactor.core.iface.MyEventListener;
-import com.xjjlearning.reactor.core.iface.MyEventProcessor;
+import com.xjjlearning.reactor.core.website.iface.MyEventListener;
+import com.xjjlearning.reactor.core.website.iface.MyEventProcessor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,6 +26,12 @@ public class FluxTest {
         Flux<String> seq1 = Flux.just("foo", "bar", "foobar");
         List<String> iterable = Arrays.asList("foo", "bar", "foobar");
         Flux<String> seq2 = Flux.fromIterable(iterable);
+
+        StepVerifier.create(seq1)
+                .expectNext("foo")
+                .expectNext("bar")
+                .expectNext("foobar")
+                .verifyComplete();
     }
 
     @Test
@@ -36,7 +43,7 @@ public class FluxTest {
             // throw new RuntimeException("Go to 4");
             return i + 1;
         });
-        subscriber.subscribe(
+        subscriber.subscribe( // add a subscriber
                 System.out::println, // success
                 e -> System.out.println("error: " + e),  //error
                 () -> System.out.println("Done"),   //callback

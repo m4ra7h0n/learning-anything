@@ -18,6 +18,7 @@
         <module>learning-spring-boot</module>
         <module>learning-spring-cloud</module>
         <module>learning-spring-security</module>
+        <module>learning-spring-authorization-srever</module>
     </modules>
 
 </project>

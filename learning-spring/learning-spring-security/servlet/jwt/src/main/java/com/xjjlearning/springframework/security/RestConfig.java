@@ -9,6 +9,7 @@ import com.nimbusds.jose.proc.SecurityContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
@@ -33,7 +34,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
  * created by xjj on 2022/12/6
  */
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 public class RestConfig {
     @Value("${jwt.public.key}")
     RSAPublicKey key;
@@ -49,6 +50,7 @@ public class RestConfig {
     }
 
 
+    // must
     @Bean
     JwtDecoder jwtDecoder() {
         return NimbusJwtDecoder.withPublicKey(this.key).build();
@@ -101,11 +103,19 @@ public class RestConfig {
 
 
         // settings for FilterChains
-        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().authenticated())
-                .httpBasic(withDefaults())
-                .csrf((csrf) -> csrf.ignoringAntMatchers("/token")) // or 403 forbidden
+
+
+
+        http.authorizeHttpRequests((authorize) -> authorize
+                        .antMatchers(HttpMethod.GET, "/message/**").hasAnyAuthority("SCOPE_message:read")
+                        .antMatchers(HttpMethod.POST, "/message/**").hasAnyAuthority("SCOPE_message:write")
+                        .anyRequest().authenticated())
+                .httpBasic(withDefaults()) // username/password
+                .csrf((csrf) -> csrf.ignoringAntMatchers("/token")) // use our jwt. Or 403 forbidden
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
+
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
                 .exceptionHandling((exceptions) -> exceptions
                         .authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())
                         .accessDeniedHandler(new BearerTokenAccessDeniedHandler())

@@ -1,4 +1,4 @@
-package com.xjjlearning.reactor.core.iface;
+package com.xjjlearning.reactor.core.website.iface;
 
 public interface MyEventProcessor {
 		void register(MyEventListener<String> eventListener);
