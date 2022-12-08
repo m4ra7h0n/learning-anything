@@ -1,24 +1,58 @@
 package com.xjjlearning.springframework.cloud.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
+import static org.springframework.security.config.Customizer.withDefaults;
+
+@Configuration(proxyBeanMethods = false)
 @EnableWebSecurity
 public class OAuth2ClientSecurityConfig {
+    //
+    // // @Bean
+    // // WebSecurityCustomizer webSecurityCustomizer() {
+    // //     return (web) -> web.ignoring().requestMatchers("/webjars/**");
+    // // }
+    //
+    // // @formatter:off
+    // @Bean
+    // SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    //     http
+    //             .authorizeHttpRequests(authorize ->
+    //                     authorize.anyRequest().authenticated()
+    //             )
+    //             .oauth2Login(oauth2Login ->
+    //                     oauth2Login.loginPage("/oauth2/authorization/messaging-client-oidc"))
+    //             .oauth2Client(withDefaults());
+    //     return http.build();
+    // }
+    // // @formatter:on
 
-	// @Bean
-	// public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		// http.oauth2Client(oauth2 -> oauth2
-		// 		.clientRegistrationRepository(this.clientRegistrationRepository())
-		// 		.authorizedClientRepository(this.authorizedClientRepository())
-		// 		.authorizedClientService(this.authorizedClientService())
-		// 		.authorizationCodeGrant(codeGrant -> codeGrant
-		// 			.authorizationRequestRepository(this.authorizationRequestRepository())
-		// 			.authorizationRequestResolver(this.authorizationRequestResolver())
-		// 			.accessTokenResponseClient(this.accessTokenResponseClient())
-		// 		)
-		// 	);
-		// return http.build();
-	// }
+    @Bean
+    WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> web.ignoring().requestMatchers("/webjars/**");
+    }
+
+    // @formatter:off
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests(authorize ->
+                        authorize.anyRequest().authenticated()
+                )
+                // client login page
+                .oauth2Login(oauth2Login ->
+                        oauth2Login.loginPage("/oauth2/authorization/messaging-client-oidc"))
+                .oauth2Client(withDefaults());
+        return http.build();
+    }
+    // @formatter:on
+
+
+
+
 }

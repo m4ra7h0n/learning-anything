@@ -4,7 +4,7 @@ import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBea
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static javax.servlet.DispatcherType.*;
+import static jakarta.servlet.DispatcherType.*;
 
 @Configuration
 public class FilterConfig {

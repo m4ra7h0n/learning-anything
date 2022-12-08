@@ -19,6 +19,7 @@
         <module>learning-spring-cloud</module>
         <module>learning-spring-security</module>
         <module>learning-spring-authorization-srever</module>
+        <module>learning-spring-framework</module>
     </modules>
 
 </project>

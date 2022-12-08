@@ -1,5 +1,6 @@
 package com.xjjlearning.springframework.security.filter;
 
+import jakarta.servlet.*;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -8,7 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.*;
 import java.io.IOException;
 import java.util.Collection;
 

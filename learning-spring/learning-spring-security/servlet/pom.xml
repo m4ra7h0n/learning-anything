@@ -15,8 +15,8 @@
     <packaging>pom</packaging>
 
     <properties>
-        <spring-boot.version>2.5.2</spring-boot.version>
-        <spring-security.version>5.6.2</spring-security.version>
+        <spring-boot.version>3.0.0</spring-boot.version>
+        <spring-security.version>6.0.0</spring-security.version>
     </properties>
 
     <modules>
@@ -27,34 +27,6 @@
         <module>jwt</module>
     </modules>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
