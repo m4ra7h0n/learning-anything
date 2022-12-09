@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>learning-apache</artifactId>
+		<groupId>com.xjjlearning.apache</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.xjjlearning.apache.rocketmq</groupId>
+	<artifactId>learning-apache-rocketmq</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>learning-apache-rocketmq</name>
+	<description>learning-apache-rocketmq</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>rocketmq-connect</module>
+		<module>rocketmq-feature</module>
+		<module>rocketmq-streams</module>
+		<module>rocketmq-feature-before5</module>
+	</modules>
+
+	<properties>
+		<spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+
+<!--			下面注意两个版本之间的差别-->
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-client-java</artifactId>
+				<version>5.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-client</artifactId>
+				<version>4.9.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-streams-clients</artifactId>
+				<version>1.0.1-preview</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>

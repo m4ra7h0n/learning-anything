@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xjjlearning.database.mysql.mapper.RoleMapper">
+    <resultMap id="roleMap" type="com.xjjlearning.database.mysql.model.SysRole">
+        <id property="id" column="id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="enabled" column="enabled"/>
+        <association property="createInfo" javaType="com.xjjlearning.database.mysql.model.CreateInfo">
+            <result property="createBy" column="create_by"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="rolePrivilegeListMap" type="com.xjjlearning.database.mysql.model.SysRole" extends="roleMap">
+        <collection property="privilegeList" columnPrefix="privilege_" resultMap="com.xjjlearning.database.mysql.mapper.PrivilegeMapper.privilegeMap"/>
+    </resultMap>
+
+    <select id="selectRoleById" resultMap="roleMap">
+        select * from sys_role where id = #{id}
+    </select>
+
+</mapper>

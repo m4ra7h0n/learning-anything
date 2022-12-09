@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.95.7.37:8848
+server:
+  port: 8083

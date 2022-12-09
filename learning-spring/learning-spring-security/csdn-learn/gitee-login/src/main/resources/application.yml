@@ -1,0 +1,37 @@
+server:
+  port: 8082
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          gitee: # registrationId, must
+            provider: gitee  # registrationId by default
+            client-id: a280a18982dac0bef77e5833b0bf9e2aa6c11ed98e63a6c9200abbca674c7724  # must
+            client-secret: ${client-secret.gitee}  # must
+            authorization-grant-type: authorization_code  # must
+            redirect-uri: 'http://localhost:8082/login/oauth2/code/gitee'  # must  the client sent to the authorization server
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+            client-authentication-method: POST  # decide the strategy of token-uri
+            scope: user_info  # the scope of authorization
+            # client-name: learning-spring-security  # name which stayed in authorization server
+          github:
+            client-id: 07f3edaf7b6932e85445
+            client-secret: ${client-secret.github}
+            authorization-grant-type: authorization_code
+            redirect-uri: 'http://localhost:8082/login/oauth2/code/github'
+        provider:
+          gitee:  # the same as registrationId
+            authorization-uri: https://gitee.com/oauth/authorize  # authorization Endpoint which client requests
+            token-uri: https://gitee.com/oauth/token  # the Endpoint where acquire token from
+            user-info-uri: https://gitee.com/api/v5/user  # the userinfo Endpoint
+            user-name-attribute: name  # the key of user which client identified by
+#            jwt-set-uri:  # acquire the pub key from authorization server
+#            issur-uri:  # metadata
+
+# 开启日志 方便调试
+logging:
+  level:
+    org.springframework.web: trace
+    org.springframework.security: trace
+    org.springframework.security.oauth2: debug

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>learning-alibaba-sentinel</artifactId>
+		<groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>sentinel-parameter-flow-control-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sentinel-parameter-flow-control-example</name>
+	<description>sentinel-parameter-flow-control-example</description>
+
+	<dependencies>
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.csp</groupId>-->
+<!--			<artifactId>sentinel-parameter-flow-control</artifactId>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.csp</groupId>-->
+<!--			<artifactId>sentinel-transport-simple-http</artifactId>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+</project>

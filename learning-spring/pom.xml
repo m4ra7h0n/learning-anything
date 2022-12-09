@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>learning-anything</artifactId>
+        <groupId>com.xjjlearning</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.xjjlearning.springframework</groupId>
+    <artifactId>learning-spring</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>learning-spring</name>
+    <description>learning-spring</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>learning-spring-boot</module>
+        <module>learning-spring-cloud</module>
+        <module>learning-spring-security</module>
+        <module>learning-spring-authorization-srever</module>
+        <module>learning-spring-framework</module>
+    </modules>
+
+</project>

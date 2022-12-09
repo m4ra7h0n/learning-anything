@@ -1,0 +1,32 @@
+{
+  "properties": [
+    {
+      "name": "xjj.redisson.host",
+      "type": "java.lang.String",
+      "defaultValue": "localhost",
+      "description": "Description for xjj.redisson.host."
+    },
+    {
+      "name": "xjj.redisson.password",
+      "type": "java.lang.String",
+      "description": "Description for xjj.redisson.password."
+    },
+    {
+      "name": "xjj.redisson.port",
+      "type": "java.lang.Integer",
+      "defaultValue": "6379",
+      "description": "Description for xjj.redisson.port."
+    },
+    {
+      "name": "xjj.redisson.timeout",
+      "type": "java.lang.Integer",
+      "description": "Description for xjj.redisson.timeout."
+    },
+    {
+      "name": "xjj.redisson.ssl",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "Description for xjj.redisson.ssl."
+    }
+  ]
+}

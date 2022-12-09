@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.95.7.37:8848
+  application:
+    name: sentinel-apache-dubbo-consumer-example
+dubbo:
+  cloud:
+    subscribed-services: sentinel-apache-dubbo-provider-example
+server:
+  port: 8083
+
