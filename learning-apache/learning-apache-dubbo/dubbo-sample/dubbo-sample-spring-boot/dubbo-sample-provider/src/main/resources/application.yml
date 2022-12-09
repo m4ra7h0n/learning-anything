@@ -1,0 +1,12 @@
+dubbo:
+  application:
+    name: springboot-privider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+#    id: zk-registry
+    address: nacos://47.95.7.37:8848
+#    address: zookeeper://47.95.7.37:2181
+#  config-center:
+#    address: zookeeper://47.95.7.37:2181

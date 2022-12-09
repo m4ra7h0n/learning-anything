@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.95.7.37:8848
+  #    zookeeper:
+#      discovery:
+#        register: false
+#      connect-string: 47.95.7.37:2181
+  application:
+    name: dubbo-sample-spring-cloud-consumer
+dubbo:
+  cloud:
+    subscribed-services: dubbo-sample-spring-cloud-provider
+server:
+  port: 8082

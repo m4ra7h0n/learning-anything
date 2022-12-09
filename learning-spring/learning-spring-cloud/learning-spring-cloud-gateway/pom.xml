@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>learning-spring-cloud</artifactId>
+        <groupId>com.xjjlearning.springframework.cloud</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>learning-spring-cloud-gateway</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>learning-spring-cloud-gateway</name>
+    <description>learning-spring-cloud-gateway</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-cloud-gateway-demo</module>
+        <module>spring-cloud-gateway-service</module>
+        <module>spring-cloud-gateway-nacos</module>
+        <module>spring-cloud-gateway-oauth</module>
+    </modules>
+</project>

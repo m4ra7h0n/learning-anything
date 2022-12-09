@@ -1,0 +1,13 @@
+spring:
+  redis:
+    host: 47.95.7.37
+    port: 6379
+
+
+xjj:
+  redisson:
+    host: localhost
+    port: 6379
+
+server:
+  port: 8082

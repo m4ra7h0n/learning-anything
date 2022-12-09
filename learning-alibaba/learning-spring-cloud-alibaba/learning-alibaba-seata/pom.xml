@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>learning-spring-cloud-alibaba</artifactId>
+        <groupId>com.xjjlearning.alibaba.cloud</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.xjjlearning.alibaba.cloud.seata</groupId>
+    <artifactId>learning-alibaba-seata</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>learning-seata</name>
+    <description>learning-seata</description>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-cloud-alibaba-samples</module>
+        <module>spring-cloud-nacos-seata</module>
+        <module>spring-cloud-dubbo-seata</module>
+        <module>seata-sourcecode</module>
+    </modules>
+</project>

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 47.95.7.37:8848
+#        namespace: 9d0ed1f6-3f74-4baf-b4e9-2f7021549256
+#        group: DEFAULT_GROUP
+        # 多个配置
+#        extension-configs:
+  #        shared-configs:
+  profiles:
+    active: dev
+  application:
+    name: nacos-sample-spring-cloud-config

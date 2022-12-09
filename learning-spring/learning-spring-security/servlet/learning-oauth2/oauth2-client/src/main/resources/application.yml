@@ -1,0 +1,35 @@
+messages:
+  base-uri: http://127.0.0.1:8090/messages
+
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          messaging-client-oidc:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            # The client’s registered redirect URI that the Authorization Server redirects the end-user’s user-agent to
+            # after the end-user has authenticated and authorized access to the client.
+            redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
+            # The scope(s) requested by the client during the Authorization Request flow, such as openid, email, or profile.
+            # openid is necessary if use openid
+            scope: openid, profile
+            client-name: messaging-client-oidc
+          messaging-client-authorization-code: # hashmap-key(String)   and below is hashmap-value(Registration)
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://127.0.0.1:8080/authorized"
+            scope: message.read,message.write
+            client-name: messaging-client-authorization-code
+        provider:
+          spring:
+            issuer-uri: http://localhost:9000 # get :9000/.well-known/openid-configuration (necessary
+server:
+  port: 8080

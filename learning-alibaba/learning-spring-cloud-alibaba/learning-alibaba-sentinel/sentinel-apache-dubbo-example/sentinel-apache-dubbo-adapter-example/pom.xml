@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>sentinel-apache-dubbo-example</artifactId>
+		<groupId>com.xjjlearning.alibaba.cloud.sentinel</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>sentinel-apache-dubbo-adapter-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sentinel-apache-dubbo-adapter-example</name>
+	<description>sentinel-apache-dubbo-adapter-example</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<apache.dubbo.version>2.7.3</apache.dubbo.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-core</artifactId>
+		</dependency>
+
+<!--		包含dubbo-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-dubbo</artifactId>
+		</dependency>
+
+		<!--		2.6.x及以下版本，请使用：com.alibaba.dubbo-->
+		<!--		2.7.0开始，使用org.apache.dubbo-->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.dubbo</groupId>-->
+<!--			<artifactId>dubbo</artifactId>-->
+<!--			<version>${apache.dubbo.version}</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>
