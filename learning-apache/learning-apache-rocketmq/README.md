@@ -1,3 +1,52 @@
+4.x的文档就是个jiba  
+还好5的文档稍微详细一点
+
+参考官网
+# nameserver
+先启动 nameserver  
+nohup sh mqnamesrv &
+
+# broker
+conf/2m-2s-async/broker-a.properties中添加如下两个配置
+enablePropertyFilter=true
+autoCreateTopicEnable=true
+使用时: -c conf/2m-2s-async/broker-a.properties
+
+再启动 broker  
+nohup sh mqbroker -n localhost:9876 autoCreateTopicEnable=true &
+
+关闭  
+sh bin/mqshutdown broker
+sh bin/mqshutdown namesrv
+
+
+# connect
+https://github.com/apache/rocketmq-connect
+1.创建测试topic(一定要配置 ROCKETMQ_HOME )
+sh ${ROCKETMQ_HOME}/bin/mqadmin updateTopic -t fileTopic -n localhost:9876 -c DefaultCluster -r 8 -w 8
+
+2.构建connect
+git clone https://github.com/apache/rocketmq-connect.git
+mvn -Prelease-connect -DskipTests clean install -U
+
+3.运行worker
+cd distribution/target/rocketmq-connect-0.0.1-SNAPSHOT/rocketmq-connect-0.0.1-SNAPSHOT
+sh bin/connect-standalone.sh -c conf/connect-standalone.conf &
+
+4.source connector
+测试
+touch test-source-file.txt
+echo "Hello \r\nRocketMQ\r\n Connect" >> test-source-file.txt
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8082/connectors/fileSourceConnector -d '{"connector.class":"org.apache.rocketmq.connect.file.FileSourceConnector","filename":"test-source-file.txt","connect.topicname":"fileTopic"}'
+
+5. sink connector
+   curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8082/connectors/fileSinkConnector -d '{"connector.class":"org.apache.rocketmq.connect.file.FileSinkConnector","filename":"test-sink-file.txt","connect.topicnames":"fileTopic"}'
+   cat test-sink-file.txt
+
+日志文件位置
+~/logs/rocketmqconnect
+
+
 5.0.0官网: https://rocketmq.apache.org/zh/docs
 
 我想吐槽一下 就离谱

@@ -15,6 +15,7 @@
 
     <modules>
         <module>servlet</module>
+        <module>csdn-learn</module>
 
     </modules>
 

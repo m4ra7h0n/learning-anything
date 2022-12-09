@@ -2,12 +2,14 @@ package com.xjjlearning.springframework.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
+import org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer;
+import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.OidcScopes;
@@ -15,8 +17,8 @@ import org.springframework.security.oauth2.server.authorization.client.InMemoryR
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.ClientSettings;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 
 import java.util.UUID;
 
@@ -27,43 +29,22 @@ import java.util.UUID;
 @EnableWebSecurity(debug = true)
 public class Oauth2AuthorizationServerSecurityConfiguration {
 
-    // @Bean
-    // @Order(1)
-    // public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
-    //     // WebSecurityConfigurerAdapter
-    //     // SecurityFilterAutoConfiguration
-    //     OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-    //     http.formLogin(Customizer.withDefaults());
-    //     return http.build();
-    // }
 
     @Bean
-    // @Order(2)
-    public SecurityFilterChain standardSecurityFilterChain(HttpSecurity http) throws Exception {
+    @Order(Ordered.HIGHEST_PRECEDENCE)
+    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
+        OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
+        http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
+                .oidc(Customizer.withDefaults());	// Enable OpenID Connect 1.0
+
         // @formatter:off
         http
-                .authorizeHttpRequests((authorize) -> authorize
-                        .anyRequest().authenticated()
+                .exceptionHandling(exceptions ->
+                        exceptions.authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"))
                 )
-                // .httpBasic(Customizer.withDefaults());
-                .formLogin(Customizer.withDefaults());
+                .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
         // @formatter:on
-
         return http.build();
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        // @formatter:off
-        UserDetails userDetails = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
-                .roles("USER")
-                .build();
-        // @formatter:on
-
-        return new InMemoryUserDetailsManager(userDetails);
-
     }
 
     @Bean
@@ -77,21 +58,21 @@ public class Oauth2AuthorizationServerSecurityConfiguration {
                 // it's our white list which is 在登录和授权之后回调的用户端地址, 其中回调地址还需要用户指定
                 .redirectUri("http://127.0.0.1:8080/login/oauth2/code/login-client")
                 .redirectUri("http://127.0.0.1:8080/authorized")
-                .scope(OidcScopes.OPENID)
-                .scope(OidcScopes.PROFILE)
+                .scope(OidcScopes.OPENID) // openid connect necessary
+                .scope(OidcScopes.PROFILE) // openid necessary
                 .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
                 .build();
-        RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("messaging-client")
-                .clientSecret("{noop}secret")
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-                // No user authorization is required, client
-                // The client initiates a request to the authorization server in its own name to obtain user resources
-                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
-                .scope("message:read")
-                .scope("message:write")
-                .build();
-        return new InMemoryRegisteredClientRepository(loginClient, registeredClient);
+        // RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
+        //         .clientId("messaging-client")
+        //         .clientSecret("{noop}secret")
+        //         .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+        //         // No user authorization is required, client
+        //         // The client initiates a request to the authorization server in its own name to obtain user resources
+        //         .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+        //         .scope("message:read")
+        //         .scope("message:write")
+        //         .build();
+        return new InMemoryRegisteredClientRepository(loginClient);
     }
 
     //

@@ -105,13 +105,12 @@ public class RestConfig {
         // settings for FilterChains
 
 
-
         http.authorizeHttpRequests((authorize) -> authorize
-                        .antMatchers(HttpMethod.GET, "/message/**").hasAnyAuthority("SCOPE_message:read")
-                        .antMatchers(HttpMethod.POST, "/message/**").hasAnyAuthority("SCOPE_message:write")
+                        .requestMatchers(HttpMethod.GET, "/message/**").hasAnyAuthority("SCOPE_message:read")
+                        .requestMatchers(HttpMethod.POST, "/message/**").hasAnyAuthority("SCOPE_message:write")
                         .anyRequest().authenticated())
                 .httpBasic(withDefaults()) // username/password
-                .csrf((csrf) -> csrf.ignoringAntMatchers("/token")) // use our jwt. Or 403 forbidden
+                .csrf((csrf) -> csrf.ignoringRequestMatchers("/token")) // use our jwt. Or 403 forbidden
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
 
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

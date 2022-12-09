@@ -1,10 +1,14 @@
+# openid connect (OCId)
+https://openid.net/connect/
 UserDetailsServiceAutoConfiguration
 定义用户加载到内存的逻辑, 使用配置文件账户密码逻辑  
 
+# 一个用来做测试的包 用来动态获取网络数据(selenium)
 selenium:
 page factory makes locate easily
 design pattern: A java class is created that corresponds to each web page
 
+# spring security 在 spring 中的生命周期
 // java-privilege                -> nextFilter and isAsync and java-privilege-> 1.isSkipAsyncDispatch 2.isAlreadyFiltered
 ApplicationFilterChain(doFilter) -> ApplicationFilterChain(internalDoFilter) -> OncePerRequestFilter(doFilter)
 -> CharacterEncodingFilter(doFilterInternal) ->

@@ -17,6 +17,7 @@ spring:
             # after the end-user has authenticated and authorized access to the client.
             redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
             # The scope(s) requested by the client during the Authorization Request flow, such as openid, email, or profile.
+            # openid is necessary if use openid
             scope: openid, profile
             client-name: messaging-client-oidc
           messaging-client-authorization-code: # hashmap-key(String)   and below is hashmap-value(Registration)

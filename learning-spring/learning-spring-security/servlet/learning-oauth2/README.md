@@ -1,4 +1,6 @@
-授权码模式流程  
+**openid:** https://help.aliyun.com/document_detail/48019.html  
+
+**授权码模式流程**  
 官网: https://docs.spring.io/spring-security/reference/servlet/oauth2/client/authorization-grants.html  
 启动authorization-server  
 启动resource-server  
