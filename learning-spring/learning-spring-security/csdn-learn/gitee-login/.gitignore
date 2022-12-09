@@ -1,4 +1,4 @@
-learning-docs
+src/main/resources/application.properties
 # Compiled class file
 *.class
 *.classpath

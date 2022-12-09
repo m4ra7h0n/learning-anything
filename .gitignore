@@ -1,5 +1,5 @@
 learning-docs
-~/IdeaProjects/**/application.properties
+**/application.properties
 # Compiled class file
 *.class
 *.classpath
