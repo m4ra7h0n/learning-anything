@@ -1,9 +1,0 @@
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 47.95.7.37:8848
-  application:
-    name: service-provider #be care
-server:
-  port: 8095

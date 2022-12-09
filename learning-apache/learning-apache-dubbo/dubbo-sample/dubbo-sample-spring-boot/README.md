@@ -1,1 +1,0 @@
-使用最新的版本 artifactId = org.apache.dubbo

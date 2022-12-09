@@ -1,7 +1,0 @@
-server:
-  port: 8085
-spring:
-  cloud:
-    sentinel:
-      transport:
-        dashboard: 47.95.7.37:8090
