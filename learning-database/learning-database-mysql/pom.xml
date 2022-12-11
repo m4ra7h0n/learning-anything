@@ -19,5 +19,6 @@
         <module>mybatis-plus</module>
         <module>hibernate</module>
         <module>tk-mybatis</module>
+        <module>mybatis-mapper</module>
     </modules>
 </project>

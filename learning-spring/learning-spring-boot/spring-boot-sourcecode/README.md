@@ -14,6 +14,13 @@ spring-boot-starter-redis以及spring-boot-demo是《spring cloud alibaba原理�
 @EnableAutoConfiguration注解中实现了@Import(AutoConfigurationImportSelector.class)  
 AutoConfigurationImportSelector.class继承了ImportSelector, 其中需要定义selectImports()函数返回自动加载的类的名字    
   
+## spring-autoconfigure-metadata.properties
+首先说明下，这个 spring-autoconfigure-metadata.properties 文件存储的是”待自动装配候选类“过滤的计算规则，这个信息很重要，框架会根据里面的规则逐一对候选类进行计算看是否需要被自动装配进容器，并不是全部加载；  
+spring-autoconfigure-metadata.properties 内容格式 (自动配置的类全名.条件Condition=值)：  
+```text
+org.springframework.boot.autoconfigure.amqp.RabbitAnnotationDrivenConfiguration.ConditionalOnClass = org.springframework.amqp.rabbit.annotation.EnableRabbit
+```
+
 ## @conditional注解  
 按照条件加载bean, 自定义需要继承Condition    
 包括ConditionalOnBean: 存在Bean的时候加载    

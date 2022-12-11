@@ -27,7 +27,8 @@ public class GiteeLoginApplication {
         // redirect to localhost:8082/login to choose the authorization server to login, choose gitee
         // 2.localhost get http://localhost:8082/oauth2/authorization/gitee  -- provider
 
-        // OAuth2AuthorizationRequestRedirectFilter -- authorization-uri
+
+        // OAuth2AuthorizationRequestRedirectFilter -- authorization-uri  // override class OAuth2AuthorizationRequestResolver to implement the resolve() method
         // 3.localhost Redirecting to https://gitee.com/oauth/authorize?response_type=code&client_id=a280a18982dac0bef77e5833b0bf9e2aa6c11ed98e63a6c9200abbca674c7724&scope=user_info&state=1vVhtaY4-H5AyBOKxbAN4sv8liYzLpGvPMcmN2G4nag%3D&redirect_uri=http://localhost:8082/login/oauth2/code/gitee
 
         // 4.click to authorize

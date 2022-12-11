@@ -16,7 +16,7 @@
     <modules>
         <module>servlet</module>
         <module>csdn-learn</module>
-
+        <module>spring-security-inaction</module>
     </modules>
 
 </project>

@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "xjj.redis.enable",
+      "type": "java.lang.Boolean",
+      "description": "Description for xjj.redis.enable."
+    }
+  ] }

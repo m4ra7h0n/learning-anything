@@ -1,0 +1,6 @@
+# 开启日志 方便调试
+logging:
+  level:
+    org.springframework.web: trace
+    org.springframework.security: trace
+    org.springframework.security.oauth2: debug

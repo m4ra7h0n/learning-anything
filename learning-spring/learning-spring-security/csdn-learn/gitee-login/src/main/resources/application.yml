@@ -4,7 +4,7 @@ spring:
   security:
     oauth2:
       client:
-        registration:
+        registration:  # provides the information of the client in authorization server
           gitee: # registrationId, must
             provider: gitee  # registrationId by default
             client-id: a280a18982dac0bef77e5833b0bf9e2aa6c11ed98e63a6c9200abbca674c7724  # must
@@ -20,7 +20,7 @@ spring:
             client-secret: ${client-secret.github}
             authorization-grant-type: authorization_code
             redirect-uri: 'http://localhost:8082/login/oauth2/code/github'
-        provider:
+        provider:  # provides the urls
           gitee:  # the same as registrationId
             authorization-uri: https://gitee.com/oauth/authorize  # authorization Endpoint which client requests
             token-uri: https://gitee.com/oauth/token  # the Endpoint where acquire token from

@@ -1,0 +1,7 @@
+# https://www.cnblogs.com/lori/p/13490005.html
+xjj:
+  redis:
+    enable: true
+
+server:
+  port: 8085
