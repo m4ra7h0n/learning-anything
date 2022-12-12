@@ -17,9 +17,6 @@ import java.io.PrintWriter;
 
 /**
  * CustomLogoutSuccessHandler
- *
- * @author Felordcn
- * @since 17:10 2019/10/23
  **/
 @Slf4j
 public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {

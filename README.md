@@ -128,6 +128,8 @@ English. thanks for your star and focus on.
         - [ ] 源码 + 源码实践
     - [x] spring-cloud
         - [x] spring-cloud-gateway
+    - [ ] spring-security
+    - [ ] spring-cache
 - [ ] learning-netty
 - [ ] learning-reactor
 - [ ] learning-serverless

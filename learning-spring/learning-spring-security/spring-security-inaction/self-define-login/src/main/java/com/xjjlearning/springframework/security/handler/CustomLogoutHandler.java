@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义登录处理器
- *
- * @author Felordcn
- * @since 16:55 2019/10/23
  **/
 @Slf4j
 public class CustomLogoutHandler implements LogoutHandler {

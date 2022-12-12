@@ -20,6 +20,7 @@
         <module>learning-spring-security</module>
         <module>learning-spring-authorization-srever</module>
         <module>learning-spring-framework</module>
+        <module>learning-spring-cache</module>
     </modules>
 
 </project>

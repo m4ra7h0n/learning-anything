@@ -24,6 +24,7 @@ public class RequestUtil {
      */
     public static String obtainBody(ServletRequest request) {
 
+
         BufferedReader br = null;
         StringBuilder sb = new StringBuilder();
         try {

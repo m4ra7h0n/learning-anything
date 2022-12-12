@@ -1,4 +1,4 @@
-package com.xjjlearning.springframework.security.cache;
+package com.xjjlearning.springframework.security.service;
 
 public interface CaptchaCacheStorage {
 

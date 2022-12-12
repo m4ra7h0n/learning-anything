@@ -3,6 +3,8 @@ package com.xjjlearning.springframework.security.config;
 import com.xjjlearning.springframework.security.filter.JsonLoginPostProcessor;
 import com.xjjlearning.springframework.security.filter.LoginPostProcessor;
 import com.xjjlearning.springframework.security.filter.PreLoginFilter;
+import com.xjjlearning.springframework.security.handler.CustomLogoutHandler;
+import com.xjjlearning.springframework.security.handler.CustomLogoutSuccessHandler;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
@@ -13,6 +15,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.annotation.Resource;
@@ -59,6 +63,15 @@ public class CustomSpringBootWebSecurityConfiguration {
         @Resource
         private PreLoginFilter preLoginFilter;
 
+        // @Resource
+        // private CaptchaAuthenticationFilter captchaAuthenticationFilter;
+
+        @Resource
+        private AuthenticationSuccessHandler authenticationSuccessHandler;
+
+        @Resource
+        private AuthenticationFailureHandler authenticationFailureHandler;
+
         @Override
         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
             // AuthenticationConfiguration.getAuthenticationManager()
@@ -78,6 +91,10 @@ public class CustomSpringBootWebSecurityConfiguration {
                     .authorizeRequests().anyRequest().authenticated()
                     .and()
                     /**
+                     * 验证码过滤器
+                     */
+                    // .addFilterBefore(captchaAuthenticationFilter, PreLoginFilter.class)
+                    /**
                      * 1.通过增加前置过滤器实现账户密码的定制
                      */
                     // 增加一层过滤 通过传入的type和内容 来解码用户名和密码 再交给 下一个filter
@@ -85,7 +102,12 @@ public class CustomSpringBootWebSecurityConfiguration {
                     .formLogin()
                     // // 这个配置使用后 前台的登录提交表单逻辑 会交给这个url, 实际上没有写任何逻辑 然后会交给 UsernamePasswordAuthenticationFilter
                     .loginProcessingUrl(LOGIN_PROCESSING_URL)
-                    .successForwardUrl("/login/success").failureForwardUrl("/login/failure");
+                    // 登录  成功后返回jwt token  失败后返回 错误信息
+                    .successHandler(authenticationSuccessHandler).failureHandler(authenticationFailureHandler)
+                    // 登录成功失败的跳转url 和上面的只能选一个
+                    // .successForwardUrl("/login/success").failureForwardUrl("/login/failure")
+                    .and().logout().addLogoutHandler(new CustomLogoutHandler()).logoutSuccessHandler(new CustomLogoutSuccessHandler());
+
 
                     /**
                      * 2.通过继承 并修改 UsernamePasswordAuthenticationFilter 实现定制

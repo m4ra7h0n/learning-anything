@@ -21,3 +21,14 @@ spring:
       schema-locations: classpath:sql/ddl.sql
       #  \u521D\u59CB\u5316\u6570\u636E DML
       data-locations: classpath:sql/dml.sql
+# jwt
+jwt:
+  config:
+    enabled: true
+    key-location: xjj.jks
+    key-alias: xjjjjj
+    key-pass: 123456
+    iss: xjj.wiki
+    sub: all
+    access-exp-days: 30
+    refresh-exp-days: 90

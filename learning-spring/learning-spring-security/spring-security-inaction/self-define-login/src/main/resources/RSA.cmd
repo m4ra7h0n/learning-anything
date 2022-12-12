@@ -1,0 +1,1 @@
+keytool -genkey -alias xjjjjj -keyalg RSA -storetype PKCS12 -keysize 1024 -validity 365 -keystore ~/Desktop/xjj.jks -storepass 123456 -dname "CN=(xjj), OU=(xjj), O=(xjj), L=(zz), ST=(hn), C=(cn)"

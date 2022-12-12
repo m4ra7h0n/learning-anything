@@ -2,8 +2,12 @@ package com.xjjlearning.springframework.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+@EnableCaching
+// how to use cache and it's source code
+// see: https://zhuanlan.zhihu.com/p/266804094
 public class SelfDefineLoginApplication {
 
 	public static void main(String[] args) {
