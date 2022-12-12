@@ -105,7 +105,12 @@ public class JwtTokenGenerator {
         RSAPublicKey rsaPublicKey = (RSAPublicKey) this.keyPair.getPublic();
         SignatureVerifier rsaVerifier = new RsaVerifier(rsaPublicKey);
         // 解析错误 怎么办
-        Jwt jwt = JwtHelper.decodeAndVerify(jwtToken, rsaVerifier);
+        Jwt jwt = null;
+        try {
+            jwt = JwtHelper.decodeAndVerify(jwtToken, rsaVerifier);
+        } catch (Exception e) {
+            return null;
+        }
         String claims = jwt.getClaims();
         JSONObject jsonObject = JSONUtil.parseObj(claims);
         String exp = jsonObject.getStr(JWT_EXP_KEY);

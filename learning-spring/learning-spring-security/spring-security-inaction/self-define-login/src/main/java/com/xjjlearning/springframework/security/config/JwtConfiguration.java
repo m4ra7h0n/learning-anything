@@ -1,5 +1,6 @@
 package com.xjjlearning.springframework.security.config;
 
+import com.xjjlearning.springframework.security.filter.JwtAuthenticationFilter;
 import com.xjjlearning.springframework.security.handler.CustomLoginFailedHandler;
 import com.xjjlearning.springframework.security.handler.CustomLoginSuccessHandler;
 import com.xjjlearning.springframework.security.jwt.JwtProperties;
@@ -69,5 +70,11 @@ public class JwtConfiguration {
     @Bean
     public AuthenticationFailureHandler authenticationFailureHandler() {
         return new CustomLoginFailedHandler();
+    }
+
+
+    @Bean
+    public JwtAuthenticationFilter jwtAuthenticationFilter(JwtTokenGenerator jwtTokenGenerator, JwtTokenStorage jwtTokenStorage) {
+        return new JwtAuthenticationFilter(jwtTokenGenerator, jwtTokenStorage);
     }
 }
