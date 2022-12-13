@@ -14,11 +14,15 @@ import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.access.AccessDecisionManager;
+import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -85,6 +89,12 @@ public class CustomSpringBootWebSecurityConfiguration {
         @Resource
         private SimpleAuthenticationEntryPoint simpleAuthenticationEntryPoint;
 
+        @Resource
+        private FilterInvocationSecurityMetadataSource filterInvocationSecurityMetadataSource;
+
+        @Resource
+        private AccessDecisionManager accessDecisionManager;
+
         @Override
         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
             // AuthenticationConfiguration.getAuthenticationManager()
@@ -102,6 +112,8 @@ public class CustomSpringBootWebSecurityConfiguration {
                     .cors()
                     .and()
                     .authorizeRequests().anyRequest().authenticated()
+                    // 动态权限开启
+                    //.withObjectPostProcessor(filterSecurityInterceptorObjectPostProcessor())
                     .and()
                     /**
                      * 异常处理, 设置异常处理之后 服务器返回的状态码是200 而我们的Handler处理这个状态
@@ -143,6 +155,22 @@ public class CustomSpringBootWebSecurityConfiguration {
                     // .addFilter(multiTypeUsernamePasswordAuthenticationFilter)
                     // .formLogin()
                     // .loginProcessingUrl(LOGIN_PROCESSING_URL);
+        }
+
+        /**
+         * 自定义 FilterSecurityInterceptor  ObjectPostProcessor 以替换默认配置达到动态权限的目的
+         *
+         * @return ObjectPostProcessor
+         */
+        private ObjectPostProcessor<FilterSecurityInterceptor> filterSecurityInterceptorObjectPostProcessor() {
+            return new ObjectPostProcessor<FilterSecurityInterceptor>() {
+                @Override
+                public <O extends FilterSecurityInterceptor> O postProcess(O object) {
+                    object.setAccessDecisionManager(accessDecisionManager);
+                    object.setSecurityMetadataSource(filterInvocationSecurityMetadataSource);
+                    return object;
+                }
+            };
         }
     }
 }

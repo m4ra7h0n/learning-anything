@@ -131,11 +131,9 @@ public class UserDetailsRepository {
 
         if (Objects.nonNull(sysUser)) {
             return User.withUsername(username).password(sysUser.getEncodePassword())
-                    .authorities(AuthorityUtils.NO_AUTHORITIES)
+                    .authorities(AuthorityUtils.createAuthorityList("ROLE_ADMIN", "ROLE_APP"))
                     .build();
         }
         throw new UsernameNotFoundException("username: " + username + " notfound");
     }
-
-
 }

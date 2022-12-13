@@ -1,5 +1,7 @@
 package com.xjjlearning.springframework.security;
 
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
 import com.xjjlearning.springframework.security.entity.SysUser;
 import com.xjjlearning.springframework.security.jwt.JwtTokenGenerator;
 import com.xjjlearning.springframework.security.jwt.JwtTokenPair;
@@ -113,5 +115,26 @@ class SelfDefineLoginApplicationTests {
         JwtTokenPair jwtTokenPair = jwtTokenGenerator.jwtTokenPair("133", roles, additional);
 
         System.out.println("jwtTokenPair = " + jwtTokenPair);
+    }
+
+    @Test
+    void authorizeTest() throws Exception {
+        MvcResult mvcResult1 = mockMvc.perform(post("/process")
+                        .param("username", "xjj")
+                        .param("password", "12345")
+                        .param("login_type", "0")).andReturn();
+        String contentAsString = mvcResult1.getResponse().getContentAsString();
+        System.out.println(contentAsString);
+        JSONObject jsonObject = JSONUtil.parseObj(contentAsString).getJSONObject("data");
+        Object access_token = jsonObject.get("access_token");
+
+        mockMvc.perform(get("/foo/test2").header("Authorization", "Bearer " + access_token))
+                .andExpect(status().isOk());
+        mockMvc.perform(get("/foo/bar").header("Authorization", "Bearer " + access_token))
+                .andExpect(status().isOk());
+        mockMvc.perform(get("/foo/param/xjj").header("Authorization", "Bearer " + access_token))
+                .andExpect(status().isOk());
+        mockMvc.perform(get("/foo/postfilter").header("Authorization", "Bearer " + access_token))
+                .andExpect(status().isOk());
     }
 }

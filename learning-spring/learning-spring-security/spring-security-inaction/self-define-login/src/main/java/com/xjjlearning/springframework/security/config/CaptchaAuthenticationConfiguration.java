@@ -20,6 +20,7 @@ import javax.annotation.Resource;
 import java.util.Collections;
 
 @Slf4j
+// 暂未使用
 // @Configuration
 public class CaptchaAuthenticationConfiguration {
 
