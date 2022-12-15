@@ -1,0 +1,5 @@
+生成密钥:
+keytool -genkey -alias jose  -keyalg RSA -storetype PKCS12 -keysize 2048 -validity 365 -keystore ~/Desktop/jose.jks -storepass xjjjjj  -dname "CN=(felord), OU=(felord), O=(felord), L=(zz), ST=(hn), C=(cn)"
+
+生成公钥cer:
+ keytool -export -alias jose -keystore jose.jks  -file pub.cer

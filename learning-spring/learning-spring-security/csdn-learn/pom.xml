@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>gitee-login</module>
+        <module>spring-auth-server</module>
     </modules>
 
     <properties>

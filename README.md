@@ -17,17 +17,19 @@ English. thanks for your star and focus on.
 ## 已经学习
 
 **学习顺序依次如下：**   
-[
-1.《Maven实战》  
-2.《Spring Cloud Alibaba原理与实战》中途学习:   
-(1)《Mybatis从入门到精通》    
-(2) mybatis-plus官网文档     
+1.[《Maven实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
+2.[《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+中途学习:   
+(1)[《Mybatis从入门到精通》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)    
+(2) mybatis-plus官网文档(过时)     
 (3) druid官网文档   
-3.《java并发编程的艺术》    
-4.《java8实战》  
-5.tk.mybatis通用mapper  
-6.spring-security官网sample  
-](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+3.[《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)    
+4.[《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
+6.[spring security 实战-老版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+中途学习:     
+(1) [mybatis-mapper](https://mapper.mybatis.io/)    
+(2) spring-cache  
+7.[spring security 实战-2022版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考
@@ -62,7 +64,7 @@ English. thanks for your star and focus on.
 《Effective Java》   
 《基于Apache Flink的流处理：流式应用基础、实现及操作》   
 《java核心技术卷》第12版 java17    
-《kotlin进阶实战》  
+《kotlin进阶实战》
 
 **下面是学习 + 阅读源码**
 
@@ -189,10 +191,10 @@ files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 建议: 减少强度 + 归脾丸 + 补肾阳的
 
 **花一整天找文档资料**
-今天学习spring security 先是去找spring官网死磕英文 看了一上午看麻了 主要是官网他讲的不清楚 有些含糊
-然后找了官方文档对应的中文版 看了一下午 因为版本和最新的sample对不上 好些教程有点老还在讲spring3 所以还是云里雾里 没有一个对新手友好的逐步进阶的教程  临近晚上去csdn找了找 发现了比较细的全的教程 博客也不是不好 还得分场合看 
-总结: 虽然官方文档好 全 但是如果是初学 官方文档详细的可以看 官方文档不详细或者是英文的而你英文不好 不适合  
-这个时候找找网友写的全面的系列也不错  
+今天学习spring security 先是去找spring官网死磕英文 看了一上午看麻了 主要是官网他讲的不清楚 有些含糊 然后找了官方文档对应的中文版 看了一下午 因为版本和最新的sample对不上 好些教程有点老还在讲spring3
+所以还是云里雾里 没有一个对新手友好的逐步进阶的教程 临近晚上去csdn找了找 发现了比较细的全的教程 博客也不是不好 还得分场合看 总结: 虽然官方文档好 全 但是如果是初学 官方文档详细的可以看 官方文档不详细或者是英文的而你英文不好
+不适合  
+这个时候找找网友写的全面的系列也不错
 
 ### 反思建议总结
 
@@ -232,9 +234,8 @@ files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 pdf中往往配有源码 一定要自己写 然后参照配的代码 这样才算是掌握 否则你复制粘贴 根本不算会 自己写不出 没有思考
 
 #### 七
-看《java8实战》中作者学习java stream 后又和 scala 中的 stream 进行对比, 这样学习可以加深印象  
 
-
+看《java8实战》中作者学习java stream 后又和 scala 中的 stream 进行对比, 这样学习可以加深印象
 
 ## by the way
 

@@ -36,6 +36,7 @@ public class GiteeLoginApplication {
 
         // OAuth2LoginAuthenticationFilter
         // OAuth2LoginAuthenticationProvider
+        // OAuth2LoginAuthenticationProvider
         // 6.post https://gitee.com/oauth/token  -- token-uri
         // 7.get  https://gitee.com/api/v5/user -- user-info-uri
 

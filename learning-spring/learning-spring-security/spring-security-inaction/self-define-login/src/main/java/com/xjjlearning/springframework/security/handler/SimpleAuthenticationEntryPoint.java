@@ -22,7 +22,7 @@ public class SimpleAuthenticationEntryPoint implements AuthenticationEntryPoint 
         //todo your business
         HashMap<String, String> map = new HashMap<>(2);
         map.put("uri", request.getRequestURI());
-        map.put("msg", "UnAuthenticated...");
+        map.put("msg", "UnAuthenticated...123");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setCharacterEncoding("utf-8");
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);

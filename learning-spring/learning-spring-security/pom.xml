@@ -17,6 +17,7 @@
         <module>servlet</module>
         <module>csdn-learn</module>
         <module>spring-security-inaction</module>
+        <module>spring-security-inaction-2022</module>
     </modules>
 
 </project>
