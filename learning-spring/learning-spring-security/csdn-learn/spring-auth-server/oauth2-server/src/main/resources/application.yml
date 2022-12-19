@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: authorization-server
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+        trace: true
+  sql:
+    init:
+      schema-locations: classpath:ddl.sql
+
+server:
+  port: 9000
+# 方便调试
+logging:
+  level:
+    org.springframework.web: trace
+    org.springframework.security: trace
+    org.springframework.security.oauth2: debug

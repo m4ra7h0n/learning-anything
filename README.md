@@ -52,6 +52,8 @@ English. thanks for your star and focus on.
 ## 打算学习:
 
 **pdf:**  
+《深入理解Java虚拟机：JVM高级特性与最佳实践(第3版)》
+《凤凰架构》
 《Hands-On-Reactive-Programming-in-Spring-5-master》  
 《Designing and Deploying Microservices》  
 《阿里巴巴Java开发手册》   
@@ -103,6 +105,7 @@ English. thanks for your star and focus on.
     - [ ] memcached
     - [x] db2
     - [ ] polardb
+- [ ] learning-elastic
 - [ ] learning-docs
 - [ ] learning-front
     - [ ] vue

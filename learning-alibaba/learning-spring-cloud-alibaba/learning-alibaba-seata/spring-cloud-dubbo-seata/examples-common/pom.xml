@@ -10,6 +10,5 @@
 
 	<artifactId>examples-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>examples-common</name>
-	<description>examples-common</description>
+
 </project>

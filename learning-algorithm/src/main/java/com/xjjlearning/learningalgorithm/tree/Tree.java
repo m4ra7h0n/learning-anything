@@ -7,8 +7,14 @@ public class Tree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
         TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
@@ -45,7 +51,7 @@ public class Tree {
     }
 
     //中序遍历意味着root放在中间访问, 左中右
-    public static void midTrival(TreeNode root){
+    public static void midTrival(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
         while (!stack.isEmpty() || node != null) {
@@ -59,30 +65,33 @@ public class Tree {
             }
         }
     }
+
     private static void lastTravel(TreeNode root) {
+        LinkedHashMap
         Deque<TreeNode> stack = new ArrayDeque<>();
         LinkedList<Integer> list = new LinkedList<>();
         stack.push(root);
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             list.addFirst(node.val);
-            if(node.left!= null) stack.push(node.left);//先压左再压右
-            if(node.right!= null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);//先压左再压右
+            if (node.right != null) stack.push(node.right);
         }
         for (Integer integer : list) {
             System.out.println(integer);
         }
     }
-    private static TreeNode buildTree(int n){
+
+    private static TreeNode buildTree(int n) {
         TreeNode root = new TreeNode(1);
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.offer(root);
-        for (int i = 2;;) {
+        for (int i = 2; ; ) {
             TreeNode node = stack.poll();
             node.left = new TreeNode(i++);
-            if (i > n)break;
+            if (i > n) break;
             node.right = new TreeNode(i++);
-            if (i > n)break;
+            if (i > n) break;
             stack.offer(node.left);
             stack.offer(node.right);
         }

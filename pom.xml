@@ -39,6 +39,7 @@
         <module>learning-serverless</module>
         <module>learning-netty</module>
         <module>learning-language</module>
+        <module>learning-elastic</module>
     </modules>
 
     <scm>

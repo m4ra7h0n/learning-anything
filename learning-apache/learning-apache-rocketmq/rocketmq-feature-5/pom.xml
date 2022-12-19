@@ -8,15 +8,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>rocketmq-demo</artifactId>
+    <artifactId>rocketmq-feature-5</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rocketmq-demo</name>
-    <description>rocketmq-demo</description>
+    <name>rocketmq-feature-5</name>
+    <description>rocketmq-feature-5</description>
     <dependencies>
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-client-java</artifactId>
         </dependency>
     </dependencies>
-
 </project>

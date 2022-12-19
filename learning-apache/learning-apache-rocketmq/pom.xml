@@ -17,7 +17,7 @@
 
 	<modules>
 		<module>rocketmq-connect</module>
-		<module>rocketmq-feature</module>
+		<module>rocketmq-feature-5</module>
 		<module>rocketmq-streams</module>
 		<module>rocketmq-feature-before5</module>
 	</modules>
@@ -54,6 +54,8 @@
 				<artifactId>rocketmq-client-java</artifactId>
 				<version>5.0.0</version>
 			</dependency>
+
+
 			<dependency>
 				<groupId>org.apache.rocketmq</groupId>
 				<artifactId>rocketmq-client</artifactId>
@@ -64,6 +66,7 @@
 				<artifactId>rocketmq-streams-clients</artifactId>
 				<version>1.0.1-preview</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

@@ -63,3 +63,10 @@ connect文档: https://rocketmq-1.gitbook.io/rocketmq-connector/
 
 # rocketmq与kafka对比
 kafka不支持消费失败重试/定时消息/事务消息/顺序消费，难以支撑淘宝订单交易充值等业务。淘宝中间件团队参考kafka设计的RocketMQ
+
+
+
+# 设计
+## 日志
+系统产生日志 -> 放入rocketmq -> 消费端写入mongodb
+mongodb日志 -> rocket-connect -> hudi
