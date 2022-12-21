@@ -67,7 +67,6 @@ public class Tree {
     }
 
     private static void lastTravel(TreeNode root) {
-        LinkedHashMap
         Deque<TreeNode> stack = new ArrayDeque<>();
         LinkedList<Integer> list = new LinkedList<>();
         stack.push(root);

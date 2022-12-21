@@ -25,7 +25,7 @@ English. thanks for your star and focus on.
 (3) druid官网文档   
 3.[《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)    
 4.[《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
-6.[spring security 实战-老版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+6.[spring security 实战](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
 中途学习:     
 (1) [mybatis-mapper](https://mapper.mybatis.io/)    
 (2) spring-cache  

@@ -1,0 +1,1 @@
+spring-security: CVE-2022-31692

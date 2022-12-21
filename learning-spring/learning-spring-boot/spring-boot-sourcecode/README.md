@@ -89,7 +89,7 @@ SpringApplication.run() 打断点, 一直跟进到org.springframework.boot.Sprin
         ---> CharSequence  
     --> listeners.contextLoaded():发布容器已加载事件  
   
--> refreshContext():刷新容器  
+-> refreshContext():**//刷新容器**  
     --> shutdownHook.registerApplicationContext():优雅关闭spring?  
     --> refresh()  
         ---> prepareRefresh(); **//刷新前的预处理**

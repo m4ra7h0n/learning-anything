@@ -14,4 +14,8 @@
     <description>hack-spring</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>CVE-2022-31692</module>
+    </modules>
+
 </project>

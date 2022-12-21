@@ -9,6 +9,11 @@ class ConcurrentApplicationTests {
 
     @Test
     void contextLoads() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("1");
+        sb.append("2");
+        sb.delete(1, 1);
+        System.out.println(sb);
     }
 
 }
