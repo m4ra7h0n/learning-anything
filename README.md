@@ -118,6 +118,8 @@ English. thanks for your star and focus on.
 - [ ] learning-hack
     - [ ] learning-codeql
     - [ ] hack-spring
+    - [ ] hack-alibaba
+      - [ ] nacos
 - [ ] learning-language
     - [ ] learning-java
         - [x] util
