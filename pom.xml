@@ -40,6 +40,7 @@
         <module>learning-netty</module>
         <module>learning-language</module>
         <module>learning-elastic</module>
+        <module>learning-spider</module>
     </modules>
 
     <scm>
