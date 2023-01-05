@@ -3,7 +3,8 @@
 这里面还差一个codeql-cli 因为文件2G所以放在本地了 需要配置classpath seebug里面有教程跟着来就可以  
 
 # 学习方式
-资源集合: https://github.com/ASTTeam/CodeQL  
+官方资源: https://codeql.github.com/docs/
+大佬搜集资源: https://github.com/ASTTeam/CodeQL  
 
 学习顺序: 
 https://paper.seebug.org/1078 (初始搭建环境 简单demo)   

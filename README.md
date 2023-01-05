@@ -29,7 +29,7 @@ English. thanks for your star and focus on.
 中途学习:     
 (1) [mybatis-mapper](https://mapper.mybatis.io/)    
 (2) spring-cache  
-7.[spring security 实战-2022版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+7.[spring security 实战-2022版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
 8.[代码分析平台CodeQL学习手记](https://www.4hou.com/posts/o6wX)
 
 **下面的天数是单个项目的天数**  
@@ -142,10 +142,27 @@ English. thanks for your star and focus on.
 - [ ] learning-reactor
 - [ ] learning-serverless
 
-## idea使用
+## 编辑器使用技巧
 
+### 一.idea使用
 1.idea打开如果模块过多则使用settings(windows)/preferences(mac) -> build, execution, deployment -> build tools -> maven -> ignore
 files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
+
+一些常用插件:  
+
+好玩插件:  
+1.(用中文写代码) ChinesePinyin-CodeCompletionHelper  
+
+### 二.vscode
+设置目录宽度: https://blog.csdn.net/qq_35091353/article/details/117112097    
+Visual Studio Code的一些使用技巧: https://www.antbaba.com/2020/08/04/visual-studio-code%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
+一些常用插件: 
+1.中文
+2.好看主题monokai(同理idea)
+3.中文逗号转英文
+4.输入英文自动补全英文
+5.Dictionary Completion(英文单词补全)  
+6.HexEditor(编辑二进制文本 适合二进制安全)  
 
 ## ps学习建议
 
