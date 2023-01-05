@@ -30,6 +30,7 @@ English. thanks for your star and focus on.
 (1) [mybatis-mapper](https://mapper.mybatis.io/)    
 (2) spring-cache  
 7.[spring security 实战-2022版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
+8.[代码分析平台CodeQL学习手记](https://www.4hou.com/posts/o6wX)
 
 **下面的天数是单个项目的天数**  
 由于不是全天学习 所以以下内容仅供参考
@@ -119,7 +120,7 @@ English. thanks for your star and focus on.
     - [ ] learning-codeql
     - [ ] hack-spring
     - [ ] hack-alibaba
-      - [ ] nacos
+      - [x] nacos
 - [ ] learning-language
     - [ ] learning-java
         - [x] util
