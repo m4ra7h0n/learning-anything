@@ -1,9 +1,0 @@
----
-sourceLocationPrefix: "/Users/xjj/IdeaProjects/learning-anything/learning-hack/learning-codeql/src/javascript"
-baselineLinesOfCode: 2
-unicodeNewlines: true
-columnKind: "utf16"
-primaryLanguage: "javascript"
-creationMetadata:
-  cliVersion: "2.11.6"
-  creationTime: "2023-01-05T05:45:01.325945Z"

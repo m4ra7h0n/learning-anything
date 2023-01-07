@@ -11,3 +11,10 @@ https://paper.seebug.org/1078 (初始搭建环境 简单demo)
 https://www.4hou.com/posts/o6wX (具体教程)    
 
 官方ql: https://github.com/semmle/ql  
+
+# 生成数据库方式
+在src文件夹下的每个项目下执行
+```bash
+codeql database create name-database --language=xxx
+```
+language 为 java/python/javascript/等

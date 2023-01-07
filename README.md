@@ -156,6 +156,8 @@ files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 ### 二.vscode
 设置目录宽度: https://blog.csdn.net/qq_35091353/article/details/117112097    
 Visual Studio Code的一些使用技巧: https://www.antbaba.com/2020/08/04/visual-studio-code%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
+设置: 
+1.自动保存 auto save: 设置save after delay 然后下面的delay设置为0
 一些常用插件: 
 1.中文
 2.好看主题monokai(同理idea)
