@@ -1,0 +1,7 @@
+name: codeql/cpp-tests
+groups: [cpp, test]
+dependencies:
+  codeql/cpp-all: ${workspace}
+  codeql/cpp-queries: ${workspace}
+extractor: cpp
+tests: .
