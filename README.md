@@ -53,6 +53,7 @@ English. thanks for your star and focus on.
 ## 打算学习:
 
 **pdf:**  
+《用LLVM开发新语言》
 《深入理解Java虚拟机：JVM高级特性与最佳实践(第3版)》  
 《凤凰架构》  
 《Hands-On-Reactive-Programming-in-Spring-5-master》  

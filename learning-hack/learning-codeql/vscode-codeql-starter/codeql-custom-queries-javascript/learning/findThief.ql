@@ -1,7 +1,6 @@
 import tutorial
 
 // https://www.4hou.com/posts/nN9D
-
 from Person p
 where p.getHeight() > 150 
 and not p.getHairColor() = "blond" 
@@ -14,8 +13,8 @@ and not (p.getHeight() > 180 and p.getHeight() < 190)
 and exists(Person p1 | p1.getAge() > p.getAge())
 
 // 聚合操作
-// 求最大的年龄:  max( 定义 | 限制 | 取值/排序 )
-// max(int i | exists(Person p | p.getAge() = i) | i)
+// https://codeql.github.com/docs/ql-language-reference/expressions/
+// <aggregate>(<variable declarations> | <formula> | <expression>)
 
 and not p = max(Person p1 | | p1 order by p1.getAge())
 and p.getHeight() < avg(float i | exists(Person p1 | p1.getHeight() = i) | i)

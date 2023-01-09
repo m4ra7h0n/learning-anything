@@ -1,6 +1,7 @@
 learning-docs
-**/application.py
-**/application.properties
+application.py
+application.properties
+
 # Compiled class file
 *.class
 *.classpath
