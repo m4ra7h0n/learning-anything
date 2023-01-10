@@ -18,6 +18,8 @@
         <module>learning-groovy</module>
         <module>learning-scala</module>
         <module>learning-jvm</module>
+        <module>learning-llvm</module>
+        <module>learning-cpp</module>
         <!--        <module>learning-kotlin</module>-->
         <!--        <module>learning-haskell</module>-->
     </modules>
