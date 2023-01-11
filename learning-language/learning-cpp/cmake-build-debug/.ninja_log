@@ -1,3 +1,6 @@
 # ninja log v5
 0	1218	1673304831730058790	CMakeFiles/learning_cpp.dir/main.cpp.o	bbe92b98e24a3cd7
 1219	1293	1673304831813436254	learning_cpp	91f1df96b5c15919
+7	1000	1673419860854854600	CMakeFiles/learning_cpp.dir/learning-cmake/F-build-type/main.cpp.o	88818a5de3e4f0b
+9	1001	1673419860854844348	CMakeFiles/learning_cpp.dir/learning-cmake/I-compiling-with-clang/main.cpp.o	6896f6a8902f9857
+8	1001	1673419860854840960	CMakeFiles/learning_cpp.dir/learning-cmake/G-compile-flags/main.cpp.o	70659777ecf31a3d

@@ -1,0 +1,4 @@
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/C-static-library/build/CMakeFiles/rebuild_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/C-static-library/build/CMakeFiles/edit_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/C-static-library/build/CMakeFiles/hello_binary.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/C-static-library/build/CMakeFiles/hello_library.dir

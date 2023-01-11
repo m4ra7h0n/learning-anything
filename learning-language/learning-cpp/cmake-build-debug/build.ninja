@@ -52,6 +52,30 @@ build CMakeFiles/learning_cpp.dir/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /
   OBJECT_DIR = CMakeFiles/learning_cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/learning_cpp.dir
 
+build CMakeFiles/learning_cpp.dir/learning-cmake/F-build-type/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/F-build-type/main.cpp || cmake_object_order_depends_target_learning_cpp
+  DEP_FILE = CMakeFiles/learning_cpp.dir/learning-cmake/F-build-type/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/learning_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/learning_cpp.dir/learning-cmake/F-build-type
+
+build CMakeFiles/learning_cpp.dir/learning-cmake/G-compile-flags/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/G-compile-flags/main.cpp || cmake_object_order_depends_target_learning_cpp
+  DEP_FILE = CMakeFiles/learning_cpp.dir/learning-cmake/G-compile-flags/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/learning_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/learning_cpp.dir/learning-cmake/G-compile-flags
+
+build CMakeFiles/learning_cpp.dir/learning-cmake/H-third-party-library/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/H-third-party-library/main.cpp || cmake_object_order_depends_target_learning_cpp
+  DEP_FILE = CMakeFiles/learning_cpp.dir/learning-cmake/H-third-party-library/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/learning_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/learning_cpp.dir/learning-cmake/H-third-party-library
+
+build CMakeFiles/learning_cpp.dir/learning-cmake/I-compiling-with-clang/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/I-compiling-with-clang/main.cpp || cmake_object_order_depends_target_learning_cpp
+  DEP_FILE = CMakeFiles/learning_cpp.dir/learning-cmake/I-compiling-with-clang/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/learning_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/learning_cpp.dir/learning-cmake/I-compiling-with-clang
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target learning_cpp
@@ -60,7 +84,7 @@ build CMakeFiles/learning_cpp.dir/main.cpp.o: CXX_COMPILER__learning_cpp_Debug /
 #############################################
 # Link the executable learning_cpp
 
-build learning_cpp: CXX_EXECUTABLE_LINKER__learning_cpp_Debug CMakeFiles/learning_cpp.dir/main.cpp.o
+build learning_cpp: CXX_EXECUTABLE_LINKER__learning_cpp_Debug CMakeFiles/learning_cpp.dir/main.cpp.o CMakeFiles/learning_cpp.dir/learning-cmake/F-build-type/main.cpp.o CMakeFiles/learning_cpp.dir/learning-cmake/G-compile-flags/main.cpp.o CMakeFiles/learning_cpp.dir/learning-cmake/H-third-party-library/main.cpp.o CMakeFiles/learning_cpp.dir/learning-cmake/I-compiling-with-clang/main.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
   OBJECT_DIR = CMakeFiles/learning_cpp.dir
   POST_BUILD = :

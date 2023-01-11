@@ -157,6 +157,11 @@ English. thanks for your star and focus on.
 files进行ignore 可使用正则 "*"代表匹配多个字母 ","分割
 
 一些常用插件:  
+1.IdeaVimExtension 使用该插件可以实现中文输入法切换问题
+https://www.cnblogs.com/liuyishi/p/14351946.html
+2.codeglance（代码预览，右侧可以预览代码）
+3.Rainbow Brackets（彩虹括号，花括号的代码会有竖线关联）
+4.vim
 
 好玩插件:  
 1.(用中文写代码) ChinesePinyin-CodeCompletionHelper  

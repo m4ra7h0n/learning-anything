@@ -1,0 +1,3 @@
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/G-compile-flags/build/CMakeFiles/rebuild_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/G-compile-flags/build/CMakeFiles/edit_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/G-compile-flags/build/CMakeFiles/cmake_examples_compile_flags.dir

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/G-compile-flags/main.cpp
+iostream
+-
+

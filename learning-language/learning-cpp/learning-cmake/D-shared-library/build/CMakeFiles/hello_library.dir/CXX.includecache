@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/D-shared-library/include/shared/Hello.h
+
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/D-shared-library/src/Hello.cpp
+iostream
+-
+../include/shared/Hello.h
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/D-shared-library/include/shared/Hello.h
+

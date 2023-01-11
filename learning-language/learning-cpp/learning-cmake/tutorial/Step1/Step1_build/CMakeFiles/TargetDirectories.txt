@@ -1,3 +1,0 @@
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/tutorial/Step1/Step1_build/CMakeFiles/rebuild_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/tutorial/Step1/Step1_build/CMakeFiles/edit_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/tutorial/Step1/Step1_build/CMakeFiles/Tutorial.dir

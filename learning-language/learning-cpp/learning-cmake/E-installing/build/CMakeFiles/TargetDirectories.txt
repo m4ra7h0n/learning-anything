@@ -1,0 +1,8 @@
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/install/local.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/install/strip.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/install.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/list_install_components.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/cmake_examples_inst_bin.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/rebuild_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/edit_cache.dir
+/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/CMakeFiles/cmake_examples_inst.dir
