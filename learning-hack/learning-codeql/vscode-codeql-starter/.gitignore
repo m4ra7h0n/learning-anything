@@ -1,0 +1,3 @@
+# CodeQL compilation caches
+.cache/
+ql/**

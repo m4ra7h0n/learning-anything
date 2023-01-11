@@ -1,6 +1,8 @@
 # 说明
-这个模块是使用vscode写的 因为vscode里面有插件, 可以运行codeql  
-这里面还差一个codeql-cli 因为文件2G所以放在本地了 需要配置classpath seebug里面有教程跟着来就可以  
+1.这个模块是使用vscode写的 因为vscode里面有插件, 可以运行codeql  
+2.这里面还差一个codeql-cli 因为文件2G所以放在本地了 需要配置classpath seebug里面有教程跟着来就可以  
+3.还有一个vscode-codql-starter/ql下需要放codeql的官方库, 整个下载放里面: https://github.com/github/codeql  
+4.src下面放你需要测试的项目
 
 # 学习方式
 官方资源: https://codeql.github.com/docs/

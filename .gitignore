@@ -5,17 +5,16 @@ learning-docs
 application.py
 application.properties
 
+# codeql
+learning-hack/learning-codeql/vscode-codeql-starter/ql
+learning-hack/learning-codeql/src/python/nova
+
 # Compiled class file
 *.class
 *.classpath
 *.factorypath
 learning-language/learning-cpp/learning-cmake/**/build
-*.cmake
-*.o
-*.a
-*.bin
-*.internal
-*.make
+learning-language/**/cmake-build-debug
 
 # Package Files #
 *.jar
