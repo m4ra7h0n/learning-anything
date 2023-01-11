@@ -1,3 +1,0 @@
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/H-third-party-library/build/CMakeFiles/rebuild_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/H-third-party-library/build/CMakeFiles/edit_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/H-third-party-library/build/CMakeFiles/third_party_include.dir

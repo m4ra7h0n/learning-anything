@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libhello_library.a CMakeFiles/hello_library.dir/src/Hello.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libhello_library.a

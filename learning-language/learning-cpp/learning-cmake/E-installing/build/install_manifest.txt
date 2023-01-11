@@ -1,4 +1,0 @@
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/install/bin/cmake_examples_inst_bin
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/install/lib/libcmake_examples_inst.dylib
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/install/include/installing/Hello.h
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/E-installing/build/install/etc/cmake-examples.conf

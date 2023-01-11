@@ -1,3 +1,0 @@
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/A-hello-cmake/build/CMakeFiles/rebuild_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/A-hello-cmake/build/CMakeFiles/edit_cache.dir
-/Users/xjj/IdeaProjects/learning-anything/learning-language/learning-cpp/learning-cmake/A-hello-cmake/build/CMakeFiles/hello_cmake.dir

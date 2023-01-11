@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -DEX2 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmake_examples_compile_flags.dir/main.cpp.o -o cmake_examples_compile_flags 
