@@ -1,0 +1,3 @@
+cmake_minimum_required(VERSION 3.10)
+message("子目录,MY_GLOBAL_VAR=${MY_GLOBAL_VAR}")
+set(MY_GLOBAL_VAR "777" CACHE STRING INTERNAL FORCE )

@@ -1,12 +1,12 @@
 how to learn:
 
-# cmake-examples-codes
-
+# 1.cmake-examples-codes
 https://github.com/ttroy50/cmake-examples
-
 # cmake-examples-chinese-doc
-
 https://sfumecjf.github.io/cmake-examples-Chinese/
+
+# 2.cmake-tutorial
+https://github.com/BrightXiaoHan/CMakeTutorial
 
 # 表
 

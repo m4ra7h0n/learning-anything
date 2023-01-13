@@ -12,3 +12,4 @@ endif ()
 
 project(build_type)
 add_executable(cmake_examples_build_type main.cpp)
+
