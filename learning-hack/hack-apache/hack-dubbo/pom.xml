@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>hack-apache</artifactId>
+        <groupId>com.xjjlearning.hack</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+
+    <artifactId>hack-dubbo</artifactId>
+    <groupId>com.xjjlearning.hack.dubbo</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>CVE-2019-17564</module>
+    </modules>
+
+</project>

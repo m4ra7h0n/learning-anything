@@ -1,6 +1,3 @@
-# docs in ali pan
-learning-docs
-
 # settings Files
 application.py
 application.properties
@@ -13,6 +10,7 @@ learning-hack/learning-codeql/src/python/nova
 *.class
 *.classpath
 *.factorypath
+learning-language/learning-cpp/learning-clang/build
 learning-language/learning-cpp/learning-cmake/**/build
 learning-language/**/cmake-build-debug
 

@@ -4,6 +4,8 @@
 
 网上的入门教程很多,[@snsn1984](https://blog.csdn.net/snsn1984/article/details/81283070),但是没有一个手把手上手实践的教程,最近几天倒腾llvm,创建了第一个实践项目,下面就将把这个过程梳理下来,供小白参考
 
+mac 系统安装llvm: https://www.jianshu.com/p/e4cbcd764783  
+
 ## 1.下载源码,编译
 
 [llvm官方文档](http://llvm.org/docs/GettingStarted.html) [clang官方文档](http://clang.llvm.org/get_started.html),比较详细,但是太冗长,下边给出简单方法:
@@ -108,7 +110,7 @@ target_link_libraries(simple-tool ${llvm_libs})
 
 官网一句话:The `find_package(...)` directive when used in CONFIG mode (as in the above example) will look for the `LLVMConfig.cmake` file in various locations (see cmake manual for details),It creates a `LLVM_DIR` cache entry to save the directory where `LLVMConfig.cmake` is found 
 
-大意是说:find_package采用config模式,会根据LLVM_DIR缓存条目(cache entry)来寻找`LLVMConfig.cmake` ,这个缓存条目是个什么玩意儿???懵逼
+大意是说:find_package采用config模式,会根据LLVM_DIR缓存条目(cache entry)来寻找`LLVMConfig.cmake` ,这个缓存条目是个什么玩意儿???懵逼 <- cmake都不会来写llvm?沙壁
 
 将环境变量中加入`export LLVM_DIR=/llvmRootPath/build_install`,等等一系列措施,最后找到了方法
 

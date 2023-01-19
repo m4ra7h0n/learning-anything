@@ -18,6 +18,7 @@
 	<modules>
         <module>security</module>
 		<module>util</module>
+        <module>io</module>
 	</modules>
 
 	<dependencyManagement>

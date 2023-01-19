@@ -93,7 +93,7 @@ namespace llvm {
                 // Search modules in reverse order: from last added to first added.
                 // This is the opposite of the usual search order for dlsym, but makes more
                 // sense in a REPL where we want to bind to the newest available definition.
-                for (auto H : make_range(ModuleKeys.rbegin(), ModuleKeys.rend()))
+                for (auto H: make_range(ModuleKeys.rbegin(), ModuleKeys.rend()))
                     if (auto Sym = CompileLayer.findSymbolIn(H, Name, ExportedSymbolsOnly))
                         return Sym;
 

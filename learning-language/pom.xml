@@ -20,6 +20,7 @@
         <module>learning-jvm</module>
         <module>learning-llvm</module>
         <module>learning-cpp</module>
+        <module>learning-python</module>
         <!--        <module>learning-kotlin</module>-->
         <!--        <module>learning-haskell</module>-->
     </modules>

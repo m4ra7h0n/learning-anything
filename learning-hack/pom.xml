@@ -18,5 +18,8 @@
     <modules>
         <module>hack-spring</module>
         <module>learning-codeql</module>
+        <module>hack-apache</module>
+        <module>hack-alibaba</module>
+        <module>hack-language</module>
     </modules>
 </project>
