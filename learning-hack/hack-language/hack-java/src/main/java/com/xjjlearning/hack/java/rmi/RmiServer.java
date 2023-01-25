@@ -13,7 +13,7 @@ public class RmiServer {
     private static volatile Object lock;
 
     // 远程调用的类
-    private static class RemoteHelloWorld extends UnicastRemoteObject implements IRemoteHelloWorld {
+    public static class RemoteHelloWorld extends UnicastRemoteObject implements IRemoteHelloWorld {
         protected RemoteHelloWorld() throws RemoteException {
             super();
         }
@@ -39,6 +39,7 @@ public class RmiServer {
                      * 这种命名的映射是使用 JNDI 接口的
                      */
                     Naming.bind("rmi://127.0.0.1:1099/Hello", new RemoteHelloWorld());
+                    // Naming.bind("rmi://127.0.0.1:1099/Hello", new PocWithRuntime());
 
                     // LocateRegistry.getRegistry("127.0.0.1", 1099)
                     //         .bind("hello", new RemoteHelloWorld());

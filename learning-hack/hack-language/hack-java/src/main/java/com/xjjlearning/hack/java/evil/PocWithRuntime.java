@@ -1,12 +1,14 @@
 package com.xjjlearning.hack.java.evil;
 
+import java.rmi.Remote;
+
 /**
  * created by xjj on 2023/1/15
  */
-public class PocWithRuntime {
+public class PocWithRuntime implements Remote {
     static {
         try {
-            String command = "open /System/Applications/Calculator.app";
+            String command = "open -a Calculator";
             // 使用.class不会自动初始化对象
             // 但是使用forName会自动初始化对象
 
