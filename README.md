@@ -14,8 +14,12 @@ English. thanks for your star and focus on.
 ![](https://img.shields.io/github/stars/x-j-j/learning-anything?style=social)
 ![](https://img.shields.io/github/forks/x-j-j/learning-anything?style=social)
 
-## 已经学习
+## 如何查看jdk源码
+下载全版本jdk8 https://gitee.com/huan4j/jdk8/tree/master  
+然后用idea打开切换分支即可
+从官网下载全版本可执行程序: https://www.oracle.com/hk/java/technologies/javase/javase8-archive-downloads.html
 
+## 已经学习
 **学习顺序依次如下：**   
 1.[《Maven实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
 2.[《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)
@@ -32,9 +36,9 @@ English. thanks for your star and focus on.
 7.[spring security 实战-2022版](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  
 8.[代码分析平台CodeQL学习手记](https://www.4hou.com/posts/o6wX)  
 中途学习:  
-(1)[《用LLVM开发新语言》](https://llvm-tutorial-cn.readthedocs.io/en/latest/index.html)  
-(2) cpp/cmake  
-9.[重学java漫谈-java放序列号漏洞]()
+(1)[《用LLVM开发新语言》](https://llvm-tutorial-cn.readthedocs.io/en/latest/index.html)   
+(2) cpp/cmake   
+9.[重学java漫谈-java反序列号漏洞]()   
 
 
 **下面的天数是单个项目的天数**  

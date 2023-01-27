@@ -13,6 +13,7 @@ public class RmiServer {
     private static volatile Object lock;
 
     // 远程调用的类
+    // UnicastRemoteObject: http://itmyhome.com/java-api/java/rmi/server/UnicastRemoteObject.html
     public static class RemoteHelloWorld extends UnicastRemoteObject implements IRemoteHelloWorld {
         protected RemoteHelloWorld() throws RemoteException {
             super();

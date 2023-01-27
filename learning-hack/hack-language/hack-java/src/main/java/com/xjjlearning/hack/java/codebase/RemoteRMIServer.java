@@ -25,7 +25,7 @@ public class RemoteRMIServer {
 
     }
     private static void start() throws Exception {
-        // 被攻击的条件之一, 需要SecurityManager
+        // 被攻击的条件之一, 需要SecurityManager, 在LoaderHandler.class中
         // 条件2: java.rmi.server.useCodebaseOnly = false
         if (System.getSecurityManager() == null) {
             System.out.println("Setting up SecurityManager");

@@ -12,14 +12,6 @@ learning-language/learning-cpp/learning-clang/build
 learning-language/learning-cpp/learning-cmake/**/build
 learning-language/**/cmake-build-debug
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
 # IDE Files #
 *.iml
 .idea
