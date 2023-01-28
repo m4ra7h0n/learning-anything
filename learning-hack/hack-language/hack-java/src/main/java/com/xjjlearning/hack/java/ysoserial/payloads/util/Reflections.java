@@ -1,5 +1,6 @@
 package com.xjjlearning.hack.java.ysoserial.payloads.util;
 
+import com.nqzero.permit.Permit;
 import sun.reflect.ReflectionFactory;
 
 import java.lang.reflect.AccessibleObject;
@@ -15,7 +16,7 @@ public class Reflections {
         int javaVersion = Integer.parseInt(versionStr.split("\\.")[0]);
         if (javaVersion < 12) {
           // quiet runtime warnings from JDK9+
-          // com.nqzero.permit.Permit.setAccessible(member);
+          Permit.setAccessible(member);
         } else {
           // not possible to quiet runtime warnings anymore...
           // see https://bugs.openjdk.java.net/browse/JDK-8210522

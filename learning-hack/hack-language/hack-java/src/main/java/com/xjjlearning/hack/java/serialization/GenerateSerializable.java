@@ -8,15 +8,18 @@ import java.util.Arrays;
  */
 public class GenerateSerializable {
 
+    private String string;
+
+    transient String name = "hello";
+
     private final static String dir = System.getProperty("user.dir") +
             "/learning-hack/hack-language/hack-java/src/main/resources/serialization";
 
     private static class ObjectOutputStreamTest extends ObjectOutputStream {
         @Override
         protected void annotateClass(Class<?> cl) {
-            // 序列化的时候 打印Person类的所有方法
-            Arrays.stream(cl.getMethods())
-                    .forEach(System.out::println);
+            // 序列化的时候 打印Person类的所有方法的数量
+            System.out.println(Arrays.stream(cl.getMethods()).count());
         }
 
         public ObjectOutputStreamTest(OutputStream out) throws IOException {
@@ -41,7 +44,7 @@ public class GenerateSerializable {
         try (FileOutputStream fos = new FileOutputStream(dir + "/person.ser");
              ObjectOutputStreamTest oos = new ObjectOutputStreamTest(fos)) {
 
-            oos.writeObject(new Person("xjj", 22));
+            oos.writeObject(new Person("xjj", "12345"));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,6 +53,6 @@ public class GenerateSerializable {
 
     public static void main(String[] args) throws IOException {
         serialization();
-        // deserialization();
+        deserialization();
     }
 }

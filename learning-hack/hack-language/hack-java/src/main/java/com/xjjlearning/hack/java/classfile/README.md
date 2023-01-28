@@ -1,4 +1,7 @@
-# how to execute it
+# 学习字节码指令文章
+https://tobebetterjavaer.com/jvm/zijiema-zhiling.html
+
+# 如何使用命令生成字节码信息
 ```bash
 # 生成class文件
 javac TestClass.java

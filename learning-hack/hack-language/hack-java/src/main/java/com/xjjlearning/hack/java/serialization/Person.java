@@ -1,32 +1,78 @@
 package com.xjjlearning.hack.java.serialization;
 
 import java.io.*;
+import java.util.Base64;
 
 /**
  * created by xjj on 2023/1/26
  */
 public class Person implements Serializable {
     public String name;
-    public int age;
+    public String password;
+    transient String string = "hello";
 
-    public Person(String name, int age) {
+    public Person(String name, String password) {
         this.name = name;
-        this.age = age;
+        this.password = password;
     }
 
-    private void writeObject(ObjectOutputStream s) throws IOException {
-        s.defaultWriteObject();
-        s.writeObject("This is a object");
+
+    private void writeObject(ObjectOutputStream oos) throws IOException {
+        // 这个方法是干嘛的？给序列化执行默认的赋值
+        // oos.defaultWriteObject();
+
+        // 流中写入一个String
+        oos.writeObject("this is a message");
+
+        // 获取对象中的字段
+        ObjectOutputStream.PutField putFields = oos.putFields();
+        // 加密
+        String encryptedPassword = Base64.getEncoder().encodeToString(password.getBytes());
+        // 手动输入序列化数据
+        putFields.put("password", encryptedPassword);
+        putFields.put("name", name);
+        oos.writeFields();
     }
 
-    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
-        s.defaultReadObject();
-        String message = (String) s.readObject();
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        // ois.defaultReadObject();
+
+        // 读取写入String信息
+        String message = (String) ois.readObject();
         System.out.println(message);
+
+        // 获取原始流中的密码
+        ObjectInputStream.GetField getFields = ois.readFields();
+        // 解密
+        String encryptedPassword = (String) getFields.get("password", "");
+        byte[] passwordBytes = Base64.getDecoder().decode(encryptedPassword);
+        // 手动赋值序列化数据
+        this.password = new String(passwordBytes);
+        this.name = (String) getFields.get("name", "");
     }
 
     @Override
     public String toString() {
-        return "name: " + name + ", age: " + age;
+        return "name: " + name + ", password: " + password;
     }
+
+
+    /**
+     * writeReplace 存在时自定义的writeObject失效
+     */
+    // private Object writeReplace() throws ObjectStreamException {
+    //     List<Object> list = new ArrayList<>();
+    //     list.add(name);
+    //     list.add(password);
+    //     return list;
+    // }
+
+    /**
+     * readResolve 会在 readObject 调用之后自动调用，它最主要的目的就是对反序列化的对象进行修改后返回。
+     */
+    // private Object readResolve() throws ObjectStreamException {
+    //     return password == null ?
+    //             new Person("xjj", "1234") :
+    //             new Person("xxx", "1111");
+    // }
 }
