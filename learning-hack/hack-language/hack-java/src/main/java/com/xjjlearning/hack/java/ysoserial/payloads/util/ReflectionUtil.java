@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 @SuppressWarnings ( "restriction" )
-public class Reflections {
+public class ReflectionUtil {
 
     public static void setAccessible(AccessibleObject member) {
         String versionStr = System.getProperty("java.version");

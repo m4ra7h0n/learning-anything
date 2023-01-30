@@ -1,5 +1,6 @@
 package com.xjjlearning.hack.java.ysoserial.trial;
 
+
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.map.LazyMap;
 
