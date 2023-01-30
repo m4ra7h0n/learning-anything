@@ -1,9 +1,3 @@
-序列化执行流程文章:  
-1.https://www.cnblogs.com/binarylei/p/10987540.html
-2.https://www.cnblogs.com/binarylei/p/10987933.html  
-3.https://www.cnblogs.com/binarylei/p/10989372.html
-分析反序列化执行流程文章:  
-https://cnpanda.net/sec/928.html  
 
 ```text
 笔记
@@ -91,3 +85,24 @@ Contents
           TC_ENDBLOCKDATA - 0x78
 
 ```
+
+```text
+序列化执行流程文章:  
+1.https://developer.aliyun.com/article/643797
+1.https://www.cnblogs.com/binarylei/p/10987540.html
+2.https://www.cnblogs.com/binarylei/p/10987933.html  
+3.https://www.cnblogs.com/binarylei/p/10989372.html
+panda文章:  
+https://cnpanda.net/sec/893.html
+https://cnpanda.net/sec/928.html  
+https://www.cnpanda.net/talksafe/892.html
+Java序列化最详细内容
+https://blog.csdn.net/silentbalanceyh/article/details/8250096
+```
+# 笔记
+```text
+ObjectOutputStream.writeNonProxyDesc()执行自定义annotateClass()
+ObjectOutputStream.writeSerialData()#invokeWriteObject()执行自定义writeObject()
+ObjectOutputStream.write*()都会调用writeObject0()方法
+```
+
