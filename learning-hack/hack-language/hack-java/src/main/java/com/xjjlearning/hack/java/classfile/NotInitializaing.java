@@ -1,4 +1,4 @@
-package com.xjjlearning.hack.java.classfile.classloding;
+package com.xjjlearning.hack.java.classfile;
 
 /**
  * created by xjj on 2023/1/16
@@ -20,7 +20,7 @@ class ConstClass {
     static {
         System.out.println("ConstClass init!");
     }
-    public static final String HELLOWORLD = "Hello World";
+    public static final String HELLOWORLD = "EvilTemplatesImpl World";
 }
 
 public class NotInitializaing {

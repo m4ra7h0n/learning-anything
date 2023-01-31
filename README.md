@@ -105,6 +105,7 @@ English. thanks for your star and focus on.
         - [x] nacos
         - [x] seata
         - [x] sentinel
+- [ ] learning-android
 - [ ] learning-apache
     - [x] rocketmq
     - [ ] dubbo
@@ -137,6 +138,8 @@ English. thanks for your star and focus on.
     - [ ] hack-spring
     - [ ] hack-alibaba
       - [x] nacos
+    - [ ] hack-language
+      - [ ] hack-java
 - [ ] learning-language
     - [ ] learning-java
         - [x] util
@@ -152,6 +155,8 @@ English. thanks for your star and focus on.
     - [ ] learning-cpp
       - [ ] learning-clang
       - [x] learning-cmake
+    - [ ] learning-python
+    - [ ] learning-php
 - [ ] learning-spring
     - [ ] spring-boot
         - [ ] 源码 + 源码实践
@@ -162,6 +167,7 @@ English. thanks for your star and focus on.
 - [ ] learning-netty
 - [ ] learning-reactor
 - [ ] learning-serverless
+- [ ] learning-ops
 </details>
 
 ## 编辑器使用技巧
@@ -172,6 +178,7 @@ English. thanks for your star and focus on.
 2.codeglance（代码预览，右侧可以预览代码）
 3.Rainbow Brackets（彩虹括号，花括号的代码会有竖线关联）
 4.vim
+5.jclasslib查看字节码
 
 好玩插件:  
 1.(用中文写代码) ChinesePinyin-CodeCompletionHelper  
@@ -272,9 +279,5 @@ Visual Studio Code的一些使用技巧: https://www.antbaba.com/2020/08/04/visu
 有两种方案:  
 - 1.前期尽量跟着各种教程来学源码等  
 - 2.当教程枯竭, 读到生僻的源码, 就一定要细致, 最好能搞出流程图, 分析好每个地方的作用
+14.学习安全的时候不能只看中文文章, 还得学习写这篇文章的人是从哪里学的, 如果他写的文章很复杂史无前例, 大概是通过外文文章学习, 这个时候需要你学会发现外文文章的能力. 以达到也能写出文章的效果. 对于各种软件的官网发布bug或者漏洞位置要熟悉, 这样就可以自己去官网找最新的漏洞复现了
 ```
-
-# by the way
-
-项目里有阿里云ecs服务器公网地址 也有其他服务的端口账号密码 但是 你访问不了 谢谢 设置了ip白名单  
-而且也不要想着信息搜集我 去登录我的其他社交媒体的账户 因为 这个密码唯一 只是这个项目用:)    

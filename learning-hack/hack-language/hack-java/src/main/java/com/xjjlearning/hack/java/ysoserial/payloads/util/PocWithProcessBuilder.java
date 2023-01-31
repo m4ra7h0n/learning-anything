@@ -1,4 +1,4 @@
-package com.xjjlearning.hack.java.ysoserial.payloads.util.evil;
+package com.xjjlearning.hack.java.ysoserial.payloads.util;
 
 import java.rmi.Remote;
 import java.util.Arrays;

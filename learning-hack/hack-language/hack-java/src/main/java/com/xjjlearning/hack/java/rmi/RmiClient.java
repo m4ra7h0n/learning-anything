@@ -10,13 +10,13 @@ import java.util.Arrays;
 public class RmiClient {
 
     public static void main(String[] args) throws Exception {
-        IRemoteHelloWorld hello = (IRemoteHelloWorld) Naming.lookup("rmi://127.0.0.1:1099/Hello");
+        IRemoteHelloWorld hello = (IRemoteHelloWorld) Naming.lookup("rmi://127.0.0.1:1099/EvilTemplatesImpl");
         String res = hello.hello("client");
         System.out.println(res);
 
         try {
-            // Naming.rebind("rmi://127.0.0.1:1099/Hello", new RmiServer.RemoteHelloWorld());
-            Naming.rebind("rmi://192.168.31.141:1099/Hello", new RmiServer.RemoteHelloWorld());
+            // Naming.rebind("rmi://127.0.0.1:1099/EvilTemplatesImpl", new RmiServer.RemoteHelloWorld());
+            Naming.rebind("rmi://192.168.31.141:1099/EvilTemplatesImpl", new RmiServer.RemoteHelloWorld());
         } catch (RemoteException e) {
             System.out.println("we can't rebind without localhost");
         }

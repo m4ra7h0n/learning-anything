@@ -45,7 +45,7 @@ public class ClassUtil {
             while ((len = in.read(buffer)) != -1) {
                 out.write(buffer, 0, len);
             }
-            return buffer;
+            return out.toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

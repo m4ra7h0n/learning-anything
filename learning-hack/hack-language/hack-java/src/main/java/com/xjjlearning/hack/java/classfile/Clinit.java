@@ -1,4 +1,4 @@
-package com.xjjlearning.hack.java.classfile.classloding;
+package com.xjjlearning.hack.java.classfile;
 
 /**
  * created by xjj on 2023/1/17

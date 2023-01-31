@@ -19,7 +19,8 @@
         <module>security</module>
 		<module>util</module>
         <module>io</module>
-	</modules>
+        <module>lang</module>
+    </modules>
 
 	<dependencyManagement>
 		<dependencies>
