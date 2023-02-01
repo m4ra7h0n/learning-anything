@@ -1,4 +1,4 @@
-package com.xjjlearning.hack.java.classfile;
+package com.xjjlearning.jvm.classfile;
 
 import com.sun.org.apache.bcel.internal.classfile.InnerClass;
 
