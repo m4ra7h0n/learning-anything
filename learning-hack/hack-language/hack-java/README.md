@@ -48,7 +48,7 @@ https://docs.oracle.com/javase/8/docs/platform/serialization/spec/protocol.html#
 http://wjlshare.com/archives/1522
 问题4：搞清楚调用链中的invoke到底是什么
 问题5: 使用webapp搭建一个shiro
-问题6: debug Tomcat对类的加载逻辑(漫谈15)
+问题6: debug Tomcat对类的加载逻辑(漫谈15), 并debug shiro具体的编码位置
 https://blog.zsxsoft.com/post/35
 http://www.rai4over.cn/2020/Shiro-1-2-4-RememberMe%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90-CVE-2016-4437/
 问题7：尝试使用jrmp解决tomcat无法通过shiro-550的问题

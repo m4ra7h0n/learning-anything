@@ -18,7 +18,7 @@ import java.util.Optional;
  * created by xjj on 2023/1/27
  */
 // 使用LazyMap来触发gadget
-public class CommonCollections11 {
+public class CommonCollections1Lazy {
 
     // 使用jdk8u66执行
     public void gadget() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, IOException {
@@ -61,6 +61,6 @@ public class CommonCollections11 {
 
 
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, IOException {
-        new CommonCollections11().gadget();
+        new CommonCollections1Lazy().gadget();
     }
 }

