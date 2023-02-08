@@ -7,10 +7,13 @@ JNDI是一个接口规范 具体实现有rmi, ldap, dns, corba, nds, windows注�
 3.rmi vs rpc: https://cloud.tencent.com/developer/article/1353191  
 rmi通过 stub 和 skeleton 调用方法, 而rpc调用服务(一个服务可能有若干方法)  
 rpc是协议rmi是实现, 就好像rmi是rpc的子集  
-4.ldap: https://www.cnblogs.com/wilburxu/p/9174353.html
+4.ldap: 
+https://www.cnblogs.com/wilburxu/p/9174353.html
+https://www.cnblogs.com/fusheng11711/p/11158692.html
 LDAP（Light Directory Access Portocol），它是基于X.500标准的轻量级目录访问协议
 目录数据需要存储在相关的数据库中 然后使用LDAP协议访问之
 5.使用openldap: https://www.jb51.net/article/202232.htm
+
 6.其他文章
 http://wjlshare.com/archives/1522
 https://paper.seebug.org/1091/
@@ -44,3 +47,9 @@ https://docs.oracle.com/javase/8/docs/platform/serialization/spec/protocol.html#
 问题3：研究php和python的反序列化漏洞(反序列化1)
 http://wjlshare.com/archives/1522
 问题4：搞清楚调用链中的invoke到底是什么
+问题5: 使用webapp搭建一个shiro
+问题6: debug Tomcat对类的加载逻辑(漫谈15)
+https://blog.zsxsoft.com/post/35
+http://www.rai4over.cn/2020/Shiro-1-2-4-RememberMe%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90-CVE-2016-4437/
+问题7：尝试使用jrmp解决tomcat无法通过shiro-550的问题
+http://blog.orange.tw/2018/03/pwn-ctf-platform-with-java-jrmp-gadget.html

