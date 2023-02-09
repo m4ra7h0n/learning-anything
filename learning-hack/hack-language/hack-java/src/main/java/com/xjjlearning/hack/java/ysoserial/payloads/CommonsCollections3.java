@@ -22,7 +22,7 @@ import java.util.Optional;
 /**
  * created by xjj on 2023/2/2
  */
-public class CommonCollections3 {
+public class CommonsCollections3 {
 
     // TemplatesImpl + cc6
     // TemplatesImpl加载类
@@ -80,6 +80,6 @@ public class CommonCollections3 {
     }
 
     public static void main(String[] args) throws Exception {
-        new CommonCollections3().gadget();
+        new CommonsCollections3().gadget();
     }
 }

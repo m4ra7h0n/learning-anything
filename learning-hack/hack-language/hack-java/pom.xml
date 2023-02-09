@@ -12,6 +12,8 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+<!--        这两个是有漏洞的版本-->
+
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -22,11 +24,39 @@
             <artifactId>commons-collections4</artifactId>
             <version>4.0</version>
         </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
+<!--        这两个是修复的版本-->
+<!--        FunctorUtils.checkUnsafeSerialization()-->
+
+<!--        <dependency>-->
+<!--            <groupId>commons-collections</groupId>-->
+<!--            <artifactId>commons-collections</artifactId>-->
+<!--            <version>3.2.2</version>-->
+<!--        </dependency>-->
+
+<!--        直接去掉序列化接口-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-collections4</artifactId>-->
+<!--            <version>4.1</version>-->
+<!--        </dependency>-->
+
 <!--        reflect-->
         <dependency>
             <groupId>com.nqzero</groupId>
             <artifactId>permit-reflect</artifactId>
             <version>0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 </project>
