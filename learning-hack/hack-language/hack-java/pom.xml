@@ -12,7 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
-<!--        这两个是有漏洞的版本-->
+        <!--        这两个是有漏洞的版本-->
 
         <dependency>
             <groupId>commons-collections</groupId>
@@ -30,24 +30,24 @@
             <version>1.9.4</version>
         </dependency>
 
-<!--        这两个是修复的版本-->
-<!--        FunctorUtils.checkUnsafeSerialization()-->
+        <!--        这两个是修复的版本-->
+        <!--        FunctorUtils.checkUnsafeSerialization()-->
 
-<!--        <dependency>-->
-<!--            <groupId>commons-collections</groupId>-->
-<!--            <artifactId>commons-collections</artifactId>-->
-<!--            <version>3.2.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>commons-collections</groupId>-->
+        <!--            <artifactId>commons-collections</artifactId>-->
+        <!--            <version>3.2.2</version>-->
+        <!--        </dependency>-->
 
-<!--        直接去掉序列化接口-->
+        <!--        直接去掉序列化接口-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.commons</groupId>-->
-<!--            <artifactId>commons-collections4</artifactId>-->
-<!--            <version>4.1</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.commons</groupId>-->
+        <!--            <artifactId>commons-collections4</artifactId>-->
+        <!--            <version>4.1</version>-->
+        <!--        </dependency>-->
 
-<!--        reflect-->
+        <!--        reflect-->
         <dependency>
             <groupId>com.nqzero</groupId>
             <artifactId>permit-reflect</artifactId>
@@ -57,6 +57,11 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.28.0-GA</version>
         </dependency>
     </dependencies>
 </project>

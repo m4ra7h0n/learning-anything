@@ -12,7 +12,7 @@ public class FileClassLoader extends ClassLoader {
         if (!file.exists()) {
             throw new ClassNotFoundException();
         }
-        
+
         byte[] classBytes = getClassData(file);
         if (classBytes.length == 0) {
             throw new ClassNotFoundException();
@@ -32,6 +32,6 @@ public class FileClassLoader extends ClassLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new byte[] {};
+        return new byte[]{};
     }
 }
