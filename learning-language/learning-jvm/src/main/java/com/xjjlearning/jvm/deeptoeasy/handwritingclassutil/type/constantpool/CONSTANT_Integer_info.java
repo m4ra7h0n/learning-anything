@@ -2,12 +2,14 @@ package com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.constantpool;
 
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U1;
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U4;
+import lombok.Getter;
 
 import java.nio.ByteBuffer;
 
 /**
  * created by xjj on 2023/2/12
  */
+@Getter
 public class CONSTANT_Integer_info extends CpInfo {
     private U4 bytes;
 

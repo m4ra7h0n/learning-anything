@@ -2,6 +2,7 @@ package com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.constantpool;
 
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U1;
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U2;
+import lombok.Getter;
 
 import java.nio.ByteBuffer;
 
@@ -12,10 +13,10 @@ import java.nio.ByteBuffer;
 /**
  * 存储类的符号信息
  */
+@Getter
 public class CONSTANT_Class_info extends CpInfo {
     /**
-     * CONSTANT_Utf8_info常量
-     * 存储的是class的类名
+     * 存储的是类对应常量池中常量的索引, 一般是CONSTANT_Utf8_info常量
      */
     private U2 name_index;
 

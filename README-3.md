@@ -18,6 +18,7 @@
 《基于Apache Flink的流处理：流式应用基础、实现及操作》   
 《java核心技术卷》第12版 java17    
 《kotlin进阶实战》
+查缺补漏: https://github.com/yudaocode/SpringBoot-Labs
 ```
 
 | 入门         | 中阶     | 高阶         | big data        | source code | serverless | language |

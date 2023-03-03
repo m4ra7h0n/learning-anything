@@ -2,6 +2,7 @@ package com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.constantpool;
 
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U1;
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.U2;
+import lombok.Getter;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
@@ -9,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 用于存储字符串常量，字符串编码使用UTF-8
  */
+@Getter
 public class CONSTANT_Utf8_info extends CpInfo {
 
     private U2 length;

@@ -75,9 +75,9 @@ public class FastJsonLE1224 {
 
     public static void main(String[] args) throws Exception {
         String poc = templatesImpl();
-        JSON.parseObject(poc, Feature.SupportNonPublicField);
+//        JSON.parseObject(poc, Feature.SupportNonPublicField);
 //        JSON.parse(poc, Feature.SupportNonPublicField);
-//        JSON.parseObject(poc, Object.class, Feature.SupportNonPublicField);
+        JSON.parseObject(poc, Object.class, Feature.SupportNonPublicField);
 
 
         String poc2 = jdbcRowSetImpl();

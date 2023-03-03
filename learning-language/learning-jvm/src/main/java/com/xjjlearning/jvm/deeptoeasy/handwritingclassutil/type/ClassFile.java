@@ -3,8 +3,6 @@ package com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type;
 import com.xjjlearning.jvm.deeptoeasy.handwritingclassutil.type.constantpool.CpInfo;
 import lombok.Getter;
 import lombok.Setter;
-import sun.management.MethodInfo;
-import sun.reflect.FieldInfo;
 
 /**
  * created by xjj on 2023/2/11

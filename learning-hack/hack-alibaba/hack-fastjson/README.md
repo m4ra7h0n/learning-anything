@@ -53,6 +53,10 @@ main:78, FastJsonLE1224
 跟踪到这块的时候明明传入的是null, 结果进去就自动生成object了
 com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(com.alibaba.fastjson.parser.DefaultJSONParser, java.lang.reflect.Type, java.lang.Object, int)
 排除debug本身的问题因为toString和上面那个选项都关掉了 有可能是代码有拦截器 -> FastjsonASMDeserializer_1_TransformerFactoryImpl
+找到答案: asm生成类
+com.alibaba.fastjson.parser.deserializer.ASMDeserializerFactory.createJavaBeanDeserializer
+问题:
+尝试学习asm
 
 6.getOutputProperties()
 fastjson-1.2.24-sources.jar!/com/alibaba/fastjson/parser/deserializer/JavaBeanDeserializer.java:599

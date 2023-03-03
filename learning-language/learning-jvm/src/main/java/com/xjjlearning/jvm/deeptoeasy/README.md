@@ -1,3 +1,5 @@
+https://wujiuye.github.io/JVMByteCodeGitBook
+《java虚拟机规范 SE8》
 
 # 源码
 虚拟机栈大小设置:
