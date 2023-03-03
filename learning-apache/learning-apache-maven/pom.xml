@@ -119,7 +119,7 @@
                     <configuration>
 
                         <includes>
-                            <include>**/*Test.java</include>
+                            <include>**/*TestSerialization.java</include>
                         </includes>
                         <excludes>
                             <exclude>**/*ServiceTest.java</exclude>

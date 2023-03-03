@@ -31,6 +31,7 @@
 | druid官方文档                      | 1days  |
 | 《java并发编程的艺术》                  | 7days  |
 | 《java8实战》                      | 5days  |
+| 《java漫谈》                       | 20days |
 
 # 完成列表
 - [ ] learning-algorithm

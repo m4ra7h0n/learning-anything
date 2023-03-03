@@ -1,6 +1,6 @@
 # 基本名词
 ```text
-1.jndi: https://www.4spaces.org/309.html  
+1.jdbcrowsetimpl: https://www.4spaces.org/309.html  
 JNDI 在 J2EE 应用程序中的主要角色就是提供间接层，这样组件就可以发现所需要的资源，而不用了解这些间接性。  
 JNDI是一个接口规范 具体实现有rmi, ldap, dns, corba, nds, windows注册表等  
 2.rmi and jrmp: https://cloud.tencent.com/developer/article/1106776  

@@ -18,7 +18,16 @@ import static com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil.s
 /**
  * created by xjj on 2023/2/8
  */
-
+/*
+	Gadget chain:
+		ObjectInputStream.readObject()
+			PriorityQueue.readObject()
+				...
+					TransformingComparator.compare()
+						InvokerTransformer.transform()
+							Method.invoke()
+							     TemplatesImpl.newTransformer()
+ */
 public class CommonsCollections2Temp {
     // jdk8u71以及之后的版本使用
     public byte[] getPayload(String exp) throws Exception {

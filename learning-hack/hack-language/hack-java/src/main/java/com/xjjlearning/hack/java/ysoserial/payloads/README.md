@@ -1,3 +1,9 @@
+# 结构
+CB链
+CC1 -> 使用HashMap
+CC1Lazy -> LazyMap + Proxy
+CC2 -> 使用PriorityQueue的compare执行tranform()
+CC2Temp -> 使用PriorityQueue的反射
 # 如何查看jdk源码
 下载全版本jdk8 https://gitee.com/huan4j/jdk8/tree/master  
 然后用idea打开切换分支即可  

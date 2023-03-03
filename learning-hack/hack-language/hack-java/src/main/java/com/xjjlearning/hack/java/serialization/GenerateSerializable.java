@@ -39,6 +39,7 @@ public class GenerateSerializable {
     }
 
     private static void deserialization() throws IOException {
+        String file = "cc6-padding.ser";
 
         try (FileInputStream fis = new FileInputStream(dir + "/person.ser");
              ObjectInputStream ois = new ObjectInputStream(fis)) {
@@ -67,8 +68,20 @@ public class GenerateSerializable {
         }
     }
 
+    private static void deserializationEvil() {
+        String file = "cc6-padding.ser";
+
+        try (FileInputStream fis = new FileInputStream(dir + "/" + file);
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+            ois.readObject();
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) throws IOException {
-        serialization();
-        deserialization();
+        // serialization();
+        // deserialization();
+        deserializationEvil();
     }
 }

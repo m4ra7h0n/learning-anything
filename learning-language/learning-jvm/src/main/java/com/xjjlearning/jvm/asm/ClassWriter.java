@@ -10,10 +10,10 @@ public class ClassWriter implements ClassVisitor {
 
     private int version;
     private String className;
-        private String access;
-        // 存储的是字段访问者
-        private List<FieldWriter> fieldWriters = new ArrayList<>();
-        // 存储的是方法访问者
+    private String access;
+    // 存储的是字段访问者
+    private List<FieldWriter> fieldWriters = new ArrayList<>();
+    // 存储的是方法访问者
     private List<MethodWriter> methodWriters = new ArrayList<>();
 
     @Override
@@ -36,5 +36,4 @@ public class ClassWriter implements ClassVisitor {
         methodWriters.add(methodWriter);
         return methodWriter;
     }
-
 }

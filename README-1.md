@@ -7,6 +7,7 @@
 3.Rainbow Brackets（彩虹括号，花括号的代码会有竖线关联）
 4.vim
 5.jclasslib查看字节码
+6.backgroundimage: mac系统自带图片: /Library/Desktop\ Pictures
 
 好玩插件:  
 1.(用中文写代码) ChinesePinyin-CodeCompletionHelper  

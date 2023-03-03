@@ -1919,7 +1919,7 @@ Use :: Prev的2个LSBits（最低有效位）中的位编码允许查找User对�
 以下有文化的Haskell片段演示了这个概念：
 
 ```haskell
-> import Test.QuickCheck
+> import TestSerialization.QuickCheck
 >
 > digits :: Int -> [Char] -> [Char]
 > digits 0 acc = '0' : acc

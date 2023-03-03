@@ -15,6 +15,7 @@
 
     <modules>
         <module>hack-nacos</module>
+        <module>hack-fastjson</module>
     </modules>
 
 </project>

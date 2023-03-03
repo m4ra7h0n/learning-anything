@@ -36,6 +36,7 @@ public class RemoteRMIServer {
         LocateRegistry.createRegistry(1099);
         System.out.println("create registry ok");
 
+        // 或者使用ReferenceWrapper
         Naming.bind("refObj", h);
         System.out.println("binding ok");
     }

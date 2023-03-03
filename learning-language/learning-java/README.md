@@ -132,7 +132,7 @@ reduce方法旨在把两个值结合起来生成一个新值，它是一个不�
 与此相反，collect方法的设计就是要改变容器，从而累积要输出的结果
 
 ```java
-class Test {
+class TestSerialization {
     public static void main(String[] args) {
         Stream<Integer> stream = Arrays.asList(1, 2, 3, 4, 5, 6).stream();
         List<Integer> numbers = stream.reduce(
