@@ -1,8 +1,8 @@
-package com.xjjlearning.jvm.deeptoeasy.test;
+package com.xjjlearning.jvm.deeptoeasy.classoperation;
 
 import java.io.IOException;
 
-public class RecursionAlgorithmMain {
+public class RecursionAlgorithm {
 
     private static volatile int value = 0;
 

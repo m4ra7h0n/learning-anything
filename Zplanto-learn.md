@@ -1,6 +1,7 @@
 # 打算学习:
-
 ```text
+查缺补漏: https://github.com/yudaocode/SpringBoot-Labs
+RCE回显: https://github.com/feihong-cs/Java-Rce-Echo
 《java网络编程 第四版》  
 《java网络编程进阶：从BIO到RPC》  
 《深入理解Java虚拟机：JVM高级特性与最佳实践(第3版)》  
@@ -18,7 +19,6 @@
 《基于Apache Flink的流处理：流式应用基础、实现及操作》   
 《java核心技术卷》第12版 java17    
 《kotlin进阶实战》
-查缺补漏: https://github.com/yudaocode/SpringBoot-Labs
 ```
 
 | 入门         | 中阶     | 高阶         | big data        | source code | serverless | language |

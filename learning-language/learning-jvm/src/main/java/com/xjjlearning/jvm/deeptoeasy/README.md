@@ -1,6 +1,13 @@
 https://wujiuye.github.io/JVMByteCodeGitBook
 《java虚拟机规范 SE8》
 
+# handwritingclassutil
+手写字节码文件处理器
+# classoperation
+字节码指令
+# test
+用于测试字节码的类
+
 # 源码
 虚拟机栈大小设置:
 openjdk/hotspot/src/os_cpu/linux_x86/vm/os_linux_x86.cpp

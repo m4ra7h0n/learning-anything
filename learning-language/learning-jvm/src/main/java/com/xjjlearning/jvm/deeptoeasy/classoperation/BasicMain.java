@@ -1,9 +1,9 @@
-package com.xjjlearning.jvm.deeptoeasy;
+package com.xjjlearning.jvm.deeptoeasy.classoperation;
 
 /**
  * created by xjj on 2023/2/11
  */
-public class Main {
+public class BasicMain {
     public static void main(String[] args) {
         // System.out.println(Thread.currentThread().getName());
         int a = 10;

@@ -34,7 +34,35 @@ English. thanks for your star and focus on.
 | spider       | [学习爬虫](https://github.com/x-j-j/learning-anything/tree/master/learning-spider)                                                                                 |
 | spring       | [学习spring技术栈, 包括springboot, spring-cache, spring-cloud, spring, spring-security](https://github.com/x-j-j/learning-anything/tree/master/learning-spring)       |
 
+
+learning-algorithm学习途径: [力扣]()
+
+| learning-apache | 学习途径                                                                                                     |
+|-----------------|----------------------------------------------------------------------------------------------------------|
+| dubbo           |                                                                                                          |
+| maven           | [《Maven实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)   |
+| rocketmq        |                                                                                                          |
+
+| learning-alibaba       | 学习途径                                                                                                                      |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| spring-cloud-alibaba   | [《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  |
+| fastjson               |                                                                                                                           |
+
+| learning-hack | 学习途径           |
+|---------------|----------------|
+| hack-java     | [《java安全漫谈》]() |
+|               |                |
+
+| learning-language | 学习途径                                                                                                       |
+|-------------------|------------------------------------------------------------------------------------------------------------|
+| jvm               | [《深入浅出java字节码》]()                                                                                          |
+|                   | [《java虚拟机规范 SE8》]()                                                                                        |
+|                   | [《深入理解java虚拟机》: jvm高级特性与最佳实践3]()                                                                           |
+| java              | [《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace) |
+|                   | [《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)     |
+
+
 # 其他的部分
-- [idea等使用技巧及学习方法总结反思](https://github.com/x-j-j/learning-anything/blob/master/README-1.md)  
-- [已完成列表](https://github.com/x-j-j/learning-anything/blob/master/README-2.md)  
-- [待学习列表](https://github.com/x-j-j/learning-anything/blob/master/README-3.md)  
+- [idea等使用技巧及学习方法总结反思](https://github.com/x-j-j/learning-anything/blob/master/Zeditor-suggestions.md)  
+- [已完成列表](https://github.com/x-j-j/learning-anything/blob/master/Zalready-learned.md)  
+- [待学习列表](https://github.com/x-j-j/learning-anything/blob/master/Zplanto-learn.md)  
