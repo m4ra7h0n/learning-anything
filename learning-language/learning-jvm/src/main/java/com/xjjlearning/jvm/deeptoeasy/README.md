@@ -7,6 +7,19 @@ https://wujiuye.github.io/JVMByteCodeGitBook
 字节码指令
 # test
 用于测试字节码的类
+# loadclass
+jvm加载类学习
+初识JNI: https://segmentfault.com/a/1190000017314326?utm_source=sf-similar-article
+
+# 比较好的一些文章
+详解符号引用转直接引用: https://cana.space/%E8%AF%A6%E8%A7%A3%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8%E8%BD%AC%E7%9B%B4%E6%8E%A5%E5%BC%95%E7%94%A8/
+
+# 问题
+1.loadClass和forName的hotspot源码, 没有详细的学习, 只看了个大概
+在第四章的"动态加载类的两种方式"
+
+
+
 
 # 源码
 虚拟机栈大小设置:

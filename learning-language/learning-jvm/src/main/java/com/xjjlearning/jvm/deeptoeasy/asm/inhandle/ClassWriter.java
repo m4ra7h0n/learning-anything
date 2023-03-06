@@ -1,4 +1,4 @@
-package com.xjjlearning.jvm.asm;
+package com.xjjlearning.jvm.deeptoeasy.asm.inhandle;
 
 import lombok.Getter;
 
@@ -36,4 +36,31 @@ public class ClassWriter implements ClassVisitor {
         methodWriters.add(methodWriter);
         return methodWriter;
     }
+
+    public void showClass() {
+
+        System.out.println("版本号：" + getVersion());
+        System.out.println("访问标志：" + getAccess());
+        System.out.println("类名：" + getClassName());
+
+        fieldWriters.stream()
+                .map(f -> {
+                            String annotations = f.getAnnotations().stream()
+                                    .reduce(" ", String::join);
+                            return f.getAccess() + " " +
+                                    f.getDescriptor() + " " +
+                                    f.getName() + " " + annotations;
+                        }
+                )
+                .forEach(System.out::println);
+
+        methodWriters.stream()
+                .map(m -> m.getAccess() + " " +
+                        m.getName() +
+                        m.getDescriptor() + " " +
+                        "操作数栈大小: " + m.getMaxStackSize() + " " +
+                        "局部变量表大小: " + m.getMaxLocalSize())
+                .forEach(System.out::println);
+    }
+
 }

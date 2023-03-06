@@ -1,8 +1,6 @@
 # learning anything
 
-learning-anything 意在练习各种技术, 学习记录代码, 代码中的注释统一用英文, 感谢star和关注  
-learning-anything is meant to practice a variety of techniques, learn and record codes, All comments in the codes are in
-English. thanks for your star and focus on.
+learning-anything 意在练习各种技术, 学习记录代码, 感谢star和关注  
 
 ![](https://img.shields.io/badge/Author-XJJ-orange)
 ![](https://img.shields.io/badge/Email-2849771625%40qq.com-orange)  
@@ -37,29 +35,30 @@ English. thanks for your star and focus on.
 
 learning-algorithm学习途径: [力扣]()
 
-| learning-apache | 学习途径                                                                                                     |
-|-----------------|----------------------------------------------------------------------------------------------------------|
-| dubbo           |                                                                                                          |
-| maven           | [《Maven实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)   |
-| rocketmq        |                                                                                                          |
+| learning-apache      | 学习途径                                                                                                     |
+|----------------------|----------------------------------------------------------------------------------------------------------|
+| dubbo                |                                                                                                          |
+| maven                | [《Maven实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)   |
+| rocketmq             |                                                                                                          |
 
-| learning-alibaba       | 学习途径                                                                                                                      |
-|------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| spring-cloud-alibaba   | [《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  |
-| fastjson               |                                                                                                                           |
+| learning-alibaba     | 学习途径                                                                                                                      |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| spring-cloud-alibaba | [《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  |
+| fastjson             |                                                                                                                           |
 
-| learning-hack | 学习途径           |
-|---------------|----------------|
-| hack-java     | [《java安全漫谈》]() |
-|               |                |
+| learning-hack        | 学习途径           |
+|----------------------|----------------|
+| hack-java            | [《java安全漫谈》]() |
+|                      |                |
 
-| learning-language | 学习途径                                                                                                       |
-|-------------------|------------------------------------------------------------------------------------------------------------|
-| jvm               | [《深入浅出java字节码》]()                                                                                          |
-|                   | [《java虚拟机规范 SE8》]()                                                                                        |
-|                   | [《深入理解java虚拟机》: jvm高级特性与最佳实践3]()                                                                           |
-| java              | [《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace) |
-|                   | [《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)     |
+| learning-language    | 学习途径                                                                                                       |
+|----------------------|------------------------------------------------------------------------------------------------------------|
+| jvm                  | [《深入浅出java字节码》]()                                                                                          |
+|                      | [《HotSpot实战》]()                                                                                            |
+|                      | [《深入理解java虚拟机》: jvm高级特性与最佳实践3]()                                                                           |
+|                      | [《java虚拟机规范 SE8》]()                                                                                        |
+| java                 | [《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace) |
+|                      | [《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)     |
 
 
 # 其他的部分

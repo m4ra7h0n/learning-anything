@@ -1,4 +1,4 @@
-package com.xjjlearning.jvm.asm;
+package com.xjjlearning.jvm.deeptoeasy.asm.inhandle;
 
 public interface ClassVisitor {
     // 设置class文件结构的版本号、类的访问标志、类名

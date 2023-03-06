@@ -1,4 +1,4 @@
-package com.xjjlearning.jvm.asm;
+package com.xjjlearning.jvm.deeptoeasy.asm.inhandle;
 
 public interface MethodVisitor {
     // 设置局部变量表和操作数栈的大小

@@ -1,5 +1,7 @@
 package com.xjjlearning.jvm.deeptoeasy;
 
+import jdk.internal.org.objectweb.asm.ClassWriter;
+
 /**
  * Created by xjj on 2023/3/4.
  */
@@ -17,5 +19,6 @@ public class SomethingFun {
          *     IINC 0 1 // 对局部变量（Slot 0）进行自增（+1）操作，与栈无关
          *     ISTORE 0 // 弹栈，并存入局部变量（Slot 0）
          */
+        ClassWriter cw = new ClassWriter(0);
     }
 }
