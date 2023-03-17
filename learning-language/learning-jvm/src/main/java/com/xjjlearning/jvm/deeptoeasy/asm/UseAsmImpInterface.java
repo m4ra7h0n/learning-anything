@@ -10,7 +10,8 @@ import java.io.IOException;
 import static org.objectweb.asm.Opcodes.*;
 
 /**
- * 实现SayHelloInterface接口的sayHello方法，为sayHello插入输出“hello word”的字节码指令
+ * 1.实现SayHelloInterface接口的sayHello方法
+ * 2.为sayHello插入输出“hello word”的字节码指令
  */
 public class UseAsmImpInterface {
 

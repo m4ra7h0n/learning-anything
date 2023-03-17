@@ -9,6 +9,10 @@ import java.io.IOException;
 
 import static org.objectweb.asm.Opcodes.*;
 
+/**
+ * 1.继承BaseClass类
+ * 2.并重写sayHello()方法
+ */
 public class UseAsmOverrideMethod {
 
     public static void main(String[] args) throws IOException {

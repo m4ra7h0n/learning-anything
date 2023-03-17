@@ -46,19 +46,20 @@ learning-algorithm学习途径: [力扣]()
 | spring-cloud-alibaba | [《Spring Cloud Alibaba原理与实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)  |
 | fastjson             |                                                                                                                           |
 
-| learning-hack        | 学习途径           |
-|----------------------|----------------|
-| hack-java            | [《java安全漫谈》]() |
-|                      |                |
+| learning-hack        | 学习途径                                                                                                    |
+|----------------------|---------------------------------------------------------------------------------------------------------|
+| hack-java            | [《java安全漫谈》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6403009921ab0e6ecfaf4517b42c8f61be936ab9) |
+|                      | [阿里先知社区](https://xz.aliyun.com/)                                                                        |
+|                      | [T00ls](https://www.t00ls.com/)                                                                         |
 
-| learning-language    | 学习途径                                                                                                       |
-|----------------------|------------------------------------------------------------------------------------------------------------|
-| jvm                  | [《深入浅出java字节码》]()                                                                                          |
-|                      | [《HotSpot实战》]()                                                                                            |
-|                      | [《深入理解java虚拟机》: jvm高级特性与最佳实践3]()                                                                           |
-|                      | [《java虚拟机规范 SE8》]()                                                                                        |
-| java                 | [《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace) |
-|                      | [《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)     |
+| learning-language    | 学习途径                                                                                                                      |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| jvm                  | [《深入浅出java字节码》]()                                                                                                         |
+|                      | [《HotSpot实战》]()                                                                                                           |
+|                      | [《深入理解java虚拟机》: jvm高级特性与最佳实践3](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/63c25b3ba7106613925a4a29a48416800b600455) |
+|                      | [《java虚拟机规范 SE8》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/63c25b3a3c4de165b95d41c08bb4fcdb446bfb8d)              |
+| java                 | [《java并发编程的艺术》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)                |
+|                      | [《java8实战》](https://www.aliyundrive.com/s/ngpTUNYpZ55/folder/6359300490083d85e6b24389aef12d098c36aace)                    |
 
 
 # 其他的部分

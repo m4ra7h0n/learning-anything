@@ -27,21 +27,22 @@
     </properties>
 
     <modules>
-        <module>learning-apache</module>
-        <module>learning-alibaba</module>
-        <module>learning-spring</module>
-        <module>learning-front</module>
+<!--        <module>learning-apache</module>-->
+<!--        <module>learning-alibaba</module>-->
+<!--        <module>learning-spring</module>-->
+<!--        <module>learning-front</module>-->
         <module>learning-hack</module>
         <module>learning-algorithm</module>
-        <module>learning-google</module>
-        <module>learning-database</module>
-        <module>learning-reactor</module>
-        <module>learning-serverless</module>
-        <module>learning-netty</module>
+<!--        <module>learning-google</module>-->
+<!--        <module>learning-database</module>-->
+<!--        <module>learning-reactor</module>-->
+<!--        <module>learning-serverless</module>-->
+<!--        <module>learning-netty</module>-->
         <module>learning-language</module>
-        <module>learning-elastic</module>
-        <module>learning-spider</module>
-        <module>learning-ops</module>
+<!--        <module>learning-elastic</module>-->
+<!--        <module>learning-spider</module>-->
+<!--        <module>learning-ops</module>-->
+        <module>learning-plantuml</module>
     </modules>
 
     <scm>

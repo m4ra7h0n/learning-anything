@@ -1,0 +1,44 @@
+@startuml
+class Teacher << general >>
+class Teacher {
+    '显示覆盖
+    {field} +Student students
+    +Course courses
+    {method} +m()
+}
+Teacher *-- Course
+Teacher o-- Student
+
+class Student {
+    {static} -String name
+    -Integer age
+    {abstract} void methods()
+}
+
+class Course {
+a
+..
+b
+==
+c
+--
+d
+
+.. e ..
+__ f __
+-- g --
+}
+
+' note
+note right of Teacher : this is a note
+
+note "single note" as N2
+Teacher .. N2
+N2 .. ArrayList
+class Foo
+note left : left note
+
+note right of Teacher::m
+a note for m method
+end note
+@enduml

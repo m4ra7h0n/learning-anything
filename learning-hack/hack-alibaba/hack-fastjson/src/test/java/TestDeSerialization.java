@@ -4,12 +4,15 @@ import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class TestDeSerialization {
+
     @Test
     public void selfExamination() {
         // 自省 使用@type
@@ -89,6 +92,7 @@ public class TestDeSerialization {
         String s = JSON.toJSONString(user, SerializerFeature.PrettyFormat);
         System.out.println(s);
     }
+
     @Test
     public void notSelfExamination() {
         // 非自省, 需要传入反序列化成的类
@@ -125,4 +129,18 @@ public class TestDeSerialization {
 //        JSON.parseObject(jsonstr_a);
     }
 
+    class Person {
+    }
+
+    List<Person> list = new ArrayList<Person>();
+
+    @Test
+    public void testRef() {
+        // 在传输的数据中出现相同的对象时，fastjson默认开启引用检测将相同的对象写成引用的形式
+        Person p = new Person();
+        list.add(p);
+        list.add(p);
+        String s = JSON.toJSONString(list);
+        System.out.println(s); // [{},{"$ref":"$[0]"}]
+    }
 }

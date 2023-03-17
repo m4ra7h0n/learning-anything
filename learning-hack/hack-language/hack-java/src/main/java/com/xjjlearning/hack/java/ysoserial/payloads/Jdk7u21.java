@@ -2,7 +2,7 @@ package com.xjjlearning.hack.java.ysoserial.payloads;
 
 import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
-import com.xjjlearning.hack.java.classloader.bytecodes.EvilTemplatesImpl;
+import com.xjjlearning.hack.java.basic.classloader.bytecodes.EvilTemplatesImpl;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ClassUtil;
 
 import javax.xml.transform.Templates;

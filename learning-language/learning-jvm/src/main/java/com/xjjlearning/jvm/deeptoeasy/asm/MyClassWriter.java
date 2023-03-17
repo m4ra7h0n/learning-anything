@@ -10,7 +10,7 @@ public class MyClassWriter extends ClassVisitor {
     private final ClassWriter classWriter;
 
     public MyClassWriter(ClassWriter classWriter) {
-        super(Opcodes.ASM9, classWriter);
+        super(Opcodes.ASM6, classWriter);
         this.classWriter = classWriter;
     }
 

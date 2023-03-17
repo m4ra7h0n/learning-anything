@@ -1,0 +1,109 @@
+@startuml
+class DefaultJSONParser {
+    #ParserConfig config
+    +JSONLexer lexer
+    -ParserConfig context
+    +SymbolTable symbolTable
+
+    +DefaultJSONParser();
+    +parseObject(Type type);
+    +parse()
+}
+class JSON {
+    +parseObject()
+    +toJSONString()
+    +parse()
+}
+class ParserConfig {
+    +ParserConfig global
+    +IdentityHashMap<> deserializer
+    +ASMDeserializerFactory asmFactory
+    -String denyList
+
+    +ParserConfig()
+    +addItemsToDeny()
+    +getDeserializer()
+    +createJavaBeanDeserializer()
+    +createFieldDeserializer()
+}
+class JSONLexer
+class SymbolTable {
+    -String symbols
+    -int indexMask
+    +String addSymbol(char[], int, int);
+}
+class ObjectDeserializer {
+    +deserialize(DefaultJSONParser dd, Type type)
+}
+
+JSON ..> DefaultJSONParser
+ParserConfig ..* DefaultJSONParser
+JSONLexer ..* DefaultJSONParser
+SymbolTable ..* DefaultJSONParser
+DefaultJSONParser ..> ObjectDeserializer
+
+note right of ParserConfig::createJavaBeanDeserializer
+以下情况下可以使用asm
+1.所有父类是pubilc
+2.不使用范型
+3.不是AsmClassLoader的子类
+4.不能是接口
+5.字段长度大于200
+6.除接口外没有构造函数
+end note
+
+' 第二层
+class JSONLexerBase
+class JSONReaderScaner
+class JSONScanner
+JSONLexerBase --|> JSONLexer
+JSONReaderScaner --|> JSONLexerBase
+JSONScanner --|> JSONLexerBase
+
+class JavaBeanDeserializer {
+    #deserialze()
+}
+note left of JavaBeanDeserializer::deserialize
+这里当处理到dataSourceName的时候, 会走到if (!matchField) {}
+这是因为没有dataSourceName这个字段只有dataSource
+我们构造dataSourceName是为了执行getter
+end note
+
+
+class MapDeserializer
+ObjectDeserializer --|> JavaBeanDeserializer
+ObjectDeserializer --|> MapDeserializer
+
+class ASMDeserializerFactory {
+    + final ASMClassLoader classLoader
+    +createJavaBeanDeserializer()
+}
+class JavaBeanInfo {
+    +FieldInfo[] fields;
+    +JavaBeanInfo build()
+    +{static} boolean add(List<FieldInfo> fieldList, FieldInfo field)
+}
+
+' 其他关系
+note right of JavaBeanInfo::build
+构建JavaBeanInfo, 用于执行方法
+setter方法自动调用的条件如下:
+1.方法名长度大于4
+2.非静态方法
+3.返回值为void或当前类
+4.方法名以set开头
+5.参数个数为1
+
+如果根据setter拿到的propertyName进而去获取的field为null, 则标志为access为false
+end note
+
+class FieldInfo {
+    +FieldInfo()
+}
+FieldInfo --o JavaBeanInfo
+note right of FieldInfo::FieldInfo
+提取class信息
+之后添加到fieldList当中
+end note
+
+@enduml
