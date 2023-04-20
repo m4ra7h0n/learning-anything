@@ -3,20 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>learning-hack</artifactId>
+        <artifactId>hack-spring</artifactId>
         <groupId>com.xjjlearning.hack</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hack-spring</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>hack-spring</name>
-    <description>hack-spring</description>
     <packaging>pom</packaging>
 
+    <artifactId>hack-spring-boot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>hack-spring-boot</name>
+    <description>hack-spring-boot</description>
+
     <modules>
-        <module>CVE-2022-31692</module>
-        <module>hack-spring-boot</module>
+        <module>spring-boot-thymeleaf-ssti</module>
     </modules>
 
 </project>

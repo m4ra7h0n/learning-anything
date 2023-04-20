@@ -10,6 +10,7 @@ public class GroovyShellTest {
     @Test
     public void f() {
         GroovyShell groovyShell = new GroovyShell();
-        groovyShell.evaluate("'calc'.execute()");
+//        groovyShell.evaluate("'calc'.execute()");
+        groovyShell.evaluate("System.out.println('hello world')");
     }
 }

