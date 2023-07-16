@@ -15,6 +15,7 @@
     <modules>
         <module>hack-dubbo</module>
         <module>hack-shiro</module>
+        <module>hack-tomcat</module>
     </modules>
 
 </project>

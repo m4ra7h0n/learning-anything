@@ -1,0 +1,2 @@
+dbcp是tomcat的连接池
+用到了BasicDataSource类, 需要pool类

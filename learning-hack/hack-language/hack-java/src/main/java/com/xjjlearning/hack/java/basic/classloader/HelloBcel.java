@@ -27,7 +27,7 @@ public class HelloBcel {
         // com.sun.org.apache.bcel.internal.util.ClassLoader 重写了loadClass方法
 
         // com.sun.org.apache.bcel.internal.util.ClassLoader#loadClass()
-        //  com.sun.org.apache.bcel.internal.util.ClassLoader#createClass(); -> 解码字符串
+//          com.sun.org.apache.bcel.internal.util.ClassLoader#createClass(); -> 解码字符串
         //  java.lang.ClassLoader#defineClass(); -> 生成类
         new ClassLoader().loadClass("$$BCEL$$" + getEvilCode()).newInstance();
     }

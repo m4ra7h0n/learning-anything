@@ -1,0 +1,8 @@
+spring:
+  mvc:
+    #JSP配置
+    view:
+      prefix: /
+      suffix: .jsp
+server:
+  port: 8082

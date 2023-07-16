@@ -1,4 +1,12 @@
 public class Evil {
+    public Evil(String cmd) {
+        this.cmd = cmd;
+    }
+
+    static {
+        System.out.println(1);
+    }
+
     public String getCmd() {
         System.out.println("getCmd()" + this.hashCode());
         return cmd;

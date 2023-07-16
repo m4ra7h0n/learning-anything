@@ -16,14 +16,15 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>learning-apache-maven</module>
-        <module>learning-apache-dubbo</module>
-        <module>learning-apache-zookeeper</module>
-        <module>learning-apache-flink</module>
-        <module>learning-apache-rocketmq</module>
-        <module>learning-apache-hudi</module>
-        <module>learning-apache-log4j</module>
-        <module>learning-apache-kafka</module>
+<!--        <module>learning-apache-maven</module>-->
+<!--        <module>learning-apache-dubbo</module>-->
+<!--        <module>learning-apache-zookeeper</module>-->
+<!--        <module>learning-apache-flink</module>-->
+<!--        <module>learning-apache-rocketmq</module>-->
+<!--        <module>learning-apache-hudi</module>-->
+<!--        <module>learning-apache-log4j</module>-->
+<!--        <module>learning-apache-kafka</module>-->
+        <module>learning-apache-tomcat</module>
     </modules>
 
 </project>

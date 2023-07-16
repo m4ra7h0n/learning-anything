@@ -23,7 +23,7 @@ public class TomcatGadgetPoc {
         //     factory = getObjectFactoryFromReference(ref, f); -> 关键
         //      NamingManager#helper.loadClass(factoryName); 加载本地工厂并返回
 
-        // 本地工厂要求？
+        // 2.本地工厂要求？
         // 工厂类必须实现 javax.naming.spi.ObjectFactory 接口
         // 并且至少存在一个 getObjectInstance() 方法。
         // Tomcat -> BeanFactory

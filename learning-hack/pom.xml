@@ -21,5 +21,8 @@
         <module>hack-apache</module>
         <module>hack-alibaba</module>
         <module>hack-language</module>
+        <module>hack-others</module>
+        <module>utils</module>
+        <module>hack-cloud</module>
     </modules>
 </project>

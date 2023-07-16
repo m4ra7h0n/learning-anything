@@ -9,6 +9,7 @@ import org.springframework.expression.ParserContext;
 import org.springframework.expression.common.TemplateParserContext;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
+import org.thymeleaf.standard.expression.VariableExpression;
 
 import java.lang.reflect.Method;
 import java.util.*;
@@ -150,6 +151,10 @@ public class SpelDemo {
         //获取值
         String value = expressionTemplate.getValue(evaluationContext, String.class);
         System.out.println(value);
+
+//        VariableExpression variableExpression = new VariableExpression("");
+//        variableExpression.execute("")
+
 
     }
 

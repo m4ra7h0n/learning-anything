@@ -26,7 +26,11 @@ import static com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil.s
 					TransformingComparator.compare()
 						InvokerTransformer.transform()
 							Method.invoke()
+
 							     TemplatesImpl.newTransformer()
+							         TemplatesImpl.getTransletInstance()
+							             TemplatesImpl.defineTransletClasses
+							                 loader.defineClass(_bytecodes[i]);
  */
 public class CommonsCollections2Temp {
     // jdk8u71以及之后的版本使用

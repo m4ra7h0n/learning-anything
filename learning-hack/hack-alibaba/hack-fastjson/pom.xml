@@ -91,5 +91,18 @@
             <artifactId>tomcat-dbcp</artifactId>
             <version>9.0.8</version>
         </dependency>
+
+<!--        c3p0-->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

@@ -1,3 +1,5 @@
+home:
+  welcome: hello
 server:
   port: 8090
 spring:

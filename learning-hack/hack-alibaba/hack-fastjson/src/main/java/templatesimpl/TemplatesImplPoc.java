@@ -8,6 +8,14 @@ import org.apache.commons.codec.binary.Base64;
 /**
  * Created by xjj on 2023/3/18.
  */
+
+/**
+ *  com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.newTransformer()
+ *   com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.getTransletInstance()
+ *    com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.defineTransletClasses()
+ *     com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.TransletClassLoader.defineClass()
+ *      EvilTemplatesImpl.java -> static
+ */
 public class TemplatesImplPoc {
     public static String templatesImpl() throws Exception {
         // 1.为什么parseObject需要Feature.SupportNonPublicField？

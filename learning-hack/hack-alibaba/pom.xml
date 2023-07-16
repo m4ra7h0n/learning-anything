@@ -18,4 +18,12 @@
         <module>hack-fastjson</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xjjlearning.hack</groupId>
+            <artifactId>utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

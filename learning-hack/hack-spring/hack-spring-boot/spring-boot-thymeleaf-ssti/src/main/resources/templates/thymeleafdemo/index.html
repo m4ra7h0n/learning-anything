@@ -3,6 +3,10 @@
     <title>Index Page</title>
 </head>
 <body>
+
+<!--消息表达式（通常称为文本外化、国际化或i18n）允许我们从外部源（.properties文件）检索特定于语言环境的消息，通过 key 引用它们（可选）应用一组参数。-->
+<p th:text="#{home.welcome}">Welcome to our grocery store!</p>
+
 <form action="save" method="post">
     <table>
         <tr>

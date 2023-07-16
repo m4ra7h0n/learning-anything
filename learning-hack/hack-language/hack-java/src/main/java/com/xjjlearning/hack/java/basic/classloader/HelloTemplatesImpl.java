@@ -6,6 +6,8 @@ import com.xjjlearning.hack.java.basic.classloader.bytecodes.EvilTemplatesImpl;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ClassUtil;
 import com.xjjlearning.hack.java.ysoserial.payloads.util.ReflectionUtil;
 
+import javax.xml.transform.Transformer;
+
 /**
  * created by xjj on 2023/1/31
  */
